@@ -19,7 +19,7 @@ package step3_01_arrayAdvanced;
  */
 
 
-public class ArrayEx25_문제 {
+public class ArrayEx25_문제 {
 
 	public static void main(String[] args) {
 		

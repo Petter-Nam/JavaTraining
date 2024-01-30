@@ -44,10 +44,10 @@ public class ArrayEx35 {
 			System.out.println("[0]종료");
 			
 			System.out.print("메뉴 선택 : ");
-			int sel = scan.nextInt();
+			int sel = scan.nextInt(); 
 			
 			if (sel == 1) {
-				if (elementCnt == 0) {
+				if (elementCnt == 0) { 
 					arr = new int[elementCnt + 1];
 				}
 				else if (elementCnt > 0){

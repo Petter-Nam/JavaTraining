@@ -1,4 +1,4 @@
-package step3_01.arrayAdvanced;
+package step3_01_arrayAdvanced;
 
 
 /*

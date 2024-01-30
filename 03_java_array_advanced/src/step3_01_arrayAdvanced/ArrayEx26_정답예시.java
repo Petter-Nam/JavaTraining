@@ -13,7 +13,7 @@ import java.util.Scanner;
  *    숫자 10~18은 tenToEightTeen 배열에 저장한다.
  */
 
-public class ArrayEx26_정답예시 {
+public class ArrayEx26_정답예시 {
 
 	public static void main(String[] args) {
 		
