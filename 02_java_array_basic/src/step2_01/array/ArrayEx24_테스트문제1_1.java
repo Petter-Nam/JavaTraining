@@ -1,5 +1,9 @@
 package step2_01.array;
-
+/*
+ * 	1월 31일
+ * 안보고 작성해보았다.
+ * 
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -81,8 +85,15 @@ public class ArrayEx24_테스트문제1_1 {
 		System.out.println(Arrays.toString(b));
 		// 문제 7) a의 값중 홀수만 c에 저장(저장위치는 앞에서부터 저장)
 		// 예) c => {5, 3, 1, 0, 0}
-		// int[] c = { 0 , 0 , 0 , 0 , 0 };// 주석 풀어야함
-
+		int[] c = { 0 , 0 , 0 , 0 , 0 };
+		
+		for (int i = 0; i < aCnt; i++) {
+			if (a[i] % 2 == 1) {
+				c[4 - i] = a[i];
+				
+			}
+		}
+		System.out.println(Arrays.toString(c));
 	}
 
 }

@@ -1,14 +1,23 @@
 package step2_01.array;
 
+import java.util.Scanner;
+
 public class ArrayEx24_테스트문제1_2 {
 
 	public static void main(String[] args) {
-
+		Scanner scan = new Scanner(System.in);
 		
 		// 문제 8) 아래 d에서 scanner로 내가 입력한 값만 빼고 e에 저장 
 		int[] d = { 10 , 20 , 30 , 40 , 50 };
 		int[] e = { 0 , 0 , 0 , 0 , 0 };
 		// 예) 30 ==> e = {10 , 20 , 40 , 50 , 0};
+		
+		System.out.print("값을 입력하세요");
+		int myChoice = scan.nextInt();
+		
+		for (int i = 0; i < d.length; i++) {
+			if (myChoice == d[i]) e[i] = 0;
+		}
 
 		// 문제 9) 아래 f에서 scanner로 내가 입력한 번호와 값을 빼고 d에 저장 
 		int[] f = { 1001 , 40 , 1002 , 65 , 1003 , 70 };
