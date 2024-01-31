@@ -62,11 +62,23 @@ public class ArrayEx24_테스트문제1_1 {
 		System.out.println(maxNum);
 		// 문제 5) 배열중 홀수의 개수 출력
 		// 예) 홀수의 개수 : 3
+		int oddCount = 0;
+		for (int i = 0; i < aCnt; i++) {
+			if (a[i] % 2 == 1) {
+				oddCount++;
+			}
+		}
+		System.out.println("홀수의 개수는 " + oddCount + "입니다.");
 
 		// 문제 6) a의 값중 홀수만 b에 저장 (저장위치는 a와 b의 동일한 위치에 저장)
 		// 예) b => {0 , 0 , 5 , 3 , 1}
-		// int[] b = {0 , 0 , 0 , 0 , 0};// 주석풀어야
-
+		int[] b = {0 , 0 , 0 , 0 , 0};
+		for (int i = 0; i < aCnt; i++) {
+			if (a[i] % 2 == 1) {
+				b[i] = a[i];
+			}
+		}
+		System.out.println(Arrays.toString(b));
 		// 문제 7) a의 값중 홀수만 c에 저장(저장위치는 앞에서부터 저장)
 		// 예) c => {5, 3, 1, 0, 0}
 		// int[] c = { 0 , 0 , 0 , 0 , 0 };// 주석 풀어야함
