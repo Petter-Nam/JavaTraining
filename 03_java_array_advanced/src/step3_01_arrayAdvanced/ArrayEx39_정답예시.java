@@ -1,11 +1,11 @@
-package step3_01.arrayAdvanced;
+package step3_01_arrayAdvanced;
 
 
 /*
  *	# 2차원배열 기본문제[3단계]
 */
 
-public class ArrayEx39_정답예시 {
+public class ArrayEx39_정답예시 {
 
 	public static void main(String[] args) {
 		

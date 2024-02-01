@@ -4,7 +4,7 @@ package step3_01_arrayAdvanced;
  *	# 관리비
 */
 
-public class ArrayEx40_문제 {
+public class ArrayEx40_연습1 {
 
 	public static void main(String[] args) {
 		
@@ -19,9 +19,11 @@ public class ArrayEx40_문제 {
 			{4100, 2000, 1000},	
 			{3000, 1600,  800}
 		};
-			
+		
+		
 		// 문제 1) 각층별 관리비 합 출력
 		// 정답 1) 4400, 7100, 5400
+		
 		
 		// 문제 2) 호를 입력하면 관리비 출력
 		// 예   2) 입력 : 202	관리비 출력 : 2000

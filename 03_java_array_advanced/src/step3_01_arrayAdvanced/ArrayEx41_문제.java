@@ -1,4 +1,4 @@
-package step3_01.arrayAdvanced;
+package step3_01_arrayAdvanced;
 /*
  * # 사다리 게임
  * 
@@ -14,7 +14,7 @@ package step3_01.arrayAdvanced;
 
 import java.util.Scanner;
 
-public class ArrayEx41_문제 {
+public class ArrayEx41_문제 {
 
 	public static void main(String[] args) {
 		
