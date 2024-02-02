@@ -6,7 +6,7 @@ import java.util.Scanner;
  *	# 2차원배열 기본문제[2단계]
 */
 
-public class ArrayEx38_정답예시 {
+public class ArrayEx38_정답예시 {
 
 	public static void main(String[] args) {
 		

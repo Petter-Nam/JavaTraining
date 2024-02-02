@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 // # 소코반
 
-public class ArrayEx47_문제 {
+public class ArrayEx47_문제 {
 
 	public static void main(String[] args) {
 		

@@ -24,7 +24,7 @@ import java.util.Scanner;
  * . 로그인시에만 이용가능
  */
 
-public class ArrayEx30_정답예시 {
+public class ArrayEx30_정답예시 {
 
 	public static void main(String[] args) {
 		

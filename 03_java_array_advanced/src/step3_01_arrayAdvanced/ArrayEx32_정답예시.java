@@ -6,7 +6,7 @@ package step3_01_arrayAdvanced;
  * . 성적 순으로 이름 출력
  */
 
-public class ArrayEx32_정답예시 {
+public class ArrayEx32_정답예시 {
 	public static void main(String[] args) {
 
 

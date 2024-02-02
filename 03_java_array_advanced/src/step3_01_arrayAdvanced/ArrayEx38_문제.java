@@ -4,7 +4,7 @@ package step3_01_arrayAdvanced;
  *	# 2차원배열 기본문제[2단계]
 */
 
-public class ArrayEx38_문제 {
+public class ArrayEx38_문제 {
 
 	public static void main(String[] args) {
 		

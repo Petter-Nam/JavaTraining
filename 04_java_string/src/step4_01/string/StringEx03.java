@@ -47,12 +47,81 @@ public class StringEx03 {
 		System.out.println(str.charAt(1));
 		System.out.println(str.charAt(2));
 		
+		//String ch = str.charAt(3); char는 문자 하나이기 때문에 String 타입에 담을 수 없다.
+		char ch = str.charAt(3);
+		System.out.println(ch);
+		
+		System.out.println(str.charAt(str.length() - 1));
+		
+		System.out.println();
+		System.out.println("\n==========================\n");
+		
+		for (int i = 0; i < str.length(); i++) { // 문자열에서 length는 메서드이기 때문에 ()가 존재함
+			System.out.println(str.charAt(i));
+		}
+		
+		System.out.println("\n==========================\n");
 		// [4] substring() : 문자 여러개 추출 (슬라이싱)
 		// 4-1) substring(index1이상, index2미만)
+		// System.out.println(str.substring(시작, 끝 - 1)));
+		System.out.println(str.substring(0, 4));
+		System.out.println(str.substring(4, 6));
+		String subStr = str.substring(2, 4);
+		System.out.println(subStr);
+		System.out.println();
 		
 		// 4-2) substring(index1부터 끝까지)
+		System.out.println(str.substring(2));
+		System.out.println(str.substring(4));
+		System.out.println("\n==========================\n");
 		
 		// [5] split("구분자") : 구분자로 잘라내기
+		String str1 = "a/b/c/d/e/f/g";
+		String str2 = "aa&bb&cc";
+		String str3 = "aaa.bbb.ccc.ddd.eee"; // 예외케이스  . 은 \\. (이스케이프 문자로 구현)
+		
+		String[] temp = str1.split("/");
+		System.out.println(temp.length);
+		
+		for (int i = 0; i < temp.length; i++) {
+			System.out.print(temp[i] + " ");	
+		}
+		System.out.println();
+		System.out.println("\n==========================\n");
+		
+		temp = str2.split("&");
+		System.out.println(temp.length);
+		
+		for (int i = 0; i < temp.length; i++) {
+			System.out.print(temp[i] + " ");	
+		}
+		System.out.println();
+		System.out.println("\n==========================\n");
+		
+		
+		temp = str3.split("\\.");
+		System.out.println(temp.length);
+		
+		for (int i = 0; i < temp.length; i++) {
+			System.out.print(temp[i] + " ");	
+		}
+		System.out.println();
+		System.out.println("\n==========================\n");
+		
+		// 참고) 문자열 비교 : compareTo()
+		String str4 = "씨";
+		String str5 = "자바";
+		String str6 = "파이썬";
+		String str7 = "씨";
+		//왼쪽 데이터(기준)가 작을 경우 음수가 반환된다.
+		System.out.println(str4.compareTo(str5));
+		System.out.println(str4.compareTo(str6));
+		System.out.println(str4.compareTo(str7));
+		System.out.println("\n==========================\n");
+		//왼쪽 데이터(기준)가 클 경우 음수가 반환된다.
+		System.out.println(str6.compareTo(str5));
+		System.out.println(str6.compareTo(str6));
+		System.out.println(str6.compareTo(str7));
 		
 	}
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //# 빙고 Ver2(플레이어 2명)
 
-public class ArrayEx46_문제 {
+public class ArrayEx46_문제 {
 
 	public static void main(String[] args) {
 		

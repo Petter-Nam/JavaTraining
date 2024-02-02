@@ -14,7 +14,7 @@ package step3_01_arrayAdvanced;
  */
 
 
-public class ArrayEx31_문제 {
+public class ArrayEx31_문제 {
 
 	public static void main(String[] args) {
 		

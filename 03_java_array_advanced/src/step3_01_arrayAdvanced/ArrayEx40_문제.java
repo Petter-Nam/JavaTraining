@@ -4,7 +4,7 @@ package step3_01_arrayAdvanced;
  *	# 관리비
 */
 
-public class ArrayEx40_문제 {
+public class ArrayEx40_문제 {
 
 	public static void main(String[] args) {
 		

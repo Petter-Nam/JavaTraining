@@ -14,7 +14,7 @@ package step3_01_arrayAdvanced;
  * 80, 50, 40, 30, 10, 7
  */
 
-public class ArrayEx31_정답예시 {
+public class ArrayEx31_정답예시 {
 	
 	public static void main(String[] args) {
 

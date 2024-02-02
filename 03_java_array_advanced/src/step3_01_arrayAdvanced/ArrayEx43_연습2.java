@@ -1,10 +1,7 @@
 package step3_01_arrayAdvanced;
 /*
- * 2월 1일 
- * 달팽이 문제에서 16 다음 (1,1) 인덱스 자리에 17을 찍는 방법을 파악하는데 시간이 너무걸렸다. 
- * 알고나니 왜 여기서 시간을 허비했는가에 속이 상했다.
- * 필요한 과정이였다고도 생각은 들지만 너무 시간만 버린것 같다...
- * 
+ * 2월 2일 
+ * 많이 헤맸다. 다시 만들어 봐야겠다.
  */
 /*
  * # 달팽이
@@ -24,55 +21,54 @@ package step3_01_arrayAdvanced;
  * 1)2)3)4) 반복
  */
 
-public class ArrayEx43_연습1 {
+
+public class ArrayEx43_연습2 {
 
 	public static void main(String[] args) {
-
+		
 		int size = 5;
 		int[][] map = new int[5][5];
-		boolean[][] isUsed = new boolean[5][5];
-
+		boolean[][] boolMap = new boolean[5][5];
+		
 		int x = 0;
 		int y = 0;
-		int num = 1;
 		int dir = 1;
-
+		int num = 1;
+		
+		
 		map[y][x] = num;
-		isUsed[y][x] = true;
-
+		boolMap[y][x] = true;
+		
 		for (int i = 0; i < 24; i++) {
-
+			
 			int xx = x;
 			int yy = y;
-
+			
 			if (dir == 1)		xx = x + 1;
 			else if (dir == 2)	yy = y + 1;
 			else if (dir == 3)	xx = x - 1;
 			else if (dir == 4)	yy = y - 1;
-
-			if (size <= xx || xx < 0 || size <= yy || yy < 0 || isUsed[yy][xx] == true) {
-
+			
+			if (size <= xx || xx < 0 || size <= yy || yy < 0 || boolMap[yy][xx] == true) {
 				dir += 1;
 				xx = x;
 				yy = y;
-
+				
 				if (dir == 5) dir = 1;
-
-				if 		(dir == 1)	xx = x + 1;
+				
+				if (dir == 1)		xx = x + 1;
 				else if (dir == 2)	yy = y + 1;
 				else if (dir == 3)	xx = x - 1;
 				else if (dir == 4)	yy = y - 1;
 			}
 			num++;
-
 			y = yy;
 			x = xx;
 			map[y][x] = num;
-			isUsed[y][x] = true;
+			boolMap[y][x] = true;
 		}
-
 		for (int i = 0; i < map.length; i++) {
-			for (int j = 0; j < map[i].length; j++) {
+			for(int j = 0; j < map[i].length; j++) {
 				System.out.print(map[i][j] + "\t");
 			}
 			System.out.println();

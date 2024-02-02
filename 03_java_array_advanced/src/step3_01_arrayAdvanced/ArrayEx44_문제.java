@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // #오목
 
-public class ArrayEx44_문제 {
+public class ArrayEx44_문제 {
 
 	public static void main(String[] args) {
 		

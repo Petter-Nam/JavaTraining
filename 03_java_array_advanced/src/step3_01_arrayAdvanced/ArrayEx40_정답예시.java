@@ -6,7 +6,7 @@ import java.util.Scanner;
  *	# 관리비
 */
 
-public class ArrayEx40_정답예시 {
+public class ArrayEx40_정답예시 {
 
 	public static void main(String[] args) {
 		

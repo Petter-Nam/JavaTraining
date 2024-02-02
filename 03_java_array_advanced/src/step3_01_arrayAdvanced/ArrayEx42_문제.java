@@ -17,7 +17,7 @@ import java.util.Scanner;
  * 
  */
 
-public class ArrayEx42_문제 {
+public class ArrayEx42_문제 {
 
 	public static void main(String[] args) {
 
