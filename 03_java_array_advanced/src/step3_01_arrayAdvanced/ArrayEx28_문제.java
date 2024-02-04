@@ -1,5 +1,6 @@
 package step3_01_arrayAdvanced;
 
+import java.util.Random;
 
 /*
  * # 중복숫자 금지[2단계]
@@ -12,9 +13,21 @@ package step3_01_arrayAdvanced;
 public class ArrayEx28_문제 {
 
 	public static void main(String[] args) {
+		Random ran = new Random();
 		
-		int[] arr = new int[5];
+		int[] arr =new int[5];
 		
+		int i = 0;
+		while (i < arr.length) {
+			
+			int rNum = ran.nextInt(10) + 1;
+			int dupleCheck = 1;
+			int j = 0;
+			
+			while (j < i) {
+				
+			}
+		}
 	}
 	
 }
