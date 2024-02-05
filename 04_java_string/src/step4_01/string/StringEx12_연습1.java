@@ -81,8 +81,16 @@ public class StringEx12_연습1 {
 				
 			} 
 			else if (sel == 3) {
-				for (int i = 0; i < 3; i++) {
-				//	if (identifier[i] == i &&)
+				for (int i = 0; i < ids.length; i++) {
+				if (identifier == i) {
+					System.out.println("과일 목록을 골라주십시오");
+					String fruit = scan.next();
+					for (int j = 0; j < items.length; i++) {
+						if (items[j].equals(fruit)) {
+					
+						}
+					}
+				}
 				}
 			} 
 			else if (sel == 4) {

@@ -53,12 +53,15 @@ public class ExceptionEx01 {
 		// catch : try{} 안의 명령어가 실행되는 중 예외가 발생할 경우 분기되는 명령어
 		catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("배열범위초과 에러 캐치");
+			e.printStackTrace(); // 에러메세지 출력
 		}
 		catch (ArithmeticException e) {
 			System.out.println("연산에러 캐치");
+			e.printStackTrace(); // 에러메세지 출력
 		}
 		catch (Exception e) {
 			System.out.println("모든 에러");
+			e.printStackTrace(); // 에러메세지 출력
 		}
 		
 	}
