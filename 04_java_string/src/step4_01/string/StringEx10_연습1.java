@@ -1,5 +1,7 @@
 package step4_01.string;
 
+import java.util.Scanner;
+
 /*
  * # 끝말잇기 게임
  * 
@@ -17,10 +19,29 @@ package step4_01.string;
 public class StringEx10_연습1 {
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 		
 		String start = "자전거";
 		System.out.println("제시어 : " + start);
-
+		
+		while (true) {
+			
+			int size = start.length();
+			System.out.println("제시어 : " + start);
+			
+			System.out.print("입력 : ");
+			String myWord = scan.next();
+			
+			if (myWord.equals("quit")) {
+				System.out.println("-종료-");
+				break;
+			}
+			
+			if (start.charAt(size - 1) == myWord.charAt(0)) {
+				start = myWord;
+			}
+		}
+		scan.close();
 	}
 
 }

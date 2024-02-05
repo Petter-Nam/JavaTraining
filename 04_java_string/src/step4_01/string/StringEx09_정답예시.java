@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 문제 : jsp
  */
 
-public class StringEx09_정답예시 {
+public class StringEx09_정답예시 {
 
 	public static void main(String[] args) {
 		

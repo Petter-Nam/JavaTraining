@@ -31,7 +31,7 @@ public class StringEx09_연습1 {
 			
 			String temp = words[0];
 			words[0] = words[r];
-			
+			words[r] = temp;
 		}
 		
 		int idx = 0;
@@ -39,7 +39,7 @@ public class StringEx09_연습1 {
 			
 			System.out.println("[" + (idx + 1) + "] 문제 : " + words[idx]);
 			
-			System.out.println("입력 : ");
+			System.out.print("입력 : ");
 			String myWord = scan.next();
 			
 			if (words[idx].equals(myWord)) {

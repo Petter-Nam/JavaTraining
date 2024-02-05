@@ -2,7 +2,7 @@ package step4_01.string;
 
 import java.util.Arrays;
 
-public class StringEx07_정답예시 {
+public class StringEx07_정답예시 {
 
 	public static void main(String[] args) {
 		

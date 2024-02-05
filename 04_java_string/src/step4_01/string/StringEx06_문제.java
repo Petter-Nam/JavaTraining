@@ -2,7 +2,7 @@ package step4_01.string;
 
 //# 문자열 1차원
 
-public class StringEx06_문제 {
+public class StringEx06_문제 {
 
 	public static void main(String[] args) {
 		

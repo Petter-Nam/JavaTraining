@@ -1,7 +1,7 @@
 package step4_01.string;
 
 
-public class StringEx08_문제 {
+public class StringEx08_문제 {
 
 	public static void main(String[] args) {
 		

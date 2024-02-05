@@ -2,7 +2,7 @@ package step4_01.string;
 
 
 
-public class StringEx05_정답예시 {
+public class StringEx05_정답예시 {
 
 	public static void main(String[] args) {
 	
