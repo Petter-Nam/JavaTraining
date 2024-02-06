@@ -6,7 +6,7 @@ import java.io.IOException;
 //# 파일 저장하기 : 연습문제1
 
 
-public class FileEx03_문제 {
+public class FileEx03_문제 {
 
 	public static void main(String[] args) {
 		

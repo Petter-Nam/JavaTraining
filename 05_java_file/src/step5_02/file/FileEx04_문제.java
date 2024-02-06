@@ -2,7 +2,7 @@ package step5_02.file;
 
 //# 파일 저장하기 : 연습문제2
 
-public class FileEx04_문제 {
+public class FileEx04_문제 {
 
 	public static void main(String[] args) {
 		

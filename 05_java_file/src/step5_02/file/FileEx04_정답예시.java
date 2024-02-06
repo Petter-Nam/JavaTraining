@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 //# 파일 저장하기 : 연습문제2
-public class FileEx04_정답예시 {
+public class FileEx04_정답예시 {
 
 	public static void main(String[] args) {
 		
