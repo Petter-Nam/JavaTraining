@@ -1,12 +1,5 @@
 package step5_02.file;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
-
 //파일 로드하기 : 연습문제2
 
 public class FileEx06_문제 {
@@ -19,36 +12,7 @@ public class FileEx06_문제 {
 		String[] pws   = new String[3];			// 1111 , 2222   , 3333
 		int[] moneys   = new int[3];			// 20000, 30000 , 40000
 		
-		String fileName = "fileTest02.txt";
-		File file = new File(fileName);
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		
-		if (file.exists()) {
-			
-		
-		try {
-			fr = new FileReader(file);
-			br = new BufferedReader(fr);
-			
-			String outputData = "//";
-			String temp1 = null;
-			for (int i = 0; i < names.length; i++) {
-				outputData = br.readLine();
-				temp1 += outputData + "//";
-			}
-		System.out.println(temp1);
-			
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-		if (br != null)	try {br.close();} catch (IOException e) {e.printStackTrace();}
-		if (fr != null)	try {fr.close();} catch (IOException e) {e.printStackTrace();}
-		}
-		
-		}
+	
 
 	}
 
