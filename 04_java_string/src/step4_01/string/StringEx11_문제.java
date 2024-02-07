@@ -23,7 +23,7 @@ import java.util.Scanner;
 
 
 
-public class StringEx11_문제 {
+public class StringEx11_문제 {
 
 	public static void main(String[] args) {
 		

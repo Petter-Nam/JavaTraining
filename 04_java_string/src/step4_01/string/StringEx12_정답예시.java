@@ -2,7 +2,7 @@ package step4_01.string;
 
 import java.util.Scanner;
 
-public class StringEx12_정답예시 {
+public class StringEx12_정답예시 {
 
 	public static void main(String[] args) {
 		

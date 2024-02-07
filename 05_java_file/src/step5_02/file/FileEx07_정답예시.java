@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 //# 파일 컨트롤러[1단계] : 어레이리스트
 
-public class FileEx07_정답예시 {
+public class FileEx07_정답예시 {
 	
 	public static void main(String[] args) {
 

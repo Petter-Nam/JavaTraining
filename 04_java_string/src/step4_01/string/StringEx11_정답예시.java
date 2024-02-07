@@ -20,7 +20,7 @@ import java.util.Scanner;
  */
 
 
-public class StringEx11_정답예시 {
+public class StringEx11_정답예시 {
 
 	public static void main(String[] args) {
 

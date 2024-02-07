@@ -12,7 +12,7 @@ import java.util.Scanner;
 	4) 전부 벗겨지거나 맞추면 종료하고 점수를 화면에 출력한다.
 
 */
-public class StringEx18_문제 {
+public class StringEx18_문제 {
 
 	public static void main(String[] args) {
 		

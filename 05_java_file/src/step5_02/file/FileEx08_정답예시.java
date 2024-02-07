@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 // # 파일 컨트롤러[2단계] : ATM
 
-public class FileEx08_정답예시 {
+public class FileEx08_정답예시 {
 
     public static void main(String[] args) {
 

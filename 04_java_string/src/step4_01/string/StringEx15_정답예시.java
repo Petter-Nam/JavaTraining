@@ -13,7 +13,7 @@ import java.util.Scanner;
  *    문자와 숫자가 섞여있다.
  */
 
-public class StringEx15_정답예시 {
+public class StringEx15_정답예시 {
 
 	public static void main(String[] args) {
 		

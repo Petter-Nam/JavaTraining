@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 
 
-public class StringEx16_정답예시 {
+public class StringEx16_정답예시 {
 
 	public static void main(String[] args) {
 		

@@ -11,7 +11,7 @@ package step4_01.string;
  *  
  * */
 
-public class StringEx19_테스트문제 {
+public class StringEx19_테스트문제 {
 
 	public static void main(String[] args) {
 			

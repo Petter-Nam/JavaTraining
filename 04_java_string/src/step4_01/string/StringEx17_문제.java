@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 
 
-public class StringEx17_문제 {
+public class StringEx17_문제 {
 
 	public static void main(String[] args) {
 

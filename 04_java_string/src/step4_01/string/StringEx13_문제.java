@@ -2,7 +2,7 @@ package step4_01.string;
 
 // # 정렬 (사전순으로 정렬해 보시오.)
 
-public class StringEx13_문제 {
+public class StringEx13_문제 {
 
 	public static void main(String[] args) {
 		

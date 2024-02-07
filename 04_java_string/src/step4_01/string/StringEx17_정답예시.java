@@ -15,7 +15,7 @@ import java.util.Scanner;
  * 		Time is too short.
  */
 
-public class StringEx17_정답예시 {
+public class StringEx17_정답예시 {
 
 	public static void main(String[] args) {
 

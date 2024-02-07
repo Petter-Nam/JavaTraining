@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //# 파일 컨트롤러[3단계] : 장바구니
 
-public class FileEx09_문제 {
+public class FileEx09_문제 {
 	
 	public static void main(String[] args) {
 

@@ -10,7 +10,7 @@ import java.util.Scanner;
  *    단어가 없으면 false를 출력한다.
  */
 
-public class StringEx16_문제 {
+public class StringEx16_문제 {
 
 	public static void main(String[] args) {
 		
