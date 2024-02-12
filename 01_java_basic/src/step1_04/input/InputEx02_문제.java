@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class InputEx02_문제 {
 
 	public static void main(String[] args) {
-	
+		
 		// 문제1) 숫자 2개를 입력받아서 합 출력
 
 		

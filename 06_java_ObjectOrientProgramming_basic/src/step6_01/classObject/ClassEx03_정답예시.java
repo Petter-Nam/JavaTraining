@@ -7,7 +7,7 @@ class Ex03{
 }
 
 
-public class ClassEx03_정답예시 {
+public class ClassEx03_정답예시 {
 
 	public static void main(String[] args) {
 		

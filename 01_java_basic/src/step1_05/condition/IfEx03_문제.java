@@ -1,5 +1,8 @@
 package step1_05.condition;
-
+/*
+ * 2월 12일
+ * 간단
+ */
 import java.util.Scanner;
 
 
@@ -18,9 +21,18 @@ import java.util.Scanner;
 public class IfEx03_문제 {
 
 	public static void main(String[] args) {
-
+		Scanner scan = new Scanner(System.in);
+		
 		int com = 1;
-
+		System.out.println("\n[0]가위\n[1]바위\n[2]보");
+		System.out.print("입력 : ");
+		int myChoice = scan.nextInt();
+		
+		if (myChoice == 0) System.out.println("패배");
+		else if (myChoice == 1) System.out.println("무승부");
+		else if (myChoice == 2) System.out.println("승리");
+		
+		scan.close();
 	}
 
 }

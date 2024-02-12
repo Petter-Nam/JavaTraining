@@ -1,5 +1,8 @@
 package step1_03.operator;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 // 2024-01-16  13:31 ~ 
 /*
  * 
@@ -8,13 +11,17 @@ package step1_03.operator;
 public class OperatorEx03_연습1 {
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 		
 		//예) 현금이 10000원있다. 2800원짜리 과자 구입 후, 잔돈 출력 
 		System.out.println(10000 - 2800);
 		System.out.println("잔돈 = " + (10000 - 2800) + "원");
 		
 		//문제1) 프리랜서의 세율은 3.3%이다. 월급이 2000000원일때 세금을 출력
-		
+		int salary = 2000000;
+		double tax = 0.033;
+		double caculate = salary * tax;
+		System.out.println("월급 : " + salary + " 세율 : " + tax +  " 세금 : " + caculate);
 		
 		//문제2) 시험점수를 100, 88, 92점 을 받았다. 평균은?
 		

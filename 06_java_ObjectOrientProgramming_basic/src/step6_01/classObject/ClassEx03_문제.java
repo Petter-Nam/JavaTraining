@@ -8,7 +8,7 @@ class Ex03_연습1 {
 
 
 
-public class ClassEx03_문제 {
+public class ClassEx03_문제 {
 
 	public static void main(String[] args) {
 		Ex03_연습1  object = new Ex03_연습1();

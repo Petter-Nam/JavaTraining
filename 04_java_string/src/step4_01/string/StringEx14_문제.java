@@ -1,5 +1,8 @@
 package step4_01.string;
-
+/*
+ * 2월 12일 
+ * 
+ */
 import java.util.Scanner;
 
 /*
@@ -19,7 +22,7 @@ public class StringEx14_문제 {
 		
 		System.out.print("동물 이름을 입력하세요 : ");
 		String myName = scan.next();
-
+		
 	}
 
 }

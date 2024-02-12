@@ -21,7 +21,6 @@ public class StringEx16_문제 {
 		
 		System.out.print("검색할 단어를 입력하세요 : ");
 		String word = scan.next();
-
 	}
 
 }

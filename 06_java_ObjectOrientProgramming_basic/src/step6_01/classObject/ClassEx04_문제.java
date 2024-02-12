@@ -12,7 +12,7 @@ class Ex04_연습 {
 
 
 
-public class ClassEx04_문제 {
+public class ClassEx04_문제 {
 
 	public static void main(String[] args) {
 		Ex04_연습 haku = new Ex04_연습();
@@ -67,15 +67,33 @@ public class ClassEx04_문제 {
 		
 		// 문제5) 성적을 입력받아 인덱스 출력
 		// 정답5) 성적 입력 : 11		인덱스 : 1
-		
+		System.out.print("성적 입력 : ");
+		int scoreChoice = scan.nextInt();
+		for (int i = 0; i < scoreIn.length; i++) {
+			if (scoreChoice == scoreIn[i]) {
+				System.out.println("인덱스 : " + i);
+			}
+		}
 		// 문제6) 학번을 입력받아 성적 출력
 		// 정답6) 학번 입력 : 1003	성적 : 45점
-		
+
 		// 문제7) 학번을 입력받아 성적 출력
 		// 		단, 없는학번 입력 시 예외처리
 		// 예   7)
 		// 학번 입력 : 1002		성적 : 11점
 		// 학번 입력 : 1000		해당학번은 존재하지 않습니다.
+		System.out.println("학번 입력 : "); 
+		int hakbunsInput = scan.nextInt();
+		
+		for (int i = 0; i < hakuNum.length; i++) {
+			if(hakbunsInput == hakuNum[i]) {
+				System.out.println(hakuNum + "의 성적은 : " + scoreIn[i]); 
+			}
+			else if (hakbunsInput != hakuNum[i]) {
+				System.out.println("존재하지 않는 학번입니다.");
+			}
+		}
+	
 		
 		// 문제8) 1등학생의 학번과 성적 출력
 		// 정답8) 1004번(98점)

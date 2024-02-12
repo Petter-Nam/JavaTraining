@@ -1,5 +1,10 @@
 package step3_01_arrayAdvanced;
-
+/*
+ * 2월 12일
+ * 
+ * 
+ */
+import java.util.Arrays;
 
 /*
  * 
@@ -20,11 +25,21 @@ package step3_01_arrayAdvanced;
  */
 
 
-public class ArrayEx25_문제 {
+public class ArrayEx25_연습2 {
 
 	public static void main(String[] args) {
 		
 		int[] arr = {11, 87, 42, 100, 24};
+		int highNum = 0;
+		int cnt = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > highNum) {
+				highNum = arr[i];
+				cnt++;
+			}
+		}
+		arr[cnt] = -1;
 		
+		System.out.println(Arrays.toString(arr));
 	}
 }
