@@ -51,6 +51,17 @@ public class ClassEx15 {
 		c1.printData();
 		c2.printData();
 		c3.printData();
+		
+		//static 사용예시
+		System.out.println(Math.PI);
+		System.out.println(Math.abs(-12));
+		
+		try {
+			Thread.sleep(3000);
+			System.out.println("끝");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
