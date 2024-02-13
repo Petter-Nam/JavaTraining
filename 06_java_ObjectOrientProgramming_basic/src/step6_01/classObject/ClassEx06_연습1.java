@@ -1,4 +1,11 @@
 package step6_01.classObject;
+/*
+ * 2월 13일 한 번 코드를 안보고 작성해 보았다.
+ * 정답예시보다 괜찮은 느낌이다.
+ * 
+ */
+import java.util.Arrays;
+import java.util.Random;
 
 /*
  * # OMR카드 : 클래스 + 변수
@@ -14,7 +21,7 @@ package step6_01.classObject;
  */
 
 
-class Ex06{
+class Ex06_1{
 	int[] answer = {1, 3, 4, 2, 5};		// 시험답안
 	int[] hgd = new int[5];				// 학생답안
 	
@@ -27,7 +34,32 @@ class Ex06{
 public class ClassEx06_연습1 {
 
 	public static void main(String[] args) {
-
+		Random ran = new Random();
+		
+		Ex06_1 e = new Ex06_1();
+		
+		for (int i = 0; i < e.hgd.length; i++) {
+			e.hgd[i] = ran.nextInt(5) + 1;
+		}
+		System.out.print("정오표 : ");
+		
+		for (int i = 0; i < e.answer.length; i++) {
+			if (e.answer[i] != e.hgd[i]) {
+				System.out.print("X ");
+				
+				
+			}
+			
+			else if (e.answer[i] == e.hgd[i]) {
+				System.out.print("O ");
+				e.answerCnt++;
+				e.score = e.answerCnt * 20;
+			}
+		}
+		System.out.println();
+		System.out.println("시험 답안 : " + Arrays.toString(e.answer));
+		System.out.println("학생 답안 : " + Arrays.toString(e.hgd));
+		System.out.println("점     수 : " + e.score);
 	}
 
 }
