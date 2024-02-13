@@ -28,10 +28,8 @@ public class FileEx03_연습2 {
 			
 			FileWriter fw = null;
 			
-			try {
-				
-			}
+			
+		}
 		}
 	}
 
-}
