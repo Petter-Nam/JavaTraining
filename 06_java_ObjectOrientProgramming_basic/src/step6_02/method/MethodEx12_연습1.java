@@ -69,21 +69,35 @@ class Ex12_1 {
 	// 문자열을 문자 배열로 저장) > [안배운문법] 문자열.toCharArray()
 	// 예시) > char[] 변수 = 문자열.toCharArray();
 	char myCharAt(String data, int index) {
-		return '0';
+		char[] chrList = data.toCharArray();
+		return chrList[index];
 	}
 
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
 	String mySubString1(String data, int startIndex) {
-		return "";
+		String result = "";
+		
+		for (int i = startIndex; i < data.length(); i++) {
+			result += data.charAt(i);
+		}
+		return result;
 	}
 
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
 	String mySubString2(String data, int startIndex, int endIndex) {
-		return "";
+		String result = "";
+		
+		for (int i = startIndex; i < endIndex; i++) {
+			result += data.charAt(i);
+		}
+		return result;
 	}
 
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
 	String[] mySplit(String data, String sep) {
+		
+		
+		
 		return null;
 	}
 
