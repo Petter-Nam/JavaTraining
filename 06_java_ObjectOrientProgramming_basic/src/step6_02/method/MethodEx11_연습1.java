@@ -4,7 +4,7 @@ package step6_02.method;
  * 설연휴를 너무 편히 보내고 문제를 작성해보았는데
  * 10번을 답안지 보고 풀어본 후 작성해보니 편해졌다.
  */
-class Ex11 {
+class Ex11_1 {
 
 	int test1(int[] arr) {
 		int tot = 0;
@@ -54,11 +54,11 @@ class Ex11 {
 
 }
 
-public class MethodEx11_문제 {
+public class MethodEx11_연습1 {
 
 	public static void main(String[] args) {
 
-		Ex11 e = new Ex11();
+		Ex11_1 e = new Ex11_1();
 
 		int[] arr = { 87, 100, 11, 72, 92 };
 

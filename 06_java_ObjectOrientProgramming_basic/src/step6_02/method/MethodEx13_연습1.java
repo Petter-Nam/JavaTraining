@@ -51,7 +51,7 @@ class Scorecheck {
 
 }
 
-public class MethodEx13_연습1 {
+public class MethodEx13_연습1 {
 
 	public static void main(String[] args) {
 

@@ -36,7 +36,7 @@ class Ex12 {
 }
 */
 
-public class MethodEx12_문제 {
+public class MethodEx12_문제 {
 
 	public static void main(String[] args) {
 

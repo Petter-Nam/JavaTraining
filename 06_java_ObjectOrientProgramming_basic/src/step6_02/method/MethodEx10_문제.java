@@ -11,7 +11,7 @@ class Ex10 {
 */
 
 
-public class MethodEx10_문제 {
+public class MethodEx10_문제 {
 
 	public static void main(String[] args) {
 		

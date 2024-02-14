@@ -86,7 +86,7 @@ class ScoreMng {
 	
 }
 
-public class MethodEx13_연습 {
+public class MethodEx13_연습 {
 
 	public static void main(String[] args) {
 		

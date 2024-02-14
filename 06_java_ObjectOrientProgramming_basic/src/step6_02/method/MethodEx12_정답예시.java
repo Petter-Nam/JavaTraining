@@ -157,7 +157,7 @@ class Ex12 {
 }
 
 
-public class MethodEx12_정답예시 {
+public class MethodEx12_정답예시 {
 
 	public static void main(String[] args) {
 
