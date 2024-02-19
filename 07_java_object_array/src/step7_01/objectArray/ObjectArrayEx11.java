@@ -76,7 +76,7 @@ public class ObjectArrayEx11 {
 		System.out.println();
 		
 		for (Product temp : productList) {
-			System.out.println(temp.name +" / " + temp.price);
+			System.out.println(temp.name + " / " + temp.price);
 		}
 		
 	}
