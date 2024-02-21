@@ -81,8 +81,30 @@ public class ATM_test {
 				else {
 					System.out.print("삭제하고 싶은 계좌번호를 입력하세요 : ");
 					String deleteAccount = scan.next();
+					int tempAccCount = userManager.user[identifier].accCount;
 					int delIdx = -1;
-					for (int i = 0; i < temp)
+					for (int i = 0; i < tempAccCount; i++) {
+						if (deleteAccount.equals(userManager.user[identifier].acc[i].number)) {
+							delIdx = i;
+						}
+					}
+					if (delIdx == -1) {
+						System.out.println("[메시지] 계좌번호를 확인하세요 .\n");
+						continue;
+					}
+					else {
+						System.out.println("[메시지] 계좌번호 : " + userManager.user[identifier].acc[delIdx].number + "삭제되었습니다.\n");
+						
+						Account_test[] temp = userManager.user[identifier].acc;
+						userManager.user[identifier].acc = new Account_test[tempAccCount - 1];
+						
+						for (int i = 0; i < delIdx; i++) {
+							userManager.user[identifier].acc[i] = temp[i];
+						}
+						for (int i = delIdx; i <tempAccCount - 1; i++) {
+							userManager.user[identifier].acc[i] = temp[i+1];
+						}
+					}
 				}
 			}
 		}
