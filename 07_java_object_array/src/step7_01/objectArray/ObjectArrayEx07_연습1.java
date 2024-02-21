@@ -10,7 +10,7 @@ class Student_1 {
 	String name;
 }
 
-public class ObjectArrayEx07_연습1 {
+public class ObjectArrayEx07_연습1 {
 
 	public static void main(String[] args) {
 

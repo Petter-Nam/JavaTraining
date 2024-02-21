@@ -84,7 +84,7 @@ class MyArrayList1 {
 	}
 }
 
-public class ObjectArrayEx14_연습1 {
+public class ObjectArrayEx14_연습1 {
 
 	public static void main(String[] args) {
 		MyArrayList myList = new MyArrayList();

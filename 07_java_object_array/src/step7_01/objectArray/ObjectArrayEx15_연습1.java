@@ -73,7 +73,7 @@ class StudentController1 {
 	}
 }
 
-public class ObjectArrayEx15_연습1 {
+public class ObjectArrayEx15_연습1 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

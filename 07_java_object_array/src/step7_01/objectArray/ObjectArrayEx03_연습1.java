@@ -7,7 +7,7 @@ class Accoun_1 {
 	
 }
 
-public class ObjectArrayEx03_연습1 {
+public class ObjectArrayEx03_연습1 {
 
 	public static void main(String[] args) {
 		

@@ -19,7 +19,7 @@ class Tv1 {
 }
 
 
-public class ObjectArrayEx13_연습1 {
+public class ObjectArrayEx13_연습1 {
 
 	public static void main(String[] args) {
 		

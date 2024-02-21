@@ -7,7 +7,7 @@ class Card_1 {
 	
 }
 
-public class ObjectArrayEx02_연습1 {
+public class ObjectArrayEx02_연습1 {
 
 	public static void main(String[] args) {
 		

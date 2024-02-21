@@ -17,7 +17,7 @@ class Student8{
 }
 
 
-public class ObjectArrayEx08_연습 {
+public class ObjectArrayEx08_연습 {
 
 	public static void main(String[] args) {
 		

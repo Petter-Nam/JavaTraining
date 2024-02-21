@@ -33,7 +33,7 @@ class Client_1 {
 }
 
 
-public class ObjectArrayEx05_연습1 {
+public class ObjectArrayEx05_연습1 {
 
 	public static void main(String[] args) {
 		Client_1[] clientList = new Client_1[3];

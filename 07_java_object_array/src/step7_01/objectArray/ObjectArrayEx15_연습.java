@@ -95,7 +95,7 @@ class StudentController{
 	
 }
 
-public class ObjectArrayEx15_연습 {
+public class ObjectArrayEx15_연습 {
 
 	public static void main(String[] args) {
 		

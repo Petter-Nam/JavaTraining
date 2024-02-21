@@ -104,7 +104,7 @@ class MyArrayList {
 }
 
 
-public class ObjectArrayEx14_연습 {
+public class ObjectArrayEx14_연습 {
 
 	public static void main(String[] args) {
 

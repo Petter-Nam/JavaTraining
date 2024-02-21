@@ -12,7 +12,7 @@ class Student8_2 {
 	String name;
 }
 
-public class ObjectArrayEx08_연습2 {
+public class ObjectArrayEx08_연습2 {
 
 	public static void main(String[] args) {
 

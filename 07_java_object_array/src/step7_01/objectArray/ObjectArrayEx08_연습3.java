@@ -21,7 +21,7 @@ class Student83 {
 	String name;
 }
 
-public class ObjectArrayEx08_연습3 {
+public class ObjectArrayEx08_연습3 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

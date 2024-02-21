@@ -9,7 +9,7 @@ class memberManager_1 {
 	member_1[] memberList = new member_1[3];
 }
 
-public class ObjectArrayEx06_연습1 {
+public class ObjectArrayEx06_연습1 {
 
 	public static void main(String[] args) {
 		memberManager_1 mg = new memberManager_1();

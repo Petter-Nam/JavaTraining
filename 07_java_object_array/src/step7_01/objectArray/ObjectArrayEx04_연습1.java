@@ -14,7 +14,7 @@ class User_1 {
 	
 }
 
-public class ObjectArrayEx04_연습1 {
+public class ObjectArrayEx04_연습1 {
 
 	public static void main(String[] args) {
 		
