@@ -6,6 +6,8 @@ package step9_01.atm_v1;
  * 이거 혼자서 여러개 클래스를 작성한다면 자기생각으로 처음부터 끝까지 만들어야 기억에 남지 않을까 싶다.
  * 따라만 치면 내가 무슨클래스 작성해서 어떻게 불러오는지 생각이 잘 안난다....
  * 
+ * 2월 23일
+ * 나머지 기능을 적용하였음 제대로 분석후 안보고 만들어볼 예정
  */
 public class Main_test {
 	public static void main(String[] args) {

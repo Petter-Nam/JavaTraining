@@ -17,15 +17,15 @@ class Unit {
 	String getName() { // 변수명 앞에 get을 추가하여 메서드 이름을 작성한다.
 		return name;
 	}
+	int getHp() {
+		return hp;
+	}
 	
 	// setter : private변수를 외부에서 수정하는 메서드
 	void setName(String name) { // 변수명 앞에 set을 추가하여 메서드 이름을 작성한다.
 		this.name = name;
 	}
 	
-	int getHp() {
-		return hp;
-	}
 	
 	void setHp(int hp) {
 		this.hp = hp;
@@ -49,11 +49,13 @@ public class EncapsulationEx02 {
 		//System.out.println(unit.name);
 		//System.out.println(unit.hp);
 		
+		System.out.println("=====================");
 		
 		//getter를 사용하여 private 필드를 반환
 		System.out.println(unit.getName());
 		System.out.println(unit.getHp());
 		System.out.println();
+		System.out.println("=====================");
 		
 		productDTO productDTO = new productDTO();
 		productDTO.setProductId(1);
@@ -61,12 +63,14 @@ public class EncapsulationEx02 {
 		productDTO.setPrice(40000);
 		productDTO.setBrandId(1);
 		productDTO.setBrandNm("로지텍");
+		System.out.println("=====================");
 		
 		System.out.println(productDTO.getProductId());
 		System.out.println(productDTO.getProductNm());
 		System.out.println(productDTO.getPrice());
 		System.out.println(productDTO.getBrandId());
 		System.out.println(productDTO.getBrandNm());
+		System.out.println("=====================");
 	}
 
 }
