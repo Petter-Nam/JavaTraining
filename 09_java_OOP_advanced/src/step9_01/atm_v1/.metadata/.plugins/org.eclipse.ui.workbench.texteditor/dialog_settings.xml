@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="printAccountMenu"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="atm.printMainMenu();"/>
+			<item value="tempAccCount"/>
 			<item value="printAccountMenu"/>
 			<item value="getUser"/>
 		</list>
