@@ -21,17 +21,20 @@ public class ClassEx14 {
 
 	public static void main(String[] args) {
 		
+		System.out.println("=======================");
 		Unit unit1 = new Unit();
 		unit1.shield = 0;
 		unit1.hp = 0;
 		System.out.println("unit1 : " + unit1);
 		unit1.printData();
+		System.out.println("=======================");
 		
 		Unit unit2 = new Unit();
 		unit2.shield = 1;
 		System.out.println("unit2 : " + unit2);
 		unit2.printData();
 		
+		System.out.println("=======================");
 		Unit unit3 = new Unit();
 		unit3.printData();
 		
