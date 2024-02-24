@@ -2,7 +2,7 @@ package step8_02.encapsulation;
 // DTO (Data Transfer Object) : 데이터 전송 객체
 // VO ( value Object) : 값(데이터) 객체
 // BO (Buisiness Object) : 비즈니스 객체
-public class productDTO {
+public class ProductDTO {
 	
 	private long productId;
 	private String productNm;

@@ -1,4 +1,4 @@
-package step9_01.atm_v1;
+package ATM_test;
 /*
  * 2월 22일 
  * 짧은 시간에 분석하면서 따라치면서 작성해보았다.

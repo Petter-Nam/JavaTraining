@@ -1,4 +1,4 @@
-package step9_01.atm_v1;
+package ATM_test;
 
 //ATM  시스템 메인 클래스
 import java.util.Random;

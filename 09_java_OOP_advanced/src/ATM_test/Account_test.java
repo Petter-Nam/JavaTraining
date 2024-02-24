@@ -1,4 +1,4 @@
-package step9_01.atm_v1;
+package ATM_test;
 
 public class Account_test {
 	String number; // 계좌번호

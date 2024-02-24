@@ -1,4 +1,6 @@
-package step9_01.atm_v1;
+package ATM_test;
+
+import step9_01.atm_v1.ATM;
 
 // 사용자 관리 클래스
 public class UserManager_test {
@@ -27,7 +29,7 @@ public class UserManager_test {
 		} 
 		else {
 			System.out.print("[가입] 아이디를 입력하세요 : ");
-			String id = ATM.scan.next();
+			String id = ATM_test.scan.next();
 
 			boolean isDuple = false;
 			for (int i = 0; i < userCount; i++) {
@@ -63,7 +65,7 @@ public class UserManager_test {
 		
 		int identifier = -1;
 		System.out.println("[입력] 아이디를 입력하세요 : ");
-		String name = ATM.scan.next();
+		String name = ATM_test.scan.next();
 		
 		for (int i = 0; i < userCount; i++) {
 			if (name.equals(user[i].id)) {
@@ -76,7 +78,7 @@ public class UserManager_test {
 	
 	void leave() {
 		System.out.print("[입력] 탈퇴할 아이디를 입력하세요.");
-		String name = ATM.scan.next();
+		String name = ATM_test.scan.next();
 		int identifier = -1;
 		for (int i = 0; i < userCount; i++) {
 			if (name.equals(user[i].id)) {

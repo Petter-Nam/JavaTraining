@@ -1,4 +1,4 @@
-package step9_01.atm_v1;
+package ATM_test;
 /*
  * 사용자 관리클래스
  */
