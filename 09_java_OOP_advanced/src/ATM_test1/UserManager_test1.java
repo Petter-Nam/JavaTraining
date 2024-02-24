@@ -21,6 +21,26 @@ public class UserManager_test1 {
 			user[userCount] = new User_test1();// 처음생성하는 배열에 객체생성
 			user[userCount].id = id; // 해당 클래스 배열에 id값을 입력받음
 			System.out.println("[메시지] ID : " +  id + "가입되었습니다.");
+			
+			userCount++;
 		}
+		
+		else {
+			System.out.println("[가입] 아이디를 입력하세요 : ");
+			String id = ATM_test1.scan.next();
+			
+			boolean isDuple = false;
+			for (int i = 0; i < userCount; i++) {
+				if (user[i].id.equals(id)) {
+					isDuple = true;
+				}	
+			}
+			if (!isDuple) {
+				User_test1[] temp = user;
+				user = new User_test1[userCount + 1];
+				
+			}
+		}
+		
 	}
 }
