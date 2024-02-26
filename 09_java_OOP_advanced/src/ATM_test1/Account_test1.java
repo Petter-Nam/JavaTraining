@@ -1,10 +1,12 @@
 package ATM_test1;
-
-public class Account_test1 {
-	String number; // 계좌번호 ATM 시스템 코드에서 난수로 생성 후 User 코드의 Acc 클래스 배열에 저장후 불러와서 출력하는 용도
-	int money; // 금액 확인 용도
+// ATM 시스템에서 사용자의 계좌 정보를 담는 클래스
+// 계좌번호 잔액을 저장 계좌 정보 출력 메서드 제공
+public class Account_test1{
 	
-	void PrintOwnAccount() {
+	String number;
+	int money;
+	
+	void printOwnAccount() {
 		System.out.println(this.number + " : " + this.money);
 	}
 }
