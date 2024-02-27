@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="addUser"/>
+		<item key="selection" value="getUser"/>
 		<list key="findhistory">
+			<item value="getUser"/>
+			<item value=".number"/>
+			<item value="number"/>
 			<item value="addUser"/>
 			<item value="Account[]"/>
 			<item value="Account[]]"/>
@@ -17,12 +20,9 @@
 			<item value="id"/>
 			<item value="new Account()"/>
 			<item value="new Account("/>
-			<item value=".number"/>
 			<item value="Account"/>
 			<item value=".Account"/>
 			<item value="atm.printMainMenu();"/>
-			<item value="tempAccCount"/>
-			<item value="printAccountMenu"/>
 		</list>
 		<list key="replacehistory">
 		</list>
