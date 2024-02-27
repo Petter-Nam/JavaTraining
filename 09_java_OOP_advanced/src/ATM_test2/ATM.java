@@ -5,6 +5,12 @@ package ATM_test2;
  * 조금만 수정하면 될것 같다. 
  * 찾기가 힘들뿐
  */
+/*
+ * 2월 28일
+ * 한창 집중하다가 자고 일어나면 누가 짠건지 모를정도로 새롭게 보인다.
+ * 에러가 보이면 허둥대는 일이 다반사이다.
+ * 에러 하나 잡아내고 수정하였다.... 힘들었다.
+ */
 import java.util.Random;
 import java.util.Scanner;
 
@@ -122,11 +128,12 @@ public class ATM{
 					for (int i = 0; i < delIdx; i++) {
 						userM.user[identifier].acc[i] = temp[i];
 					}
-					for (int i = delIdx; delIdx < userM.user[identifier].accCount; i++) {
-						userM.user[identifier].acc[i] = temp[i];
+					for (int i = delIdx; i < userM.user[identifier].accCount - 1; i++) {
+						userM.user[identifier].acc[i] = temp[i + 1];
 					}
 					
 					temp = null;
+					userM.user[identifier].accCount--;
 				}
 				
 			}
