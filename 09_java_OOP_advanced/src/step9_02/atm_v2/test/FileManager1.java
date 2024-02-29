@@ -1,0 +1,116 @@
+package step9_02.atm_v2.test;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import step9_02.atm_v2.UserManager;
+
+public class FileManager1 {
+
+	private FileManager1() {
+	}
+
+	static private FileManager1 instance = new FileManager1();
+
+	static public FileManager1 getInstance() {
+		return instance;
+	}
+
+	String fileName = "ATM1.txt";
+	String data = "";
+	UserManager1 um = UserManager1.getInstance();
+
+	void setData() {
+		data = "";
+		int userCount = um.userCnt;
+		data += userCount;
+		data += "\n";
+
+		for (int i = 0; i < userCount; i++) {
+			data += um.userList[i].id;
+			data += "\n";
+			data += um.userList[i].pw;
+			data += "\n";
+			data += um.userList[i].accCnt;
+			data += "\n";
+
+			if (um.userList[i].accCnt == 0) {
+				data += "0\n";
+			} else {
+				for (int j = 0; j < um.userList[i].accCnt; j++) {
+					data += um.userList[i].acc[j].money;
+					data += "/";
+					data += um.userList[i].acc[j].money;
+					if (j != um.userList[i].accCnt - 1) {
+						data += ",";
+					}
+				}
+				data += "\n";
+			}
+		}
+	}
+
+	void save() {
+
+		setData();
+
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(fileName);
+			fw.write(data);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (fw != null) {
+				try {
+					fw.close();
+				} catch (IOException e) {
+				}
+			}
+		}
+	}
+	
+	void load() {
+		
+		File file = new File(fileName);
+		
+		FileReader fr = null;
+		BufferedReader br = null;
+		
+		
+		try {
+			if (file.exists()) {
+				fr = new FileReader(file);
+				br = new BufferedReader(fr);
+				while (true) {
+					String line = br.readLine();
+					if (line == null) {
+						break;
+					}
+					data += line;
+					data += "\n";
+				}
+				
+				String[] tmp = data.split("\n");
+				um.userCnt = Integer.parseInt(tmp[0]);
+				um.userList = new User1[um.userCnt];
+				for (int i = 0; i < tmp.length; i += 4) {
+					um.userList[i] = new User1();
+				}
+				
+				int j = 0;
+				for (int i = 1; i < tmp.length; i += 4) {
+					String id = tmp[i];
+					String pw = tmp[i+1];
+				}
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

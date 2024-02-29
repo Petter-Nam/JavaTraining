@@ -11,6 +11,7 @@ public class StringEx04 {
 		System.out.println(birth + 1); // 20241
 		int nBirth = Integer.parseInt(birth); // Integer.parseInt("숫자형태의 글자"); 메서드 사용
 		System.out.println(nBirth + 1);
+		System.out.println("==========================");
 		
 		// [2] 숫자 > 문자열 형변환
 

@@ -61,7 +61,6 @@ public class UserManager {
 		}
 		
 		return identifier;
-
 	}
 	
 	

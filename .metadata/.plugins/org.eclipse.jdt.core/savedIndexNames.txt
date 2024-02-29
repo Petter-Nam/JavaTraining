@@ -1,0 +1,14 @@
+INDEX VERSION 1.134+/Users/nsj/git/JavaTraining/.metadata/.plugins/org.eclipse.jdt.core
+3631268418.index
+4007571496.index
+1150241321.index
+1816517380.index
+3653587851.index
+1431060166.index
+3223374152.index
+1865797976.index
+32088517.index
+1069957067.index
+284555066.index
+3998064859.index
+1213787451.index
