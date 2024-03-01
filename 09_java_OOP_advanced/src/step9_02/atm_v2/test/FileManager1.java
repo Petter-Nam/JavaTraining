@@ -39,7 +39,7 @@ public class FileManager1 {
 			data += "\n";
 
 			if (um.userList[i].accCnt == 0) {
-				data += "0\n";
+				data += "\n";
 			} else {
 				for (int j = 0; j < um.userList[i].accCnt; j++) {
 					data += um.userList[i].acc[j].money;
@@ -73,15 +73,14 @@ public class FileManager1 {
 			}
 		}
 	}
-	
+
 	void load() {
-		
+
 		File file = new File(fileName);
-		
+
 		FileReader fr = null;
 		BufferedReader br = null;
-		
-		
+
 		try {
 			if (file.exists()) {
 				fr = new FileReader(file);
@@ -94,23 +93,61 @@ public class FileManager1 {
 					data += line;
 					data += "\n";
 				}
-				
+
 				String[] tmp = data.split("\n");
 				um.userCnt = Integer.parseInt(tmp[0]);
 				um.userList = new User1[um.userCnt];
 				for (int i = 0; i < tmp.length; i += 4) {
 					um.userList[i] = new User1();
 				}
-				
+
 				int j = 0;
 				for (int i = 1; i < tmp.length; i += 4) {
 					String id = tmp[i];
-					String pw = tmp[i+1];
+					String pw = tmp[i + 1];
+					int accCnt = Integer.parseInt(tmp[i + 2]);
+
+					um.userList[j].id = id;
+					um.userList[j].pw = pw;
+					um.userList[j].accCnt = accCnt;
+					String accInfo = tmp[i + 3];
+					if (accCnt == 1) {
+						String[] temp = accInfo.split("/");
+						String acc = temp[0];
+						int money = Integer.parseInt(temp[1]);
+
+						um.userList[j].acc[0] = new Account1();
+						um.userList[j].acc[0].accNumber = acc;
+						um.userList[j].acc[0].money = money;
+
+					}
+					if (accCnt > 1) {
+						String[] temp = accInfo.split(",");
+
+						for (int k = 0; i < temp.length; k++) {
+							String[] parse = temp[k].split("/");
+							String acc = parse[0];
+							int money = Integer.parseInt(parse[1]);
+
+							um.userList[j].acc[k] = new Account1();
+							um.userList[j].acc[k].accNumber = acc;
+							um.userList[j].acc[k].money = money;
+						}
+					}
+					j++;
 				}
-				
+
+			} else {
+				// um.setDummy();
+				setData();
+				save();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (br != null) {try {br.close();} catch (IOException e) {}
+			if (fr != null) {try {fr.close();} catch (IOException e) {}}
+			}
 		}
 	}
 }

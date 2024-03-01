@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 class Node{
@@ -42,7 +43,7 @@ public class Test01 {
 		};
 		
 		int[][] mark = new int[MAP_SIZE][MAP_SIZE];					
-		Vector<Node> nodeList = new Vector<>();		
+		ArrayList<Node> nodeList = new ArrayList<>();		
 		Node node = new Node();		
 		
 		for (int i = 0; i < MAP_SIZE; i++) {

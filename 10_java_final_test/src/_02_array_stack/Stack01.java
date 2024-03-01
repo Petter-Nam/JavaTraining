@@ -1,5 +1,13 @@
 package _02_array_stack;
-
+/*
+ * lifo (last input first out) //웹브라우저 뒤로가기
+ * stack
+ * 
+ * fifo (first input first out)
+ * que
+ * 
+ * 
+ */
 
 
 class ArrayStack {

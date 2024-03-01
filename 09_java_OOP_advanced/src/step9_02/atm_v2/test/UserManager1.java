@@ -99,5 +99,31 @@ public class UserManager1 {
 		System.out.println("[메세지] 회원가입을 축하합니다.");
 		
 		FileManager1.getInstance().save();
+		
 	}
+	
+	int deleteMember(int identifier) {
+		
+		User1[] tmp = userList;
+		userList = new User1[userCnt - 1];
+		
+		int j = 0;
+		for (int i = 0; i < userCnt; i++) {
+			if (i != identifier) {
+				userList[j++] = tmp[i];
+			}
+		}
+		
+		userCnt--;
+		tmp = null;
+		identifier = -1;
+		
+		System.out.println("[메시지]탈퇴되었습니다.");
+		FileManager1.getInstance().save();
+		
+		
+		
+		return identifier;
+	}
+	
 }
