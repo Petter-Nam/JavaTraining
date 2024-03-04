@@ -49,7 +49,7 @@ public class BankUserManager {
 		String pw = scan.next();
 		
 		for (int i = 0; i < BankUserManager.instance.userCnt; i++) {
-			if (userList[i] != null && userList[i].id != null && userList[i].id.equals(id) && userList[i].pw.equals(pw)) {
+			if (userList[i].id.equals(id) && userList[i].pw.equals(pw)) {
 				identifier = i;
 			}
 		}
@@ -60,7 +60,7 @@ public class BankUserManager {
 	boolean checkId(String id) {
 	    boolean isDuple = false;
 	    for (int i = 0; i < userCnt; i++) {
-	        if (userList[i].id != null && userList[i].id.equals(id)) {
+	        if (userList[i].id.equals(id)) {
 	            isDuple = true;
 	        }
 	    }
@@ -69,38 +69,37 @@ public class BankUserManager {
 
 	
 	void joinMember() {
-		System.out.print("[회원가입]아이디를 입력하세요 : ");
-		String id = scan.next();
-		System.out.print("[회원가입]패스워드를 입력하세요 : ");
-		String pw = scan.next();
-		
-		boolean isResult = checkId(id);
-		
-		if (isResult) {
-			System.out.println("[메세지]아이디가 중복됩니다.");
-			return;
-		}
-		
-		if (userCnt == 0) {
-			userList = new BankUser[userCnt + 1];
-			userList[userCnt] = new BankUser();
-		}
-		else {
-			BankUser[] tmp = userList;
-			userList = new BankUser[userCnt + 1];
-			userList[userCnt] = new BankUser();
-			
-			for (int i = 0; i < userCnt; i++) {
-				userList[i] = tmp[i];
-			}
-			tmp = null;
-		}
-		userList[userCnt].id = id;
-		userList[userCnt].pw = pw;
-		
-		userCnt++;
-		System.out.println("[메세지]회원가입을 축하합니다.");
-		BankFileManager.getInstance().save();
+	    System.out.print("[회원가입]아이디를 입력하세요 : ");
+	    String id = scan.next();
+	    System.out.print("[회원가입]패스워드를 입력하세요 : ");
+	    String pw = scan.next();
+
+	    boolean isResult = checkId(id);
+
+	    if (isResult) {
+	        System.out.println("[메세지]아이디가 중복됩니다.");
+	        return;
+	    }
+
+	    if (userCnt == 0) {
+	        userList = new BankUser[userCnt + 1];
+	        userList[userCnt] = new BankUser();
+	    } else {
+	        BankUser[] tmp = userList;
+	        userList = new BankUser[userCnt + 1];
+	        userList[userCnt] = new BankUser();
+
+	        for (int i = 0; i < userCnt; i++) {
+	            userList[i] = tmp[i];
+	        }
+	        tmp = null;
+	    }
+	    userList[userCnt].id = id; // id 초기화 추가
+	    userList[userCnt].pw = pw; // pw 초기화 추가
+
+	    userCnt++;
+	    System.out.println("[메세지]회원가입을 축하합니다.");
+	    BankFileManager.getInstance().save();
 	}
 	
 	int deleteMember(int identifier) {

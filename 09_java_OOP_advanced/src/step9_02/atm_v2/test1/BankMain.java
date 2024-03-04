@@ -7,7 +7,14 @@ package step9_02.atm_v2.test1;
  * 결국 보고 작성했지만 에러투성이이다.
  * 다시 파악하고 에러도 수정해야 할 것 같다.
  */
-
+/*
+ * 3월 5일
+ * 에러가 계속 진행된다.
+ * 파일 load 메서드 save 메서드둘중 하나의 문제같은데 눈에도 안보이
+ * gpt도 이상한말만 한다.
+ * 
+ * 새로 분석및 코드를 따라 쳐본 후 진행해야겠다.
+ */
 public class BankMain {
 	
 	public static void main(String[] args) {
