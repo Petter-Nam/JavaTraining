@@ -47,6 +47,7 @@ public class ATM {
 			System.out.println("메뉴 선택 : ");
 			int selectMenu = scan.nextInt();
 
+			
 			if (selectMenu == 1) {
 				AccountManager.getInstance().createAcc(identifier);
 				FileManager.getInstance().save();
