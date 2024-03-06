@@ -57,7 +57,7 @@ public class TFileManager {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(fileName);
-			
+			fw.write(data);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -97,7 +97,7 @@ public class TFileManager {
 					userManager.tuserClass[j].id = id;
 					userManager.tuserClass[j].pw = pw;
 					userManager.tuserClass[j].accCnt = accCnt;
-					String accInfo = tmp[i + 4];
+					String accInfo = tmp[i + 3];
 					
 					if (accCnt == 1) {
 						String[] temp = accInfo.split("/");
