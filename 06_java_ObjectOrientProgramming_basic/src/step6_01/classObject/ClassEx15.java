@@ -49,7 +49,9 @@ public class ClassEx15 {
 		
 		
 		c1.printData();
+		System.out.println("=========");
 		c2.printData();
+		System.out.println("=========");
 		c3.printData();
 		
 		//static 사용예시
