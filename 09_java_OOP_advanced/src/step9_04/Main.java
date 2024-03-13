@@ -29,22 +29,33 @@ public class Main {
 				
 			}
 			else if (selectMenu == 2) {
-				/*
-				 *  # 구현해 보시오.
-				 *  
-				 *  - 아이디를 입력받아서 해당되는 아이디가 있으면
-				 *    이름과 번호를 변경할 수 있는 기능
-				 * 
-				 * */
+				System.out.print("아이디를 입력하세요 : ");
+			    String id = scan.next();
+			    StudentSelect stSelect = controller.getSelect();
+			    StudentVO st = stSelect.select(id);
+			    if (st != null) {
+			        System.out.print("새로운 번호를 입력하세요 : ");
+			        int newNum = scan.nextInt();
+			        System.out.print("새로운 이름을 입력하세요 : ");
+			        String newName = scan.next();
+			        st.setNum(newNum);
+			        st.setName(newName);
+			        System.out.println("수정되었습니다.");
+			    } else {
+			        System.out.println("해당 아이디가 없습니다.");
+			    }
 			}
 			else if (selectMenu == 3) {
-				/*
-				 *  # 구현해 보시오.
-				 *  
-				 *  - 아이디를 입력받아서 해당되는 아이디가 있으면 삭제
-				 * 
-				 * */
-			}
+				 System.out.print("아이디를 입력하세요 : ");
+				    String id = scan.next();
+				    StudentSelect stSelect = controller.getSelect();
+				    StudentVO st = stSelect.select(id);
+				    if (st != null) {
+				        StudentRepository.getStDB().remove(id);
+				        System.out.println("삭제되었습니다.");
+				    } else {
+				        System.out.println("해당 아이디가 없습니다.");
+				    }			}
 			else if (selectMenu == 4) {
 				
 				System.out.print("아이디를 입력하세요 : ");

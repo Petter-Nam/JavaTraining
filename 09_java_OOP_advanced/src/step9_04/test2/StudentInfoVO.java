@@ -13,6 +13,9 @@ public class StudentInfoVO {
 		this.name = name;
 		
 	}
+	public void printOneInfo() {
+		System.out.println("id: " + this.id + " / num: " + this.num + " / name: " + this.name);
+	}
 	// Getter 및 Setter 메서드 선언 
 	public String getId() { 
 		return id;// 필드의 값을 반환

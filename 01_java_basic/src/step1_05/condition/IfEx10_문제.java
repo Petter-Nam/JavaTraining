@@ -1,4 +1,11 @@
 package step1_05.condition;
+/*
+ * 3월 14일 목요일
+ * 조금씩 풀어나가는 중 
+ * 쉬운문제를 풀다보면서 객체지향 9번을 분석하는 스트레스를 조금씩 풀어나가는 중
+ * 뭔가 하다보니 희망이 느껴진다.....
+ */
+import java.util.Scanner;
 
 /*
  * # 로그인[3단계]
@@ -15,8 +22,21 @@ public class IfEx10_문제 {
 
 	public static void main(String[] args) {
 		
+		Scanner scan = new Scanner(System.in);
+		
 		int dbId = 1234;
 		int dbPw = 1111;
+		System.out.print("아이디를 입력하세요 : ");
+		int yourId = scan.nextInt();
+		System.out.print("패스워드를 입력하세요 : ");
+		int yourPw = scan.nextInt();
+		
+		if (yourId == dbId && yourPw == dbPw) {
+			System.out.println("로그인 되었습니다.");
+		}
+		else {
+			System.out.println("틀렸습니다.");
+		}
 
 	}
 
