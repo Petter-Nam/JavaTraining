@@ -26,13 +26,27 @@
 	-->
 	<h3>text type</h3>
 	<form>
-	<p>상품코드 : <input type = "text" required></p>
-	<p>상품이름 : <input type = "text" required autofocus></p>
-	<p>상품수량 : <input type = "text" maxlength="3" size = "3"></p>
-	<p>상품정보 : <input type = "text"  placeholder = "선택사항입니다."></p>
-	<p>담당자코드 : <input type = "text" value = "mgr1" disabled></p>
-	<p>담당자이름 : <input type = "text" value = "조** 부장" readonly></p>
-	<p><input type = "submit"></p>
+		<p>
+			상품코드 : <input type="text" required>
+		</p>
+		<p>
+			상품이름 : <input type="text" required autofocus>
+		</p>
+		<p>
+			상품수량 : <input type="text" maxlength="3" size="3">
+		</p>
+		<p>
+			상품정보 : <input type="text" placeholder="선택사항입니다.">
+		</p>
+		<p>
+			담당자코드 : <input type="text" value="mgr1" disabled>
+		</p>
+		<p>
+			담당자이름 : <input type="text" value="조** 부장" readonly>
+		</p>
+		<p>
+			<input type="submit">
+		</p>
 	</form>
 	<!--
 	  
@@ -42,15 +56,21 @@
 		- 사용자가 입력한 글자는 보이지 않는다.
 		 
 	-->
-	<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>password type</h3>
 	<form>
-		<p>패스워드 : <input type = "password"></p>
-	<p><input type = "submit"></p>
+		<p>
+			패스워드 : <input type="password">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-	
-	
+
+
 	<!-- 
 	
 		# radio 타입
@@ -61,18 +81,23 @@
 	 	- checked 속성을 이용해서 엘리먼트를 직접 선택할 수 있다
 	 	
 	 -->
-	<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>radio type</h3>
-		<form>
-			<input type="radio" name="month" value="1" checked> 1개월
-			<input type="radio" name="month" value="2"> 2개월
-			<input type="radio" name="month" value="3" checked> 3개월 <!--checked는 웹에서 볼 때 기본적으로 체크되어있는 부분 -->
-			<input type="radio" name="month" value="4"> 4개월
-			<input type="radio" name="month" value="5"> 5개월
-			<input type="radio" name="month" value="6" checked> 6개월
-			<p><input type = "submit"></p>
-		</form>
+	<form>
+		<input type="radio" name="month" value="1" checked> 1개월 <input
+			type="radio" name="month" value="2"> 2개월 <input type="radio"
+			name="month" value="3" checked> 3개월
+		<!--checked는 웹에서 볼 때 기본적으로 체크되어있는 부분 -->
+		<input type="radio" name="month" value="4"> 4개월 <input
+			type="radio" name="month" value="5"> 5개월 <input type="radio"
+			name="month" value="6" checked> 6개월
+		<p>
+			<input type="submit">
+		</p>
+	</form>
 	<!-- 
 		
 		# checkbox 타입
@@ -83,20 +108,25 @@
 		- radio type과 같이 name=value형태로 데이터가 전송된다.
 	
 	 -->
-	<br> <hr> <br/>
-	
-	<h3>checkbox type</h3>
-		<form>
-			<input type="checkbox" name="month" value="1"> 1개월
-			<input type="checkbox" name="month" value="2"> 2개월
-			<input type="checkbox" name="month" value="3" checked> 3개월 <!--checked는 웹에서 볼 때 기본적으로 체크되어있는 부분 -->
-			<input type="checkbox" name="month" value="4"> 4개월
-			<input type="checkbox" name="month" value="5"> 5개월
-			<input type="checkbox" name="month" value="6"> 6개월
-			<p><input type = "submit"></p>
-		</form>
+	<br>
+	<hr>
+	<br />
 
-	 <!-- 
+	<h3>checkbox type</h3>
+	<form>
+		<input type="checkbox" name="month" value="1"> 1개월 <input
+			type="checkbox" name="month" value="2"> 2개월 <input
+			type="checkbox" name="month" value="3" checked> 3개월
+		<!--checked는 웹에서 볼 때 기본적으로 체크되어있는 부분 -->
+		<input type="checkbox" name="month" value="4"> 4개월 <input
+			type="checkbox" name="month" value="5"> 5개월 <input
+			type="checkbox" name="month" value="6"> 6개월
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+
+	<!-- 
 	
 		# select 태그
 		
@@ -108,9 +138,11 @@
 		- <optgroup>요소를 이용해 option요소를 그룹화 할 수 있다.
 	
 	 -->
-	 
-	 	<br> <hr> <br/>
-	
+
+	<br>
+	<hr>
+	<br />
+
 	<h3>select tag</h3>
 	<form>
 		<select name="month">
@@ -121,11 +153,13 @@
 			<option value="5">5개월</option>
 			<option value="6" selected>6개월</option>
 		</select>
-	
-	<p><input type = "submit"></p>
+
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-	 
-	 <!-- 
+
+	<!-- 
 		
 		# button 타입
 	
@@ -133,16 +167,24 @@
 		- 버튼과 같이 자주 사용되는 onclick()함수는 버튼이 클릭되면 동작하는 함수이다. 
 	
 	 -->
-	 	<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>button type & tag</h3>
-		<form>
-			<p><input type="button" value="login"></p>
-			<p><button>로그인</button></p>
-			<p><input type = "submit" value="login"></p>
-		</form>
-	 
-   	<!--
+	<form>
+		<p>
+			<input type="button" value="login">
+		</p>
+		<p>
+			<button>로그인</button>
+		</p>
+		<p>
+			<input type="submit" value="login">
+		</p>
+	</form>
+
+	<!--
 	
 		# textarea 태그
 		 
@@ -151,17 +193,22 @@
 		- 사용자가 초기 공간보다 더 많은 텍스트를 입력하면 자동으로 스크롤바가 생성된다.
 	
 	 -->
-		<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>textarea type</h3>
 	<form>
 		<textarea rows="10" cols="30" name="textarea1"></textarea>
 		<textarea rows="10" cols="30" name="textarea2">초기값은 여기에 작성합니다.</textarea>
-		<textarea rows="10" cols="30" name="textarea3" placeholder="100자 이내로 작성" maxlength="100"></textarea>
-		
-	<p><input type = "submit"></p>
+		<textarea rows="10" cols="30" name="textarea3"
+			placeholder="100자 이내로 작성" maxlength="100"></textarea>
+
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-   	
+
 	<!-- 
 	
 		# file 타입
@@ -172,16 +219,26 @@
 		- multiple 속성을 지정하면 여러개의  파일을 업로드 할 수 있다.
 		   
 	 -->
-		<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>file type</h3>
 	<form method="post" enctype="multipart/form-data">
-		<p>파일1 : <input type="file" name="file1"></p>
-		<p>파일2 : <input type="file" name="file2"></p>
-		<p>다중파일 : <input type="file" multiple name="multiple"></p>
-	<p><input type = "submit"></p>
+		<p>
+			파일1 : <input type="file" name="file1">
+		</p>
+		<p>
+			파일2 : <input type="file" name="file2">
+		</p>
+		<p>
+			다중파일 : <input type="file" multiple name="multiple">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-	
+
 	<!-- 
 		
 		# hidden 타입
@@ -190,17 +247,23 @@
 		- hidden 요소의 name과 value값이 서버로 전달된다.
 	 
 	 -->
-	 	<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>hidden type</h3>
 	<form>
-		<p>아이디 : <input type="text" name="userId"></p>
-		<input type="hidden" name="isPc" value="true">
-		<input type="hidden" name="iTime" value="2024-03-13">
-		<input type="hidden" name="browser" value="chrome">
-	<p><input type = "submit"></p>
+		<p>
+			아이디 : <input type="text" name="userId">
+		</p>
+		<input type="hidden" name="isPc" value="true"> <input
+			type="hidden" name="iTime" value="2024-03-13"> <input
+			type="hidden" name="browser" value="chrome">
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-	 
+
 	<!-- 
 		
 		# date 타입
@@ -210,18 +273,29 @@
 		- 익스플로어 및 특정 브라우저는 아직 지원이 되지 않는다.
 		- 전송되는 데이터의 타입은 Date 타입이 아니라 String 타입으로 전송된다.
 	 -->
-	 	<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>date type</h3>
 	<form>
-		<p>예약일1 : <input type="date" name="date1"></p>
-		<p>예약일2 : <input type="date" name="date2" value="2024-03-13"></p>
-		<p>예약일3 : <input type="date" name="date3" value="2024-03-13" min="2024-03-13" max="2024-03-30"></p>
-	
-	<p><input type = "submit"></p>
+		<p>
+			예약일1 : <input type="date" name="date1">
+		</p>
+		<p>
+			예약일2 : <input type="date" name="date2" value="2024-03-13">
+		</p>
+		<p>
+			예약일3 : <input type="date" name="date3" value="2024-03-13"
+				min="2024-03-13" max="2024-03-30">
+		</p>
+
+		<p>
+			<input type="submit">
+		</p>
 	</form>
 
-	 
+
 	<!-- 
 	
 		# number 타입
@@ -236,16 +310,27 @@
 	 	min , max : 최소값, 최대값
 	 	
 	 -->
-		<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>text type</h3>
 	<form>
-		<p>주문수량 : <input type = "number" name="orderQty"></p>
-		<p>신발Size1 : <input type = "number" name="size1" value="265" step="5"></p>
-		<p>신발Size2 : <input type = "number" name="size1" value="265" step="5" min="100" max="300"></p>
-	<p><input type = "submit"></p>
+		<p>
+			주문수량 : <input type="number" name="orderQty">
+		</p>
+		<p>
+			신발Size1 : <input type="number" name="size1" value="265" step="5">
+		</p>
+		<p>
+			신발Size2 : <input type="number" name="size1" value="265" step="5"
+				min="100" max="300">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
 	</form>
-	
+
 	<!-- 
 	 
 	 	# email 타입
@@ -254,12 +339,19 @@
 	    - 유효값 확인은 submit을 클릭할 경우에 진행된다.
 	 	
 	  -->
-  		<br> <hr> <br/>
-	
+	<br>
+	<hr>
+	<br />
+
 	<h3>email type</h3>
 	<form>
-		<p><input type="email" name="email"></p><!-- validation체크 자동적으로 체크함 ex) @주소.com 형식으로 작성하여주세요-->
-	<p><input type = "submit"></p>
+		<p>
+			<input type="email" name="email">
+		</p>
+		<!-- validation체크 자동적으로 체크함 ex) @주소.com 형식으로 작성하여주세요-->
+		<p>
+			<input type="submit">
+		</p>
 	</form>
 
 </body>
