@@ -1,5 +1,6 @@
 package step1_05.condition;
 
+import java.util.Scanner;
 
 /*
  * # 성적 유효성 검사
@@ -14,6 +15,22 @@ package step1_05.condition;
 public class IfEx07_연습2 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("성적 입력 : ");
+		int score = scan.nextInt();
+		System.out.println();
+		
+		if (score >= 60 && score <= 100) {
+			System.out.println("합격");
+		}
+		else if (score < 60 && score >= 0) {
+			System.out.println("불합격");
+		}
+		else {
+			System.out.println("잘못 입력했습니다.");
+		}
 		
 		
 	}
