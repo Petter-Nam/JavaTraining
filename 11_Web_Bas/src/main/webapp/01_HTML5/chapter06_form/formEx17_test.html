@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<fieldset>회원 가입 화면
+		<p>이름: <input type="text" name="yourName"></p>
+		<p>아이디: <input type="text" name="yourId"></p>
+		<p>비밀번호: <input type="password" name="yourPw"></p>
+		
+		<p>성별: 
+			<input type="radio" name="yourSex" value="1">남
+			<input type="radio" name="yourSex" value="2">여
+			</p>
+			
+			<p>사는 지역 :
+				<select>
+					<option>서울특별시</option>
+					<option>경기</option>
+					<option>인천</option>
+					<option>강원도</option>
+					<option>충남</option>
+					<option>충북</option>
+					<option>전북</option>
+					<option>전남</option>
+					<option>제주</option>
+					<option>부산광역시</option>
+					<option>광주광역시</option>
+					<option>대구광역시</option>
+					<option>경북</option>
+					<option>경남</option>
+				</select>
+				
+			<p>
+				이메일주소 : <input type="text" size="15"> @ <input type="text" size="15">
+				(이메일수신허용
+				<input type="radio" name="email" checked >허용
+				<input type="radio" name="email">거부)
+			</p>
+			
+			<p>
+				직업:<select>
+					<option value="학생">학생</option>
+					<option value="회사원">회사원</option>
+					<option value="기타">기타</option>
+				</select>
+			</p>
+			
+			<p>자기소개<br/>
+				<textarea rows="5" cols="50"></textarea>
+			</p>
+			
+			<input type="submit" value="제출">
+			<input type="button" value="취소">
+	</fieldset>
+</body>
+</html>

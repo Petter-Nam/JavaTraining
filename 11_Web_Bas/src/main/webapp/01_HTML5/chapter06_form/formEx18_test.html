@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<fieldset>배송지 정보
+	
+		<p>배송방법 <input type="radio" name="deliveryService" vlaue="일반택배">일반택배
+		<input type="radio" name="deliveryService" vlaue="편의점 택배">편의점택배
+		<input type="radio" name="deliveryService" vlaue="해외배송">해외배송
+		</p>
+		
+		<p>받으실 분 <input type="text" name="yourName"></p>
+		<p>휴대폰 번호
+			<select>
+				<option>010</option>
+				<option>011</option>
+				<option>018</option>
+			</select>
+		-<input type="text" name="yourFirstNumber">
+		-<input type="text" name="yourSecondNumber">
+		</p>
+		
+		<p>
+		유선전화(선택) 
+			<select>
+				<option>02</option>
+				<option>031</option>
+				<option>063</option>
+			</select>
+			
+			-<input type="text" name="firstHomeNumber">
+			-<input type="text" name="secondHomeNumber">
+		</p>
+		
+		<p>주소 <input type="text" size="5"> <a href="#">우편번호검색</a><br/></p>
+		
+		<p>지번 주소 : <input type="text" name="detailAddress"><br/></p>
+		<p>도로명 주소 : <input type="text" name="roadAddress"><br/></p>
+		<p>나머지 주소 : <input type="text" name="lastAddress"><br/></p>
+		
+		<p>배송 메세지
+			<input type="radio" name="choice" value="예">예
+			<input type="radio" name="choice" value="아니요">아니요
+			<input type="text" size="50" name="reuquest" placeholder="택배 기사님께 전달할 메시지를 남겨주세요">
+		</p>
+	</fieldset>
+</body>
+</html>

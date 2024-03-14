@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<fieldset>
+	
+		<legend>결제정보</legend>
+		<input type="radio" name="howToPay" value="신용카드" checked>신용카드&nbsp;
+		<input type="radio" name="howToPay" value="제휴 신용카드">제휴 신용카드&nbsp;
+		<input type="radio" name="howToPay" value="실시간 계좌이체">실시간 계좌이체&nbsp;
+		<input type="radio" name="howToPay" value="실시간 계좌이체">무통장 입금<br/><br/>
+		<input type="radio" name="howToPay" value="휴대폰 결제">휴대폰 결제&nbsp;
+		<input type="radio" name="howToPay" value="간편 결제">카카오페이(간편결제)&nbsp;
+		<input type="radio" name="howToPay" value="페이나우">페이나우(간편 결제)&nbsp;
+		<input type="radio" name="howToPay" value="payco">페이코
+		<p> 카드선택 :
+		<select>
+			<option>삼성카드</option>
+			<option>우리카드</option>
+			<option>애플카드</option>
+			<option>애플카드</option>
+		</select>
+		</p>
+		
+		<p>할부 기간
+			<select>
+				<option>일시불</option>
+				<option>3개월</option>
+				<option>6개월</option>
+				<option>12개월</option>
+			</select>
+		</p>
+		
+		<p>휴대폰 번호 입력 : 
+			<input type ="text" name="firstPhoneNumber">-
+			<input type ="text" name="secondPhoneNumber">-
+			<input type ="text" name="thirdPhoneNumber">
+		</p>
+	</fieldset>
+</body>
+</html>
