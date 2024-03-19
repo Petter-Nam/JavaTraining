@@ -1,0 +1,44 @@
+package step9_04.test4;
+
+public class StudentVO2 {
+	
+	private String id;
+	private int num;
+	private String name;
+	
+	public StudentVO2(String id , int num , String name) {
+		this.id = id;
+		this.num = num;
+		this.name = name;
+	}	
+	
+	public void printOneInfo() {
+		System.out.println("ID " + this.id + " num " + this.num + " name " + this.name);
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+}
