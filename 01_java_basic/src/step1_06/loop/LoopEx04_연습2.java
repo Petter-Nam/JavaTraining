@@ -12,32 +12,33 @@ import java.util.Scanner;
  * 
  */
 
-public class LoopEx04_문제 {
+
+public class LoopEx04_연습2 {
 
 	public static void main(String[] args) {
-
-		Random ran = new Random();
+		
 		Scanner scan = new Scanner(System.in);
-
+		Random ran = new Random();
+		
 		int i = 1;
-
+		
 		while (i <= 5) {
-
+			
 			int x = ran.nextInt(8) + 1;
 			int y = ran.nextInt(8) + 1;
+			System.out.print(x + "*" + y + "=");
 
-			System.out.println(x + "*" + y + "=");
 			int yourAnswer = scan.nextInt();
-
+			
 			if (x * y == yourAnswer) {
 				System.out.println("정답");
-			} else {
+			}
+			else {
 				System.out.println("땡");
 			}
-			
 			i++;
 		}
-
+			
 	}
 
 }

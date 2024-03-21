@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>변수의 생명주기</title>
+<script>
+	
+	let data = "전역데이터"; // 함수 밖의 전역변수
+	
+	
+	function func1() {
+		let local1 = "지역데이터1"; // 함수 안의 지역변수
+		console.log(data);
+		console.log(local1);
+		//console.log(local2);
+		console.log("");
+	}
+	
+	function func2() {
+		let local2 = "지역데이터2"; // 함수 안의 지역변수
+		console.log(data);
+		console.log(local2);
+		//console.log(local1);
+		console.log("");
+	}
+	
+	
+	console.log(data);
+	//console.log(local1);
+	//console.log(local2);
+	console.log("");
+	
+	func1();
+	
+	func2();
+	
+	let idx1 = 1; // 전역
+	function func3() {
+		
+		let idx2 = 1; // 지역
+		console.log("idx1 : " + idx1);
+		console.log("idx2 : " + idx2);
+		console.log("");
+		
+		idx1++;
+		idx2++;
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<h3>Test Element</h3>
+	<input type="button" value="테스트" onclick="func3();">
+
+</body>
+</html>
