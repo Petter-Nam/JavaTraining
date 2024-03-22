@@ -5,16 +5,14 @@
 <title>Insert title here</title>
 <script>
 
-	
-	function answer(){
-		
+	function answer() {
 		let grade = document.getElementById("grade").value;
 		
-		document.getElementById("choiceGradeLabel").innerHTML = "선택된 학년";
+		document.getElementById("choiceGradeLabel").innerHTML="<span id='choiceGradeLabel'>선택된 학년 </span>";
 		document.getElementById("choiceGrade").value = grade;
-		document.getElementById("choiceGrade").disable = true;
-		
+		document.getElementById("choiceGrade").disabled = true;
 	}
+
 </script>
 
 </head>

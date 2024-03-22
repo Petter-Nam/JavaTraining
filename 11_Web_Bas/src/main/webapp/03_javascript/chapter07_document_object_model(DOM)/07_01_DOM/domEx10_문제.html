@@ -3,6 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title>연습예제</title>
+
+<script>
+
+function answer() {
+	
+	let inputBrowser = document.getElementById("inputBrowser").value;
+	
+	let browser = document.getElementsByName("browser");
+	
+	let isExists = false;
+	
+	for (let i = 0; i < browser.length; i++){
+		if (browser[i].value == inputBrowser) {
+			isExists = true;
+		}
+	}
+	
+	if (!isExists) {
+		alert("값이 존재하지 않습니다.");
+		return;
+	}
+
+	for (let i = 0; i < browser.length; i++){
+		if (inputBrowser == browser[i].value) {
+			browser[i].checked = true;
+		}
+	}
+}
+
+</script>
 </head>
 <body>
 	

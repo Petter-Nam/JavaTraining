@@ -5,7 +5,18 @@
 <title>연습예제</title>
 
 <script>
-
+	function answer() {
+		let searchType = document.getElementById("searchType").value;
+		
+		let placeholderValue = "";
+		
+		if (searchType == "goodsId") placeholderValue = "상품번호를 입력하세요";
+		else if (searchType == "goodsTitle") placeholderValue = "상품 이름을 입력하세요";
+		else if (searchType == "goodsWriter") placeholderValue = "저자를 입력하세요.";
+		else if (searchType == "goodsPublisher") laceholderValue = "출판사를 입력하세요.";
+		
+		document.getElementById("searchWord").placeholder = placeholderValue;
+	}
 
 </script>
 </head>
