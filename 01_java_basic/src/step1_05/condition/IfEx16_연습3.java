@@ -11,17 +11,18 @@ import java.util.Scanner;
  * 
  */
 
-public class IfEx16_연습2 {
+public class IfEx16_연습3 {
 
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("1. 홀수");
-		System.out.println("2. 짝수");
-		
-		System.out.print("입력 : ");
+		System.out.println("1.홀수");
+		System.out.println("2.짝수");
+
+		System.out.print("번호를 선택하세요 : ");
 		int choice = scan.nextInt();
+
 	}
 
 }

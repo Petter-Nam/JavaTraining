@@ -1,5 +1,9 @@
 package step1_05.condition;
-
+/*/ 1월 19일 13:00 ~ 13:06
+ *  처음 배운개념이라 보고 처보는데 쉬워보인다.
+ *  
+ *  
+ */
 import java.util.Scanner;
 
 /*
@@ -24,12 +28,12 @@ import java.util.Scanner;
  *  
  * */
 
-public class IfEx25_문제 {
+public class IfEx25_연습3 {
 
 	public static void main(String[] args) {
-
+		
 		Scanner scan = new Scanner(System.in);
-
+		
 		System.out.println("------------");
 		System.out.println("1.떡볶이");
 		System.out.println("2.순대");
@@ -37,26 +41,25 @@ public class IfEx25_문제 {
 		System.out.println("------------");
 		System.out.print("=>");
 		int getChoice = scan.nextInt();
-
+		
 		switch (getChoice) {
-
-			case 1 -> {
-				System.out.println("1.쌀떡볶이 3500원");
-				System.out.println("2.밀떡볶이 3500원");
-			}
-			case 2 -> {
-				System.out.println("1.찹쌀 순대 3500원");
-				System.out.println("2.피순대 3500원");
-			}
-			case 3 -> {
-				System.out.println("1.오징어튀김 500원");
-				System.out.println("2.고구마튀김 500원");
-				System.out.println("3.야채튀김 500원");
-			}
-			default -> {
-				System.out.println("1~3번 중에 선택하세요.");
-			}
+		case 1 -> {
+			System.out.println("1.쌀떡볶이 3500원 ");
+			System.out.println("2.밀떡볶이 3000원");
 		}
+		case 2 -> {
+			System.out.println("1.찹쌀순대 3500원");
+			System.out.println("2.피순대 3500원");
+		}
+		case 3 -> {
+			System.out.println("1.오징어튀김 500원");
+			System.out.println("2.고구마튀김 500원");
+		}
+		default -> {
+			System.out.println("1~3 번중 선택하세");
+		}
+		}
+		
 		scan.close();
 	}
 

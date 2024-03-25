@@ -11,56 +11,55 @@ public class LoopEx03_연습2 {
 
 		// 문제1) 1~10까지 반복해 3미만 7이상만 출력
 		// 정답1) 1 2 7 8 9 10
-
-		// 문제2) 문제1의 조건에 맞는 수들의 합 출력
-		// 정답2) 37
-
-		// 문제3) 문제1의 조건에 맞는 수들의 개수 출력
-		// 정답3) 6
-
-		// 문제4) 1~5까지의 합 출력
-		// 정답4) 15
-		int i = 1;
+		int i = 0;
 		while (i <= 10) {
-			if (i >= 7 || i < 3) {
-				System.out.println(i);
+
+			if (7 <= i || i < 3) {
+				System.out.print(i + " ");
 			}
- 			i++;
+			i++;
 		}
 		System.out.println();
+		// 문제2) 문제1의 조건에 맞는 수들의 합 출력
+		// 정답2) 37
 
 		int tot = 0;
 		i = 1;
 
 		while (i <= 10) {
 
-			if (i >= 7 || i < 3) {
+			if (7 <= i || i < 3) {
 				tot = tot + i;
 			}
 			i++;
 		}
-		System.out.println(tot);
-		System.out.println();
+		System.out.println("tot = " + tot);
 
-		i = 1;
+		// 문제3) 문제1의 조건에 맞는 수들의 개수 출력
+		// 정답3) 6
+
 		int cnt = 0;
+		i = 1;
 
 		while (i <= 10) {
 
-			if (i >= 7 || i < 3) {
+			if (7 <= i || i < 3) {
 				cnt++;
 			}
 			i++;
-			}
-		i = 1;
-		int sum = 0;
-		
-		while (i <= 10)
-			
-			if (i <= 5) {
-				sum++;
-			}
-		System.out.println(sum);
 		}
-	}
 
+		// 문제4) 1~5까지의 합 출력
+		// 정답4) 15
+
+		tot = 0;
+		i = 1;
+
+		while (i <= 5) {
+			tot += i;
+			i++;
+		}
+
+		System.out.println("tot = " + tot);
+	}
+}

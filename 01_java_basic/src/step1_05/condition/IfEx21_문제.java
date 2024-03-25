@@ -19,6 +19,7 @@ public class IfEx21_문제 {
 
 	public static void main(String[] args) {
 		
+		
 	}
 
 }
