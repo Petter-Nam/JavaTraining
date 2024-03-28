@@ -1,3 +1,49 @@
+/*
+
+	# 데이터 조작어 (DML : Data Manipulation Language) 
+	
+		[ SELECT문 ] 
+	
+		- 테이블에 저장되어 있는 데이터를 조회하거나 검색하기 위한 명령어
+		
+		
+		[ 레코드 출력 형식 ]
+	    
+	   - SELECT  컬럼명1, 컬럼명2, ...  
+	   	  FROM 테이블명 
+	   	  
+	   - SELECT  	컬럼명1, 컬럼명2, ...  
+	   	 FROM 		테이블명
+	   	 WHERE 	    조건절
+	   	 GROUP BY   그룹컬럼명
+	   	 HAVING 	그룹핑 조건절
+	   	 ORDER BY   정렬방식
+	   	 LIMIT	    출력 개수 지정
+	   	 
+	   	 
+	   [ SELECT문의 실행 순서 ]
+	   
+	   - FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY > LIMIT
+	   	 
+	   	  
+	
+	   EX)
+	   
+		   1) 전체 컬럼 조회
+		   SELECT  
+					* 
+		   FROM 
+					MEMBER;
+		   
+		   2) 특정 컬럼 조회
+		   SELECT 
+					NO,
+					NAME 
+		   FROM 
+					MEMBER;
+
+*/
+
 CREATE DATABASE SQL_BASIC;
 USE SQL_BASIC;
 
@@ -27,52 +73,25 @@ INSERT INTO SELECT_EX VALUES ('P10001' , '게이밍마우스패드' , 24850 , '2
 						     ('P10015' , '연장케이블 USB' , 4950 , '2021-12-20');
 						   
 # 예시 1) 전체 컬럼 조회
-SELECT * FROM SELECT_EX;
-
-SELECT
-		*
-FROM
-		SELECT_EX;
-
-SELECT *
-FROM   SELECT_EX;
 
 
 # 예시 2) PRODUCT_CD 컬럼만 조회
-SELECT PRODUCT_CD
-FROM   SELECT_EX;
 
 		
 # 예시 3) PRODUCT_CD , PRODUCT_NM 컬럼만 조회	
-SELECT PRODUCT_CD , PRODUCT_NM
-FROM   SELECT_EX;
 
 		
 # 예시 4) PRODUCT_CD , PRODUCT_NM , PRICE컬럼만 조회	  
-SELECT PRODUCT_CD , PRODUCT_NM , PRICE
-FROM   SELECT_EX;
-		
-        
-# 예시 5) PRODUCT_CD , PRODUCT_NM , PRICE , REG_DT 컬럼만 조회	
-SELECT PRODUCT_CD , PRODUCT_NM , PRICE , REG_DT
-FROM   SELECT_EX;
-		
-        
-# 예시 6) 컬럼을 적는 순서에 따라 출력되는 순서가 달라진다.
-SELECT PRICE , REG_DT , PRODUCT_NM , PRODUCT_CD
-FROM   SELECT_EX;
 
-SELECT PRODUCT_NM , REG_DT , PRICE , PRODUCT_CD
-FROM   SELECT_EX;
 		
-        
-# 예시 7) 테이블에 존재하지 않는 연산 데이터를 조회 할 수 있다. AS(Alias) 키워드로 별칭을 지정할 수 있으며 별칭은 생략할 수 있다.
-SELECT 
-		PRICE , 
-	    PRICE * 0.1 		AS TAX, 
-        PRICE + PRICE * 0.1 AS TOTAL_PRICE
-FROM   
-		SELECT_EX;
+# 예시 5) PRODUCT_CD , PRODUCT_NM , PRICE , REG_DT 컬럼만 조회	
+
+		
+# 예시 6) 컬럼을 적는 순서에 따라 출력되는 순서가 달라진다.
+
+		
+# 예시 7) 테이블에 존재하지 않는 연산 데이터를 조회 할 수 있다. AS 키워드로 별칭을 지정할 수 있으며 별칭은 생략할 수 있다.
+
 
 /*
 	
@@ -93,25 +112,15 @@ FROM
 
 
 # 예시 8) 가격이 10000원 이하의 상품 전체 컬럼 조회
-SELECT *
-FROM   SELECT_EX
-WHERE  PRICE <= 10000;  
 
 
+		
 # 예시 9) 가격이 10000원 초과의 상품 전체 컬럼 조회
-SELECT *
-FROM   SELECT_EX
-WHERE  PRICE > 10000;
 
   
+		
 # 예시 10) 상품코드가 'P10001'인 상품 전체 컬럼 조회
-SELECT *
-FROM   SELECT_EX
-WHERE  PRODUCT_CD = 'P10001';
-       
-
-
-
+     
 
 		
 # 예시 11) 상품코드가 'P10001'이 아닌 상품 전체 컬럼 조회
@@ -147,19 +156,35 @@ WHERE  PRODUCT_CD = 'P10001';
 */
 
 # 예시 14) 상품코드가 'P10001' , 'P10003' , 'P10005'인 상품의 전체컬럼 조회
-
-		
+						    
+	
+						    
 # 예시 15) 상품가격이 20000 ~ 50000인 상품의 전체컬럼 조회
-
-		
+SELECT *
+FROM   SELECT_EX
+WHERE  PRICE >= 20000 AND PRICE <= 50000;				    
+						    					    					    					    
+						    	
 # 예시 16) 상품가격이 20000 ~ 50000이 아닌 상품의 전체컬럼 조회
-		
-		
-# 예시 17) 상품가격이 20000 ~ 50000이면서 2021년도 등록상품의 전체컬럼 조회		
+SELECT *
+FROM   SELECT_EX
+WHERE  NOT (PRICE >= 20000 AND PRICE <= 50000);
+
+	
+# 예시 17) 상품가격이 5000 ~ 50000이면서 2021년도 등록상품의 전체컬럼 조회		
+SELECT * 
+FROM   SELECT_EX
+WHERE  (PRICE >= 5000 AND PRICE <= 50000)
+AND	   (REG_DT >= '2021-01-01' AND REG_DT <= '2021-12-31');
+
+
 
 		
 # 예시 18) 상품 등록날짜가 2020년도 1~3월 , 2021년도 1~3월 등록상품의 전체컬럼 조회
-
+SELECT *
+FROM   SELECT_EX 
+WHERE  (REG_DT >= '2020-01-01' AND REG_DT <= '2020-03-31')
+OR     (REG_DT >= '2021-01-01' AND REG_DT <= '2021-03-31');
 
 
 
@@ -187,26 +212,42 @@ WHERE  PRODUCT_CD = 'P10001';
 		
 # 예시 19) 상품가격이 20000 ~ 50000인 상품의 전체컬럼 조회
 
+SELECT *
+FROM   SELECT_EX
+WHERE  PRICE BETWEEN 20000 AND 50000;
+# WHERE  PRICE >= 20000 AND PRICE <= 50000;	
 
-		
+
 # 예시 20) 상품가격이 20000 ~ 50000이 아닌 상품의 전체컬럼 조회
 
-
+SELECT *
+FROM   SELECT_EX
+WHERE  PRICE NOT BETWEEN 20000 AND 50000;
+# WHERE  NOT (PRICE >= 20000 AND PRICE <= 50000);
 		
 # 예시 21) 2021년에 등록된 상품의 전체컬럼 조회		
-
+SELECT * 
+FROM   SELECT_EX
+WHERE  REG_DT BETWEEN '2021-01-01' AND '2021-12-31';
+#WHERE  (REG_DT >= '2021-01-01' AND REG_DT <= '2021-12-31');
 
 		
 # 예시 22) 2021년에 등록되지 않은 상품의 전체컬럼 조회		
-
+SELECT * 
+FROM   SELECT_EX
+WHERE  REG_DT NOT BETWEEN '2021-01-01' AND '2021-12-31';
 	
 		
 # 예시 23) 상품코드가 'P10001' , 'P10003' , 'P10005'인 상품의 전체컬럼 조회
-
+SELECT *
+FROM  SELECT_EX 
+WHERE PRODUCT_CD IN ('P10001' , 'P10003' , 'P10005');
 	
 		
 # 예시 24) 상품코드가 'P10001' , 'P10003' , 'P10005'이 아닌 상품의 전체컬럼 조회
-			
+SELECT *
+FROM  SELECT_EX 
+WHERE PRODUCT_CD NOT IN ('P10001' , 'P10003' , 'P10005');	
 		
 /*
 
@@ -220,20 +261,26 @@ WHERE  PRODUCT_CD = 'P10001';
 */
 				
 # 예시 25) 상품명에 'USB'단어가 들어있는 상품의 전체 컬럼 검색
-	
+SELECT *
+FROM   SELECT_EX 
+WHERE  PRODUCT_NM LIKE '%USB%'; 
 
 		
 # 예시 26) 상품명이 'USB'로 시작하는 상품의 전체 컬럼 검색
-
+SELECT *
+FROM   SELECT_EX 
+WHERE  PRODUCT_NM LIKE 'USB%'; 
 
 		
 # 예시 27) 상품명이 'GB'로 끝나는 상품의 전체 컬럼 검색
-
+SELECT *
+FROM   SELECT_EX 
+WHERE  PRODUCT_NM LIKE '%GB'; 
  
 
 /*
 
-	# 테이블 조회 정렬 ORDER BY 
+	# 테이블 조회 정렬 ORDER BY (자전거, 가격 ....) ASC, DESC
 
 		- 오름차순 정렬 ASC와 내림차순 정렬 DESC 2가지가 있다.
         - 조건식이 있을 경우 WHERE절 밑에 작성한다.
@@ -245,20 +292,29 @@ WHERE  PRODUCT_CD = 'P10001';
 
 		
 # 예시 28) 상품의 전체 컬럼 검색 (가격이 낮은 순서대로 정렬)
-
-   
+SELECT *
+FROM   SELECT_EX
+ORDER  BY PRICE ASC;
+#ORDER  BY PRICE;
 		
 # 예시 29) 상품의 전체 컬럼 검색 (가격이 높은 순서대로 정렬)
-
+SELECT *
+FROM   SELECT_EX
+ORDER  BY PRICE DESC;
+#ORDER  BY PRICE;
 
 		
 # 예시 30) 상품의 전체 컬럼 검색 (최근에 등록된 상품순서 , 가격이 낮은순서대로 정렬)
-
+SELECT *
+FROM   SELECT_EX 
+ORDER BY REG_DT DESC, PRICE ASC;
 
 		
 # 예시 31) 2021년도에 등록된 상품의 전체 컬럼 검색 (가격이 높은 순서대로 정렬)
-
- 
+SELECT *
+FROM   SELECT_EX 
+WHERE  REG_DT BETWEEN '2021-01-01' AND '2021-12-31'
+ORDER  BY     PRICE    ASC ;
 /*
  
 	# LIMIT : 특정 개수만큼 레코드 조회하기
@@ -277,9 +333,19 @@ WHERE  PRODUCT_CD = 'P10001';
  
 		
 # 예시 32) 가격이 가장 높은 3개의 상품의 전체 컬럼 조회
-   
+SELECT *
+FROM   SELECT_EX
+ORDER  BY PRICE  DESC
+LIMIT  3;
+
 		
 # 예시 33) 가장 최신에 등록된 3개의 상품의 전체 컬럼 조회
-		
- 
+SELECT *
+FROM SELECT_EX
+ORDER BY REG_DT DESC 
+LIMIT 3;
 # 예시 34) 최신에 등록된 3개의 상품의 전체 컬럼 조회 (5번째 레코드 이후부터 조회)
+SELECT *
+FROM   SELECT_EX 
+ORDER  BY REG_DT DESC 
+LIMIT  5, 3;
