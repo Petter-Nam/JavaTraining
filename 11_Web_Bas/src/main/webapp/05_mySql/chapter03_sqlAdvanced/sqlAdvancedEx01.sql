@@ -57,8 +57,8 @@ FROM   ORDER_EX;
 # (MAX함수 예시) 한번에 주문량이 제일 많았던 주문량을 조회하기.
 SELECT MAX(ORDER_GOODS_QTY)
 FROM   ORDER_EX;
+ 
 
-		
 # (MIN함수 예시) 한번에 주문량이 제일 적었던 주문량을 조회하기.
 SELECT MIN(ORDER_GOODS_QTY)
 FROM   ORDER_EX;		
@@ -69,18 +69,16 @@ SELECT COUNT(*)
 FROM   ORDER_EX 
 WHERE  DELIVERY_STATUS = '배송완료';
 
-
-
 		        		
 # (SUM함수 + WHERE구문 예시) 'product1'상품의 총 판매 수량을 조회하기
 SELECT SUM(ORDER_GOODS_QTY)
 FROM   ORDER_EX 
-WHERE  PRODUCT_CT = 'product1';
+WHERE  PRODUCT_CD = 'product1';
 
 # (AVG함수 + WHERE구문 예시) 'product1'상품의 평균 주문량을 조회하기
 SELECT AVG(ORDER_GOODS_QTY)
 FROM   ORDER_EX 
-WHERE  PRODUCT_CT = 'product1';       
+WHERE  PRODUCT_CD = 'product1';       
 
 
 /*
