@@ -124,7 +124,22 @@ RIGHT OUTER  JOIN STUDENT S # OUTER 키워드는 생략가능!
 ON          C.CLASS_CD = S.CLASS_CD;
 
 			   	 
-# (연습 예시 1) 2층에서 수업을 듣는 학생이름 , 과목이름 , 강의실위치를 조회하시오.			   	 
+# (연습 예시 1) 2층에서 수업을 듣는 학생이름 , 과목이름 , 강의실위치를 조회하시오.		
+
+SELECT  S.STUDENT_NM AS STUDENT_NM ,
+        C.CLASS_NM AS CLASS_NM ,
+        C.LOCATION AS LOCATION ,
+FROM   CLASS C
+JOIN   STUDENT S
+ON     CLASS.CLASS_CD = STUDENT.CLASS_CD
+WHERE  C.LOCATION IN ('201호', '202호');
+#AND    C.LOCATION IN ('201호', '202호');
 
 # (연습 예시 2) 각층별로 수업을 듣는 학생수를 조회하고 학생수가 많은 순서대로 조회하시오.
-
+SELECT SUBSTRING(C.LOCATION, 1, 1) AS LAYER,
+       COUNT(*)                    AS STUDENT_CNT
+FROM   CLASS C
+JOIN   STUDENT S
+ON     C.CLASS_CD = S.CLASS_CD
+GROUP BY SUBSTRING(C.LOCATION, 1, 1)
+ORDER BY STUDENT_CNT DESC;

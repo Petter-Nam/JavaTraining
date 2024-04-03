@@ -1,5 +1,7 @@
 package step3_01_arrayAdvanced;
 
+import java.util.Random;
+import java.util.Scanner;
 
 /* 
  * # 1 to 50[3단계] : 1 to 18
@@ -15,12 +17,62 @@ package step3_01_arrayAdvanced;
 public class ArrayEx26_연습1 {
 
 	public static void main(String[] args) {
-	
+		Scanner scan = new Scanner(System.in);
+		Random ran = new Random();
+		
 		final int SIZE = 9;
 		
 		int[] oneToNine = new int[SIZE];
 		int[] tenToEightTeen  = new int[SIZE];
 		
+		for (int i = 0; i < SIZE; i++) {
+			oneToNine[i] = i + 1;
+			tenToEightTeen[i] = SIZE + (i+1);
+		}
+		
+		for (int i = 0; i < SIZE; i++) {
+			int rIdx = ran.nextInt(SIZE);
+			int temp = oneToNine[0];
+			oneToNine[0] = oneToNine[rIdx];
+			oneToNine[rIdx] = temp;
+			
+			rIdx = ran.nextInt(SIZE);
+			temp = tenToEightTeen[0];
+			tenToEightTeen[0] = tenToEightTeen[rIdx];
+			tenToEightTeen[rIdx] = temp;
+		}
+		
+		int question = 1;
+		
+		while(true) {
+			
+			if (question == 19) {
+				System.out.println("\n-모두 맞히셨습니다. 프로그램을 종료합니다.");
+				break;
+			}
+			
+			System.out.println("\n\n");
+			for (int i = 0; i < SIZE; i++) {
+				
+				if (oneToNine[i] == -1) System.out.print("\t");
+				else 					System.out.print(oneToNine[i] + "\t");
+				
+				if (i % 3 == 2) 		System.out.println("\n");
+			}
+			
+			System.out.println("[" + question + "]의 인덱스 입력 : ");
+			int tryAnswer = scan.nextInt();
+			
+			if (oneToNine[tryAnswer] == question) {
+				
+				if (1 <= question && question <= SIZE) oneToNine[tryAnswer] = tenToEightTeen[tryAnswer];
+				else 								   oneToNine[tryAnswer] = -1;
+				
+				question++;
+			}
+			
+		}
+		scan.close();
 	}
 	
 }

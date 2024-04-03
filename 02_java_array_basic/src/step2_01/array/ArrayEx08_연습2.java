@@ -1,5 +1,9 @@
 package step2_01.array;
-
+/*
+ * 1월 25일
+ * 
+ * 
+ */
 import java.util.Random;
 
 /*
@@ -18,7 +22,7 @@ import java.util.Random;
  */
 
 
-public class ArrayEx08_문제 {
+public class ArrayEx08_연습2 {
 
 	public static void main(String[] args) {
 		
@@ -42,22 +46,24 @@ public class ArrayEx08_문제 {
 				mark[i] = 'X';
 			}
 		}
-		System.out.println("Answer : ");
+		System.out.print("Answer : ");
 		for (int i = 0; i < answer.length; i++) {
 			System.out.println(answer[i] + " ");
 		}
 		System.out.println();
 		
-		System.out.println("hgd : ");
+		System.out.println("hgd    : ");
 		for (int i = 0; i < hgd.length; i++) {
-			System.out.println(hgd[i] + " ");
+			System.out.print(hgd[i] + " ");
 		}
-		System.out.println("정오표 : ");
-	    for (int i = 0; i < mark.length; i++) {
-	    	System.out.println(mark[i] + " ");
-	    }
-	    System.out.println();
-	    System.out.println("성적 : " + totalGrade);
+		System.out.println();
+		
+		System.out.print("정오표 : ");
+		for (int i = 0; i < mark.length; i++) {
+			System.out.print(mark[i] + " ");
+		}
+		System.out.println();
+		System.out.println("성적 : " + totalGrade);
 	}
 	
 }
