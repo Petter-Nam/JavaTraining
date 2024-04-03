@@ -1,6 +1,11 @@
 USE SQL_ADVANCE_PRACTICE;
 # TB_MEMBER, TB_PRODUCT , TB_ORDER 테이블 사용
+SELECT *
+FROM 	TB_MEMBER ;
 
+SELECT * FROM TB_ORDER ;
+
+SELECT * FROM TB_PRODUCT ;
 # 1) 한번에 주문 수량이 10개 이상인 상품 정보 조회하기.
 
 	 
@@ -20,15 +25,28 @@ WHERE  ORDER_GOODS_QTY IN (SELECT MAX(ORDER_GOODS_QTY)
 							FROM  TB_ORDER);
 							
 # 4) 한번에 제일 많은 수량을 주문한 유저의 모든 정보 조회하기.
+	
+SELECT	*
+FROM	TB_MEMBER
+WHERE	MEMBER_ID = (SELECT	MEMBER_ID
+					 FROM	TB_ORDER
+					 WHERE	ORDER_GOODS_QTY IN (SELECT MAX(ORDER_GOODS_QTY) 
+											    FROM   TB_ORDER));
 
-                                
-                                
 # 5) 배송이 완료된 상품의 회원테이블의 모든 정보 조회하기.
-
-
+SELECT 
+		*
+FROM 	
+		TB_MEMBER 
+WHERE 
+		MEMBER_ID IN (SELECT 
+							MEMBER_ID
+					 FROM	
+					 		TB_ORDER 
+					 WHERE 		
+					 		DELIVERY_STATUS = '배송완료');
 
 # 6) 배송이 완료되지 않은 상품의 상품명 조회하기.
-
 
 
 # 7) '메르켈' 회원이 주문한 상품 코드와 주문상품 명을 조회하기.
