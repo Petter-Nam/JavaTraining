@@ -2,7 +2,7 @@ package step4_01.string;
 
 import java.util.Arrays;
 
-public class StringEx07_정답예시 {
+public class StringEx07_연습2 {
 
 	public static void main(String[] args) {
 		
@@ -12,7 +12,7 @@ public class StringEx07_정답예시 {
 		
 		String[] name = new String[3];
 		int[] score = new int[3];
-		
+				
 		String[] temp1 = str.split(",");
 		
 		for (int i = 0; i < temp1.length; i++) {
@@ -24,7 +24,6 @@ public class StringEx07_정답예시 {
 		System.out.println(Arrays.toString(name));
 		System.out.println(Arrays.toString(score));
 		
-
 	}
 
 }

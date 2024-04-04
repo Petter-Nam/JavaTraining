@@ -20,7 +20,34 @@ public class StringEx09_문제 {
 
 	public static void main(String[] args) {
 		
-
+		Scanner scan = new Scanner(System.in);
+		Random ran = new Random();
+		
+		String[] words = {"java", "mysql", "jsp", "spring"};
+		
+		//셔플 
+		for (int i = 0; i < 1000; i++) {
+			int r = ran.nextInt(words.length);
+			
+			String temp = words[0];
+			words[0] = words[r];
+			words[r] = temp;
+			
+		}
+		
+		int idx = 0;
+		while (idx < words.length) {
+			
+			System.out.println("[" + (idx + 1) + "] 문제 : " + words[idx]);
+			
+			System.out.println("입력 : ");
+			String myWord = scan.next();
+			
+			if (words[idx].equals(myWord)) {
+				idx++;
+			}
+		}
+		scan.close();
 	}
 
 }

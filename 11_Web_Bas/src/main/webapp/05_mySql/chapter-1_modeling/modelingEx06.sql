@@ -32,9 +32,9 @@
              NO ACTION   : 참조되는 테이블에서 데이터를 삭제하거나 수정하면 참조하는 테이블의 데이터는 변경되지 않음
 
 
-	 # ERD Diagram 생성하기
+	 # ERD 생성하기
 	 
-	 	- Database태그 > Reverse Engineer > Stored Connection 선택 및 username , password 인증 > schemas 선택
+	 	- 웹에서 dbdiagram.io 접속
 
 */
 

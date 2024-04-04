@@ -24,7 +24,14 @@ public class StringEx05_연습2 {
 		
 		// 문제 2) 성별 출력
 		// 정답 2) 여성
-
+		
+		char key = jumin.charAt(7);
+		if (key == '1' || key == '3') {
+			System.out.println("남성");
+		}
+		else if (key == '2' || key == '4') {
+			System.out.println("여성");
+		}
 	}
 
 }
