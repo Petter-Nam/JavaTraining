@@ -86,6 +86,10 @@ public class ClassEx01 {
 		System.out.println("email : " + member1.email);
 		System.out.println("address : " + member1.address);
 		
+		
+		System.out.println("================================================");
+		
+		
 		System.out.println("member2 객체");
 		System.out.println(member2);
 		System.out.println("id : " + member2.id);
