@@ -15,12 +15,12 @@ class Unit {
 	private String name;
 	private int hp;
 	
-	// getter : private변수를 외부로 반환하는 메서드
+	// getter : private 변수를 외부로 반환하는 메서드
 	String getName() { // 변수명 앞에 get을 추가하여 메서드 이름을 작성한다.
 		return name;
 	}
 	
-	// setter : private변수를 외부에서 수정하는 메서드
+	// setter : private 변수를 외부에서 수정하는 메서드
 	void setName(String name) { // 변수명 앞에 set을 추가하여 메서드 이름을 작성한다.
 		this.name = name;
 	}
