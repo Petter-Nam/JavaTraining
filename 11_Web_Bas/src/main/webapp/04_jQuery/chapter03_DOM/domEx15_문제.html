@@ -4,6 +4,29 @@
 <meta charset="UTF-8">
 <title>연습예제</title>
 </head>
+<script src = "../js/jquery-3.7.1.min.js"></script>
+<script>
+
+	$(function(){
+		
+		$("[name='brand']").change(function() {
+			
+			let brand = $("[name='brand']").val();
+			
+			if (brand == "apple") {
+				$("#brandImg").prop("src", "../images/pic_1.jpg");
+			}
+			else if (brand == "microsoft"){
+				$("#brandImg").prop("src", "../images/pic_3.jpg");
+			}
+			
+		});
+		
+		
+		
+	});
+
+</script>
 <body>
 
 	<!-- 

@@ -11,7 +11,7 @@
 		
 		$("[name='brand']").change(function(){
 			
-			let brand = $("[name='brand']:checked").val();
+			let brand = $("[name='brand']").val();
 			
 			if (brand == 'apple') {
 				$("#brandImg").prop("src" , "../images/pic_1.jpg");

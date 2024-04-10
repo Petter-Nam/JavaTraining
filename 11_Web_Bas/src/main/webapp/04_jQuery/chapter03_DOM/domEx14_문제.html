@@ -5,7 +5,42 @@
 <title>연습예제</title>
 </head>
 <body>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script>
 
+$(function(){
+	
+	$('[name="payMethod"]').change(function(){
+		
+		let payMethodValue = $('[name="payMethod"]:checked').val();
+		let setView = "";
+		
+		
+		if (payMethodValue == "phone") {
+			setView = "핸드폰 번호 : ";
+			setView += "<select>";
+			setView += "<option value='010'>010</option>";
+			setView += "<option value='017'>017</option>";
+			setView += "<option value='018'>018</option>";
+			setView += "<option value='019'>019</option>";
+			setView += "</select> - " 
+			setView += "<input type='text' size='10'> - "; 
+			setView += "<input type='text' size='10'>"; 
+			setView += "</select>"
+		}
+		else {
+			setView = "카드번호 : <input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
+		}
+		
+		$("#target").html(setView);
+	});
+	
+});
+
+</script>
 	<!-- 
 	
 		1) 신용카드 선택시
@@ -23,7 +58,7 @@
 	 -->
 	
 	<p>
-		<input type="radio" name=payMethod value="card" checked > 신용카드	
+		<input type="radio" name="payMethod" value="card" checked > 신용카드	
 		<input type="radio" name="payMethod" value="phone"> 휴대폰 결제
 	</p>
 	<div>
