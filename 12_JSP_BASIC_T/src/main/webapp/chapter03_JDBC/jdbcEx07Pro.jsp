@@ -39,8 +39,8 @@
 				
 				String productCd = rs.getString("PRODUCT_CD");
 				String productNm = rs.getString("PRODUCT_NM");
-				int price        = rs.getInt("PRICE");        
-				Date regDt       = rs.getDate("REG_DT");     
+				int    price     = rs.getInt("PRICE");        
+				Date   regDt     = rs.getDate("REG_DT");     
 				
 				System.out.println("=== 조회 결과 ===");
 				System.out.println("productCd : " + productCd);

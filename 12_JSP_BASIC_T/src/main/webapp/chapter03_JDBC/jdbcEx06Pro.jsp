@@ -35,7 +35,7 @@
 			
 			while (rs.next()) {
 				
-				String productCd = rs.getString("PRODUCT_CD");
+				String 	productCd = rs.getString("PRODUCT_CD");
 				String 	productNm = rs.getString("PRODUCT_NM");
 				int   	price = rs.getInt("PRICE");
 				Date    date = rs.getDate("REG_DT");
