@@ -8,7 +8,7 @@
 <body>
 
 	<%
-		
+		request.setCharacterEncoding("utf-8");
 		String yourAccount = request.getParameter("yourAccount"); 
 		int yourMoney      = Integer.parseInt(request.getParameter("yourMoney"));
 		
