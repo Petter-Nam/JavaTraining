@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,37 +61,34 @@
 		<p>C 학점</p>
 	</c:if>
 	<hr />
-		
-		
-		
+	
 	<h3>2) when ~ otherwise 문  </h3>
 	<c:choose>
-		<c:when test="${grade ge 60 }">
+		<c:when test="${grade ge 60}">
 			<p>합격</p>
 		</c:when>
 		<c:otherwise>
 			<p>불합격</p>
 		</c:otherwise>
 	</c:choose>
+	<hr />
+	
 
 	<h3>3) when ~ when ~ otherwise 문  </h3>
 	<c:choose>
-	<c:when test="${grade >= 90 }">
-		<p>A학점</p>
-	</c:when>
-	<c:when test="${grade >= 80 }">
-		<p>B학점</p>
-	</c:when>
-	<c:when test="${grade >= 70 }">
-		<p>C학점</p>
-	</c:when>
-	<c:otherwise>
-		<p>D학점</p>
-	</c:otherwise>
-	
+		<c:when test="${grade >= 90}">
+			<p>A 학점</p>
+		</c:when>
+		<c:when test="${grade >= 80 }">
+			<p>B 학점</p>
+		</c:when>
+		<c:when test="${grade >= 70 }">
+			<p>C 학점</p>
+		</c:when>
+		<c:otherwise>
+			<p>D 학점</p>
+		</c:otherwise>
 	</c:choose>
-	
-
 	
 </body>
 </html>

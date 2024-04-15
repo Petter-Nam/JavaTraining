@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -40,19 +40,22 @@
 			<c:out value="" />		
 					
 	--%>
-
 	<h3>1,2,3) 변수 생성 , 삭제 , 출력</h3>
 	<% String testVar = "데이터"; %>
-	<c:set var="변수명" value="예시 데이터"/>
-	<c:set var="name1" value="팀 버너스리" />
-	<c:set var="name2" value="Tim Berners Lee" />
-	<p>${name1 }</p>
-	<p><c:out value="${name1 }" /></p>
-	<hr/>
-	<c:remove var="name1" />
-	<c:remove var="name2" />
+	<c:set var="예시 변수명" value="예시 데이터"/>
+	
+	<c:set var="name1" value="팀 버너스 리"/>
+	<c:set var="name2" value="Tim Berners Lee"/>
 	
 	<p>${name1 }</p>
-	<p><c:out value="${name2 }" /></p>
+	<p><c:out value="${name2 }"/></p>
+	<hr />
+	
+	<c:remove var="name1"/>
+	<c:remove var="name2"/>
+	
+	<p>${name1 }</p>
+	<p><c:out value="${name2 }"/></p>
+	
 </body>
 </html>
