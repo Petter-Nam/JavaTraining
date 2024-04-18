@@ -26,5 +26,18 @@
 		
 	 -->
 	 
+	<table border="1">
+		<tr>
+			<th>No</th>
+			<th>PdCd</th>
+		</tr>
+			<c:set var="cnt" value="0" />
+			<c:forEach var="pdCd" items="${pdCdList }">
+			<tr>
+				<td>${cnt = cnt + 1 }</td>
+				<td>${pdCd }</td>
+			</tr>
+			</c:forEach>
+	</table>	 
 </body>
 </html>

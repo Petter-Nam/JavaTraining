@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,10 @@
 			  12
 		
 	 -->	 
-
+	<table border="1">
+		<c:forEach var="i" begin="1" end="12">
+			<td>${i }</td>
+		</c:forEach>
+	</table>
 </body>
 </html>

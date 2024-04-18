@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +23,42 @@
 		정답4) 6
 		
 	 -->
+	 
+	 <c:set var="sum" value="0" />
+	 <c:forEach var="i" begin="1" end="5">
+	 	<c:set var="sum" value="${sum+i }"/>
+	 </c:forEach>
+	 	1번 정답 : ${sum }
+	 <hr>
+	 
+	
+	2번 정답 : 	
+	<c:forEach var="i" begin="1" end="10">
+		<c:if test="${i < 3 || i >= 7 }">
+			${i }
+		</c:if>
+	</c:forEach>
+		
+	
+	<hr>	
+	 
+	<c:set var="total" value="0" />
+	<c:forEach var="i" begin="1" end="10">
+		<c:if test="${i < 3 or i >= 7 }">
+			<c:set var="total" value="${total + i }" />
+		</c:if>
+	</c:forEach>		
+	3번 정답 : ${total }
+	
+	<c:set var="cnt" value="0"/>
+	<c:forEach var="i" begin="1" end="10">
+		<c:if test="${i < 3 or i >= 7 }">
+			<c:set var="cnt" value="${cnt + 1 }"></c:set>
+		</c:if>
+	</c:forEach>
+	
+	4번 정답 : ${cnt }
+	 
 	
 </body>
 </html>

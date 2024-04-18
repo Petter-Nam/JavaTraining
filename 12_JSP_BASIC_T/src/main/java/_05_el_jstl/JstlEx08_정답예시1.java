@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jstlEx08_정답예시")
+@WebServlet("/너는또뭐냐")
 public class JstlEx08_정답예시1 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;

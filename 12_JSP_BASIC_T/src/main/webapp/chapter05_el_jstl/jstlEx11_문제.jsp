@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,22 @@
 		1일 부터 31일 까지		select태그에 구현해보시오.
 		
 	 -->
+	 
+	<select>
+		<c:forEach var="i" begin="1900" end="2020">
+			<option value="${i } ">${i }</option>>
+		</c:forEach>
+	</select>
+		<select>
+		<c:forEach var="i" begin="1" end="12">
+			<option value="${i } ">${i }</option>>
+		</c:forEach>
+	</select>
+		<select>
+		<c:forEach var="i" begin="1" end="31">
+			<option value="${i } ">${i }</option>>
+		</c:forEach>
+	</select>
 	 
 </body>
 </html>

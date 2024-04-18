@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,17 @@
 	
 	
 	-->
+	<c:set var="com" value="바위"/>
+	<c:set var="me" value="${me }"/>
+	<c:if test="${me == com}">
+		<p>비겼습니다.</p>
+	</c:if>
+	<c:if test="${me == '가위' && com != me}">
+		<p>졌습니다.</p>
+	</c:if>
+	<c:if test="${me == '보' && com != me}">
+		<p>이겼습니다.</p>
+	</c:if>
  	
 </body>
 </html>

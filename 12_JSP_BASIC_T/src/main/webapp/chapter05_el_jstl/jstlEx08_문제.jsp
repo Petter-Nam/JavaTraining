@@ -20,6 +20,10 @@
  	
  	<c:set var="dbId" value="qwer1234" />
  	<c:set var="dbPw" value="1234" />
+ 	<c:set var="id" value="${id }" />
+ 	<c:set var="pw" value="${pw }" />
+ 	
+ 	
  	
 </body>
 </html>

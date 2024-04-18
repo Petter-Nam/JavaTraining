@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,19 @@
 		   isChecked값이 false이면 script에서 alert함수로 '확인되지 않았습니다.'를 출력한다.
 	
 	 -->
-
+	 
+	 <c:choose>
+	 	<c:when test="${isChecked == true }">
+	 	<script>
+	 		alert("확인되었습니다.")
+	 	</script>
+	 	</c:when>
+	 	<c:otherwise>
+	 		<script>
+	 			alert("확인되지 않았습니다.")
+	 		</script>
+	 	</c:otherwise>
+	 </c:choose>
+	
 </body>
 </html>

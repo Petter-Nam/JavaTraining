@@ -34,11 +34,11 @@
 			<p>빙고</p>
 		</c:when>
 		<c:when test="${com > me }">
+			<p>Up</p>
+		</c:when>
+		<c:when test="${com < me }">
 			<p>Down</p>
 		</c:when>
-		<c:otherwise>
-			<p>Up</p>
-		</c:otherwise>
 	</c:choose>
 	
 </body>

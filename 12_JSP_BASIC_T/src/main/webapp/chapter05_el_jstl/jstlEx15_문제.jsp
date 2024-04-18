@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,18 @@
 			<td>부서이름</td>
 			<td>관리자이름</td>
 		</tr>
+		<c:choose>
+			<c:when test="${emty productList }">
+				<td colspan="5"><strong>현재 상품이 비어있습니다.</strong></td>
+			</c:when>
+			<c:otherwise>
+				<td>${product.pdCd }</td>
+				<td>${product.pdNm }</td>
+				<td>${product.deptCd }</td>
+				<td>${product.deptNm }</td>
+				<td>${product.mgrNm }</td>
+			</c:otherwise>
+		</c:choose>
 	</table> 
 	
 </body>
