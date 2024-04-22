@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<div align="center">
+		<h1>커뮤니티 게시판</h1>
+		<!-- webapp 폴더 하위경로부터 작성한다. -->
+
+		<p><a href="bWriter4">작성하기</a></p>
+		<p><a href="bList4">이동하기</a></p>
+	</div>
+	
+</body>
+</html>
