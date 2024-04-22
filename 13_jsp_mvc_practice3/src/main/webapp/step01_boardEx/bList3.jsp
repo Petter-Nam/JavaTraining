@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,15 +21,15 @@
 			<c:forEach var="boardDTO" items="${boardList }">
 				<tr align="center">
 					<td>${boardDTO.boardId }</td>
-					<td><a href="bDetail?boardId=${boardDTO.boardId }">${boardDTO.subject}</a></td>
-					<td>${boardDTO.writer}</td>
-					<td>${boardDTO.enrollDt}</td>
-					<td>${boardDTO.readCnt}</td>
+					<td><a href="bDetail3?boardId=${boardDTO.boardId }">${boardDTO.subject }</a></td>
+					<td>${boardDTO.writer }</td>
+					<td>${boardDTO.enrollDt }</td>
+					<td>${boardDTO.readCnt }</td>
 				</tr>
 			</c:forEach>
 			<tr align="right">
 				<td colspan="5">
-					<input type="button" value="글쓰기" onclick="location.href='bWrite';">
+					<input type="button" value="글쓰기" onclick="location.href='bWrite3';">
 				</td>
 			</tr>
 		</table>
