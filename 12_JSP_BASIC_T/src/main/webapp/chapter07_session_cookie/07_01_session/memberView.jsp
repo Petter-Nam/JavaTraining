@@ -7,11 +7,17 @@
 <title>메인</title>
 </head>
 <body>
+	<c:if test="${sessionScope.role == 'user' }">
+		<h3>${sessionScope.id }님 로그인 되었습니다. (${sessionScope.role })</h3>
+		<p><a href="myPage">마이페이지로 이동</a></p>
+		<p><a href="cart">카트리스트로 이동</a></p>
+		<p><a href="logout">로그아웃</a></p>
+	</c:if>
 	
-	<h3></h3>
-	<p><a href="myPage">마이페이지로 이동</a></p>
-	<p><a href="cart">카트리스트로 이동</a></p>
-	<p><a href="logout">로그아웃</a></p>
-
+	<c:if test="${sessionScope.role == 'admin' }">
+		<h3>${sessionScope.id }님 로그인 되었습니다. (${sessionScope.role })</h3>
+		<p><a href="admin">관리자 페이지로 이동</a></p>
+		<p><a href="logout">로그아웃</a></p>
+	</c:if>
 </body>
 </html>

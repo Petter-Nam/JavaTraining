@@ -68,6 +68,9 @@ public class SessionLogin extends HttpServlet {
 		String dbPasswd = "qwer1234";
 		String dbRole = "user";
 		
+//		String dbId = "admin";
+//		String dbPasswd = "admin";
+//		String dbRole = "admin";
 		
 		// 3-1) 인증된 유저이면 session객체에 관련된 정보를 저장한다.
 		if (id.equals(dbId) && passwd.equals(dbPasswd)) {
