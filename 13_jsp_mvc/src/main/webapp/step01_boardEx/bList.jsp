@@ -18,13 +18,13 @@
 				<td>작성일</td>
 				<td>조회수</td>
 			</tr>
-			<c:forEach var="boardDTO" items="${boardList }">
+			<c:forEach var="boardList" items="${boardList }">
 				<tr align="center">
-					<td>${boardDTO.boardId }</td>
-					<td><a href="bDetail?boardId=${boardDTO.boardId }">${boardDTO.subject}</a></td>
-					<td>${boardDTO.writer}</td>
-					<td>${boardDTO.enrollDt}</td>
-					<td>${boardDTO.readCnt}</td>
+					<td>${boardList.boardId }</td>
+					<td><a href="bDetail?boardId=${boardList.boardId }">${boardList.subject }</a></td>
+					<td>${boardList.writer }</td>
+					<td>${boardList.enrollDt }</td>
+					<td>${boardList.readCnt }</td>
 				</tr>
 			</c:forEach>
 			<tr align="right">

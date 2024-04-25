@@ -1,6 +1,8 @@
 package _08_file;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.UUID;
 
@@ -19,30 +21,53 @@ public class Upload2 extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String saveDirectory = "/Users/nsj/git/JavaTraining/12_JSP_BASIC_T/src/main/webapp/chapter08_file/fileRepository";
+		String saveDirectory = FileConfig.FILE_REPOSITORY_PATH;
 		
 		MultipartRequest multipartRequest = new MultipartRequest(request, saveDirectory , 1024 * 1024 * 300 , "utf-8");
 		
 		Enumeration<?> files = multipartRequest.getFileNames();
 		
-		while (files.hasMoreElements()) {
+		while (files.hasMoreElements()) { //<input type = 'file'/> 엘리먼트가 있으면
 			
 			String element = (String)files.nextElement();
 			
-			String originalFileName = multipartRequest.getOriginalFileName(element);
+			if (multipartRequest.getOriginalFileName(element) != null) { // 업로드한 파일이 있으면
+				
+				String originalFileName = multipartRequest.getOriginalFileName(element);
+				
+				System.out.println("originalFileName : " + originalFileName);
+				
+				UUID uuid = UUID.randomUUID(); // UUID.randomUUID() : 해쉬 생성 메서드 같은 이름의 파일 이름 덮어쓰기 방지
+				System.out.println("uuid : " + uuid);
+				
+				// 파일의 확장자를 구한다.
+				String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
+				System.out.println("extension : " + extension);
+				
+				//  UUID. 확장자 형태로 파일명을 생성한다.
+				String fileUUID = uuid + extension;
+				System.out.println("fileUUID : " + fileUUID);
+													//fileRepositoryabcde.png
+													//fileReposiotory/abvde.png
+				File originalFile = new File(saveDirectory + originalFileName); // 기존에 업로드한 파일을 자바 객체로 생성
+				File renameFile = new File(saveDirectory + fileUUID); // 변화된 파일을 자바객체로 생성한다.
+				originalFile.renameTo(renameFile);// 기존에 업로드한 파일을 변환된 파일로 변경
+				
+				
+			}
 			
-			System.out.println("originalFileName : " + originalFileName);
-			
-			UUID uuid = UUID.randomUUID(); // UUID.randomUUID() : 해쉬 생성 메서드
-			System.out.println("uuid : " + uuid);
-			
-			String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
-			System.out.println("extension : " + extension);
-			
-			String fileUUID = uuid + extension;
-			System.out.println("fileUUID : " + fileUUID);
 			
 		}
+		
+		String jsScript = """
+				<script>
+					alert('파일을 업로드 하였습니다.');
+					location.href = 'fileMain';
+				</script>""";
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		out.print(jsScript);
 	}
 
 }

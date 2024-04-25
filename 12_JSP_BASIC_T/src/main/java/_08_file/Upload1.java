@@ -42,10 +42,11 @@ public class Upload1 extends HttpServlet {
 		*/
 		
 		// 파일의 저장 경로는 웹서비스의 접근 경로가 아닌 물리적인 실제 경로를 적어주어야 한다.
-		String saveDirectory = "/Users/nsj/git/JavaTraining/12_JSP_BASIC_T/src/main/webapp/chapter08_file/fileRepository/";
+		//String saveDirectory = "/Users/nsj/git/JavaTraining/12_JSP_BASIC_T/src/main/webapp/chapter08_file/fileRepository/";
+		
 		
 		// MultipartRequest 이 코드가 실제로 파일 업로드를 담당하는 부분이다.
-		MultipartRequest multipartRequest = new MultipartRequest(request, saveDirectory , 1024 * 1024 * 100 , "utf-8");
+		MultipartRequest multipartRequest = new MultipartRequest(request, FileConfig.FILE_REPOSITORY_PATH , 1024 * 1024 * 100 , "utf-8");
 		
 		/*
 			multipart/form-data형식으로 전송 되었기 때문에 request.getParameter가 불가능하고
