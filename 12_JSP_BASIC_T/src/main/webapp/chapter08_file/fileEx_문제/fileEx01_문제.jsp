@@ -27,8 +27,8 @@
 	<form>
 		<fieldset>
 			<legend>파일 업로드</legend>
-			<p>업로더 : <input type="text" name="uploader"/></p>
-			<p>파일 : <input type="file" name="originalFileName"/></p>
+			<p>업로더 : <input type="text" /></p>
+			<p>파일 : <input type="file" /></p>
 			<p><input type="submit" value="upload"></p>		
 		</fieldset>	
 	</form>

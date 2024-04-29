@@ -16,10 +16,8 @@ public class FileMain extends HttpServlet {
     
 	// 파일메인 화면으로 이동
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		RequestDispatcher dis = request.getRequestDispatcher("chapter08_file/fileEx/fileMain.jsp"); 
 		dis.forward(request, response);
-	
 	}
 
 }

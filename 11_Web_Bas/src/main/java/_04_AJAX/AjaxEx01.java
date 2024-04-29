@@ -18,6 +18,5 @@ public class AjaxEx01 extends HttpServlet {
 		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx01.jsp");
 		dis.forward(request, response);
 	}
-	
 
 }

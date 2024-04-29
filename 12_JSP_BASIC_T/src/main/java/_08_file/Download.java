@@ -23,9 +23,9 @@ public class Download extends HttpServlet {
 		//import java.io.IOException;
 		//import java.io.OutputStream;
 		
-		
 		request.setCharacterEncoding("utf-8");
-		//다운로드 받을 파일의 위치 지정
+		
+		// 다운로드 받을 파일의 위치 지정
 		String saveDirectory = FileConfig.FILE_REPOSITORY_PATH;
 		String fileName = request.getParameter("fileName");
 		

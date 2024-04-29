@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/fileEx02_문제")
-public class FileEx02_문제 extends HttpServlet {
+public class FileEx02_문제 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_file/fileEx_문제/fileEx02_문제.jsp"); 
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_file/fileEx_문제/fileEx02_문제.jsp"); 
 		dis.forward(request, response);
 	}
 

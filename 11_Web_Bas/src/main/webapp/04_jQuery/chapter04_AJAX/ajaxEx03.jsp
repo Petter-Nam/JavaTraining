@@ -17,14 +17,24 @@
 				// 통신이 성공했을 경우 실행되는 콜백 함수
 				success : function(data, status, xhr) {
 					console.log("- 통신 성공 - ");	
+					console.log(data); // 반환데이터
+					console.log(status); // 상태코드
+					console.log(xhr); // 메타데이터
 				},
 				// 통신이 실패했을 경우 실행되는 콜백 함수
-				error : function() {
+				error : function(xhr, status, errorThrown) {
 					console.log("- 통신 실패 - ");	
+					console.log(status);
+					console.log(xhr.responseText);
+					console.log(errorThrown);
+					console.log("");
 				},
 				// 통신의 성공 실패여부와 상관없이 실행되는 콜백 함수
-				complete : function() {
+				complete : function(xhr, status) {
 					console.log("- 반드시 실행되는 함수 - ");	
+					console.log(status);
+					console.log(xhr);
+					console.log("")
 				}
 				
 			});

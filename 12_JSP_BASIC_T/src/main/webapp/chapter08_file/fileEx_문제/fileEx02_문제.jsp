@@ -27,7 +27,7 @@
 			</script>
 	 -->
 
-	<form action="fileEx02_문제" method="post">
+	<form>
 		<fieldset>
 			<legend>파일 업로드</legend>
 			<p>업로더 : <input type="text" /></p>

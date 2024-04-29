@@ -23,9 +23,11 @@ public class AjaxEx03 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// PrintWriter 객체를 사용하여 AJAX 성공 콜백함수에 데이터를 반환한다.
-		response.setContentType("text/html; charset=utf-8");
+		response.setContentType("text/html; charset=utf-8"); // 반환데이터의 한글화
+		
 		PrintWriter out = response.getWriter();
-		out.print("반환데이터");
+		// jsp에서는 string 타입만 반환 > spring에서 dto , map , list 학습
+		out.print("비즈니스 로직을 처리한 반환데이터 입니다."); // ajax의 success: function(data){} 로 반환된다.
 		
 	}
 	
