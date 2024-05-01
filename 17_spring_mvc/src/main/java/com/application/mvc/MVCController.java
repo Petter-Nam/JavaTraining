@@ -65,7 +65,7 @@ public class MVCController {
 	}
 	
 	
-	@GetMapping("/source") //localhost/source
+	@GetMapping("/source") // localhost/source
 	public String source() {
 		
 		/*
@@ -78,8 +78,11 @@ public class MVCController {
 		
 		 */
 		
-		return "redirect:/target"; // @GetMapping("/target")으로 이동한다.
-		//return "target"; 		   // /templates/target.html로 이동한다.
+		// location.href='/target';
+		//return "redirect:/target"; // @GetMapping("/target")으로 이동한다.
+		
+		// getRequestDispatcher("~~.jsp");
+		return "target"; 		   // /templates/target.html로 이동한다.
 	
 	}
 	
