@@ -33,7 +33,7 @@ public class ControlStatementController {
 		model.addAttribute("deliveryPrice" , deliveryPrice);
 		model.addAttribute("grade" , grade);
 		
-		return "chapter01_thymeleaf/controlStatment/controlEx01";
+		return "chapter01_thymeleaf/controlStatment/controlEx01.html";
 		
 	}
 	
@@ -45,7 +45,7 @@ public class ControlStatementController {
 		String menu = "일정관리"; // 권한관리 , 일정관리 , 위험관리
 		model.addAttribute("menu" , menu);
 		
-		return "chapter01_thymeleaf/controlStatment/controlEx02";
+		return "chapter01_thymeleaf/controlStatment/controlEx02.html";
 		
 	}
 	
@@ -60,7 +60,7 @@ public class ControlStatementController {
 		model.addAttribute("dtoList" , dtoList);
 		model.addAttribute("mapList" , mapList);
 		
-		return "chapter01_thymeleaf/controlStatment/controlEx03";
+		return "chapter01_thymeleaf/controlStatment/controlEx03.html";
 		
 	}
 	
@@ -72,7 +72,7 @@ public class ControlStatementController {
 		List<ProductDTO> dtoList = supposeDAO.getDTOList();
 		model.addAttribute("dtoList" , dtoList);
 		
-		return "chapter01_thymeleaf/controlStatment/controlEx04";
+		return "chapter01_thymeleaf/controlStatement/controlEx04.html";
 		
 	}
 	

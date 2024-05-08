@@ -376,12 +376,12 @@ public class ControlStatementAnswerSampleController {
 		   	  	<th>totalPrice</th>
 		   	  	<th>brandNm</th>
 		   	  </tr>
-		   	  <tr>
-		   	  	<td id="productId0">노트북1</td>
-		   	  	<td id="price0">10000</td>      
-		   	  	<td id="addTax0">1000.0</td>      
-		   	  	<td id="totalPrice0">11000.0</td>      
-		   	  	<td id="brandNm0">"브랜드1</td>      
+		   	    <tr>
+		   	  	<td id="productNm0" name="productNm0">노트북1</td>
+		   	  	<td id="price0" name="price0">10000</td>      
+		   	  	<td id="addTax0" name="addTax0">1000.0</td>      
+		   	  	<td id="totalPrice0" name="totalPrice0">11000.0</td>      
+		   	  	<td id="brandNm0" name="brandNm0">"브랜드1</td>      
 		   	  </tr>
 		   	  ...
 		   	  ...

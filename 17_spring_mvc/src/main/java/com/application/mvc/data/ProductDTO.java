@@ -2,6 +2,8 @@ package com.application.mvc.data;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -53,6 +55,7 @@ public class ProductDTO {
 	private String productNm;
 	private int price;
 	private int deliveryPrice;
+	@DateTimeFormat(pattern="yyyy-MM-dd")//htmld의 <input type="date">엘리먼트(string 타입) 와 자바의 date 타입 매핑 설정
 	private Date enrollDt; // java.util.Date;
 	private long brandId;	
 	

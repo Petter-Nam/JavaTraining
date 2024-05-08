@@ -20,7 +20,7 @@ public class ControlStatementPracticeController {
 	private SupposeDAO supposeDAO;
 	
 	@GetMapping("/ex05_practice")
-	public String ex05_question() {
+	public String ex05_question(Model model) {
 		
 		/*
 		  
@@ -33,13 +33,15 @@ public class ControlStatementPracticeController {
 		*/
 		
 		String role = "admin"; // admin , user
-
-		return "";
+		
+		model.addAttribute("role", role);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx05_practice.html";
 		
 	}
 	
 	@GetMapping("/ex06_practice")
-	public String ex06_question() {
+	public String ex06_question(Model model) {
 		
 		/*
 			# 가위 바위 보
@@ -56,14 +58,17 @@ public class ControlStatementPracticeController {
 		
 		String com = "바위";
 		String me = "바위"; // 가위 , 바위 , 보
-
-		return "";
+		
+		model.addAttribute("com", com);
+		model.addAttribute("me", me);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx06_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex07_practice")
-	public String ex07_question() {
+	public String ex07_question(Model model) {
 		
 		/*
 		
@@ -80,14 +85,16 @@ public class ControlStatementPracticeController {
 		
 		int com = 77;
 		int me = 0;    // 50 ,77, 100
-
-		return "";
+		
+		model.addAttribute("com", com);
+		model.addAttribute("me", me);
+		return "chapter01_thymeleaf/controlStatement/controlEx07_practice.html";
 		
 	}
 
 	
 	@GetMapping("/ex08_practice")
-	public String ex08_question() {
+	public String ex08_question(Model model) {
 		
 		/*
 	
@@ -103,7 +110,12 @@ public class ControlStatementPracticeController {
 		String inputId     = "qwer1234"; // qwer1234 , qwer
 		String inputPasswd = "1234";     // 1234 , 1111
 		
-		return "";
+		model.addAttribute("dbId", dbId);
+		model.addAttribute("dbPasswd", dbPasswd);
+		model.addAttribute("inputId", inputId);
+		model.addAttribute("inputPasswd", inputPasswd);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx08_practice.html";
 		
 	}
 
@@ -120,7 +132,7 @@ public class ControlStatementPracticeController {
 	
 		*/
 		
-		return "";
+		return "chapter01_thymeleaf/controlStatement/controlEx09_practice.html";
 		
 	}
 	
@@ -146,13 +158,13 @@ public class ControlStatementPracticeController {
 		*/
 		
 
-		return "";
+		return "chapter01_thymeleaf/controlStatement/controlEx10_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex11_practice")
-	public String ex11_question() {
+	public String ex11_question(Model model) {
 		
 		/*
 		  
@@ -185,14 +197,17 @@ public class ControlStatementPracticeController {
 			
 		*/
 		String[] productIds = {"0x001", "0x002", "0x003", "0x004", "0x005", "0x006", "0x007"};
-
-		return "";
+		
+		model.addAttribute("productIds", productIds);
+		
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx11_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex12_practice")
-	public String ex12_question() {
+	public String ex12_question(Model model) {
 		
 		/*
 		  
@@ -226,14 +241,14 @@ public class ControlStatementPracticeController {
 		*/
 		String[] productIds = {"0x001", "0x002", "0x003", "0x004", "0x005", "0x006", "0x007"};
 		
-
-		return "";
+		model.addAttribute("productIds", productIds);
+		return "chapter01_thymeleaf/controlStatement/controlEx12_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex13_practice")
-	public String ex13_question() {
+	public String ex13_question(Model model) {
 		
 		/*
 		  
@@ -262,13 +277,15 @@ public class ControlStatementPracticeController {
 		
 		List<ProductDTO> productList = supposeDAO.getDTOList();
 		
-		return "";
+		model.addAttribute("productList", productList);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx13_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex14_practice")
-	public String ex14_question() {
+	public String ex14_question(Model model) {
 		
 		/*
 		  
@@ -296,14 +313,17 @@ public class ControlStatementPracticeController {
 		*/
 		
 		List<ProductDTO> productList = supposeDAO.getDTOList();
-
-		return "";
+		
+		model.addAttribute("productList", productList);
+		System.out.println(productList);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx14_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex15_practice")
-	public String ex15_question() {
+	public String ex15_question(Model model) {
 		
 		/*
 		  
@@ -333,14 +353,17 @@ public class ControlStatementPracticeController {
 		*/
 		
 		List<Map<String,Object>> productMapList = supposeDAO.getMapList();
+		System.out.println(productMapList);
 		
-		return "";
+		model.addAttribute("productMapList", productMapList);
+		
+		return "chapter01_thymeleaf/controlStatement/controlEx15_practice.html";
 		
 	}
 	
 	
 	@GetMapping("/ex16_practice")
-	public String ex16_question() {
+	public String ex16_question(Model model) {
 		
 		/*
 		  
@@ -354,12 +377,12 @@ public class ControlStatementPracticeController {
 		   	  	<th>totalPrice</th>
 		   	  	<th>brandNm</th>
 		   	  </tr>
-		   	  <tr>
-		   	  	<td id="productId0">노트북1</td>
-		   	  	<td id="price0">10000</td>      
-		   	  	<td id="addTax0">1000.0</td>      
-		   	  	<td id="totalPrice0">11000.0</td>      
-		   	  	<td id="brandNm0">"브랜드1</td>      
+		   	    <tr>
+		   	  	<td id="productNm0" name="productNm0">노트북1</td>
+		   	  	<td id="price0" name="price0">10000</td>      
+		   	  	<td id="addTax0" name="addTax0">1000.0</td>      
+		   	  	<td id="totalPrice0" name="totalPrice0">11000.0</td>      
+		   	  	<td id="brandNm0" name="brandNm0">"브랜드1</td>      
 		   	  </tr>
 		   	  ...
 		   	  ...
@@ -370,8 +393,9 @@ public class ControlStatementPracticeController {
 		*/
 		
 		List<Map<String,Object>> productMapList = supposeDAO.getMapList();
+		model.addAttribute("productMapList", productMapList);
 		
-		return "";
+		return "chapter01_thymeleaf/controlStatement/controlEx16_practice.html";
 		
 	}
 	

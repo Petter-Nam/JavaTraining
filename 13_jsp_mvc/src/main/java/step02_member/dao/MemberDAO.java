@@ -68,6 +68,8 @@ public class MemberDAO {
     // ID 중복확인 메서드
     public boolean checkDuplicateId(String memberId) {
     	
+    	
+    	
     	boolean isDuple = false;
     	
     	try {
