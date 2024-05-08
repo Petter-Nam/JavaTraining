@@ -16,13 +16,17 @@
 		- ${session.속성명} 형태로 세션에 저장된 데이터를 뷰에서 접근한다.
 		
 	 -->
+	 
 	<h3>Session 데이터 출력</h3>
-	<!--before : ${sessionScope.id} -->
-	<p th:text="|id : ${session.id}">없음</p><!-- session.setAttribute("id", "qwer1234"); -->
-	<p th:text="|userRole : ${session.userRole}">없음</p><!-- session.setAttribute("userRole", "qwer1234"); -->
 	
-	<p>id : [[${session.id}]]<!-- session.setAttribute("id", "abcde"); -->
-	<p>userRole :[[${session.userRole}]]</p><!-- session.setAttribute("userRole", "admin"); -->
+	<!-- before : ${sessionScope.id} -->
+	<p th:text="|id : ${session.id} |">없음</p>				<!-- session.setAttribute("id", "qwer1234"); -->
+	<p th:text="|userRole : ${session.userRole}|">없음</p>  <!-- session.setAttribute("userRole", "admin"); -->
+	<hr/>
+	
+	<p>id : [[${session.id}]]</p>			  <!-- session.setAttribute("id", "qwer1234"); -->
+	<p>userRole : [[${session.userRole}]]</p> <!-- session.setAttribute("userRole", "admin"); -->
 
 </body>
 </html>
+

@@ -32,14 +32,14 @@ public class ObjectController {
 	}
 	
 	
-	@GetMapping("/ex02") // localhost/th/object/ex01
+	@GetMapping("/ex02") // localhost/th/object/ex02
 	public String ex02(Model model) {
 		
 		// 다양한 폼데이터 예시
 		ProductDTO productDTO = new ProductDTO();
-		productDTO.setPrice(3000000); 					// 1000000 , 2000000 , 3000000
-		productDTO.setDeliveryPrice(3000);  			// 0 , 2500 , 3000
-		productDTO.setProductId(3); 					// 1 , 2 , 3
+		productDTO.setPrice(1000000); 					// 1000000 , 2000000 , 3000000
+		productDTO.setDeliveryPrice(2500);  			// 0 , 2500 , 3000
+		productDTO.setProductId(1); 					// 1 , 2 , 3
 		productDTO.setEnrollDt(new Date());	
 		productDTO.setProductNm("테스트상품입니다.");
 		

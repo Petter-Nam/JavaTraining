@@ -61,21 +61,21 @@
 	<br><hr><br>
      
     <h1>3) HttpServletRequest</h1>
-	<p><a th:href="@{/v2c/httpServletRequest(titleId=11111, tab=tue, no=300)}">HttpServletRequest</a></p>
-	<p><a href="/v2c/httpServletRequest?titleId=11111&tab=tue&no=300">HttpServletRequest</a></p>
+	<p><a th:href="@{/v2c/httpServletRequest(titleId=11111 , tab=tue , no=300)}">HttpServletRequest</a></p>
      
 	<br><hr><br>
      
     <h1>4) @RequestParam</h1>
-	<p><a th:href="@{/v2c/requestParam(titleId=2222, tab=wed, no=301)}">@RequestParam</a></p>
+	<!-- thyemeleaf가 아닐때 : <p><a href="/v2c/requestParam?titleId=22222&tab=tue&no=301">@RequestParam</a></p> -->
+	<p><a th:href="@{/v2c/requestParam(titleId=22222 , tab=tue , no=301)}">@RequestParam</a></p>
      
 	<br><hr><br>
 	
     <h1>5) @PathVariable</h1>
-<!-- before <p><a th:href="@{/v2c/pathVariable/3333/tue/302}">@PathVariable</a></p>  -->
-	<p><a th:href="@{/v2c/pathVariable/{titleId}/{tab}/{no}(titleId=3333, tab=tue, no=302)}">@PathVariable</a></p>
-     
-     
+	<!-- thyemeleaf가 아닐때 : <p><a href="/v2c/pathVariable/33333/tue/302">@PathVariable</a></p>-->
+	<p><a th:href="@{/v2c/pathVariable/{titleId}/{tab}/{no}(titleId=33333 , tab=tue , no=302)}">@PathVariable</a></p>
      
 </body>
 </html>
+
+

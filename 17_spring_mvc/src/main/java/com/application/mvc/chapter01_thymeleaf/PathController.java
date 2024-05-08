@@ -10,5 +10,5 @@ public class PathController {
 	public String path() {
 		return "chapter01_thymeleaf/path/pathEx";
 	}
-
+	
 }

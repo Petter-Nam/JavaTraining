@@ -3,7 +3,6 @@ package com.application.mvc.chapter02_modelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,16 +21,18 @@ public class V2C_param {
 	   - JSP HttpServletRequest과 사용방법이 같다.
 	  
 	 */
+	
 	@GetMapping("/httpServletRequest")
 	public String httpServletRequest(HttpServletRequest request) {
 		
-		System.out.println("\n - HttpServletRequest - ");
+		System.out.println("\n - httpServletRequest -\n");
 		System.out.println("titleId : " + Long.parseLong(request.getParameter("titleId")));
 		System.out.println("tab : " + request.getParameter("tab"));
 		System.out.println("no : " + Integer.parseInt(request.getParameter("no")));
-	
+		System.out.println();
 		
 		return "redirect:/v2c/view";
+		
 	}
 	
 	
@@ -57,19 +58,23 @@ public class V2C_param {
 	 
 	 */
 	
-	@GetMapping("/requestParam") 
-	public String requestParam(@RequestParam("titleId") long titleId, 
-							    @RequestParam("tab") String tab,
-							    @RequestParam("no") int no) { //@RequestParam은 생략 가능하다.
+	@GetMapping("/requestParam")
+	public String requestParam(@RequestParam("titleId") long titleId ,
+							   @RequestParam("tab") String tab,
+							   @RequestParam("no") int no) {
 		
-		System.out.println("\n - RequestParam - ");
+		System.out.println("\n - @RequestParam -\n");
 		System.out.println("titleId : " + titleId);
 		System.out.println("tab : " + tab);
 		System.out.println("no : " + no);
-		
+		System.out.println();
 		
 		return "redirect:/v2c/view";
+		
 	}
+	
+	
+	
 
 	/*
 	   
@@ -98,18 +103,23 @@ public class V2C_param {
 	  */
 	
 	@GetMapping("/pathVariable/{titleId}/{tab}/{no}")
-	public String pathVariable(@PathVariable("titleId") long titleId,
+	public String pathVariable(@PathVariable("titleId") long titleId ,
 							   @PathVariable("tab") String tab,
 							   @PathVariable("no") int no) {
-		System.out.println("\n - PathVariable - ");
+		
+		System.out.println("\n - @PathVariable -\n");
 		System.out.println("titleId : " + titleId);
 		System.out.println("tab : " + tab);
 		System.out.println("no : " + no);
-		
+		System.out.println();
 		
 		return "redirect:/v2c/view";
+		
 	}
 	
 	
 	
 }
+
+
+

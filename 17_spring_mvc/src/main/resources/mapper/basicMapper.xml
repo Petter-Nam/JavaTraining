@@ -9,38 +9,43 @@
     - com.application.mvc.chapter03_mybatis.Basic 객체와 매핑
     
 -->
-<!--  
+
 <mapper namespace="com.application.mvc.chapter03_mybatis.Basic">
-
-	<select id="ex01" resultType="select 결과의 타입">
-		SELECT *
-		FROM   테이블
-	</select>
-			
-	<select id="ex02" parameterType="전달되는 데이터의 타입" resultType="select 결과의 타입">
-		SELECT *
-		FROM   테이블
-		WHERE  PRIMARY KEY 조건절
-	</select>		
 	
-	<insert id="ex03" parameterType="전달되는 데이터의 타입">
-		INSERT INTO 테이블
-		VALUES (데이터)	
-	</insert>	
+	<!-- 
 	
-	<update id="ex04" parameterType="전달되는 데이터의 타입">
-		UPDATE 테이블
-		SET    데이터
-		WHERE  PRIMARY KEY 조건절
-	</update>
+		<select id="ex01" resultType="select 결과의 타입">
+			SELECT *
+			FROM   테이블
+		</select>
+				
+		<select id="ex02" parameterType="전달되는 데이터의 타입" resultType="select 결과의 타입">
+			SELECT *
+			FROM   테이블
+			WHERE  PRIMARY KEY 조건절
+		</select>		
+		
+		<insert id="ex03" parameterType="전달되는 데이터의 타입">
+			INSERT INTO 테이블
+			VALUES (데이터)	
+		</insert>	
+		
+		<update id="ex04" parameterType="전달되는 데이터의 타입">
+			UPDATE 테이블
+			SET    데이터
+			WHERE  PRIMARY KEY 조건절
+		</update>
+		
+		<delete id="ex05" parameterType="전달되는 데이터의 타입">
+			DELETE FROM 테이블
+			WHERE		PRIMARY KEY 조건절
+		</delete>
 	
-	<delete id="ex05" parameterType="전달되는 데이터의 타입">
-		DELETE FROM 테이블
-		WHERE		PRIMARY KEY 조건절
-	</delete>
-
+	 -->
+	 
+	 
 </mapper>
--->
+
 
 
 

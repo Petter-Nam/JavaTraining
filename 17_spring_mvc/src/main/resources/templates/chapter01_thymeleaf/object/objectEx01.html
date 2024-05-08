@@ -26,15 +26,13 @@
 			step 2) 템플릿의 <form> 태그에서 전송된 객체를 'th:object'속성을 통해 지정한다. 
 			   예시 : th:object="${dto}"
 			
-			3) 폼 내의 입력 필드는 th:field="*{필드명}"을 사용하여 th:object에 지정된 객체의 필드와 바인딩된다.
+			step 3) 폼 내의 입력 필드는 th:field="*{필드명}"을 사용하여 th:object에 지정된 객체의 필드와 바인딩된다.
 				예시 : dto.필드명     > *{필드명}
 					   dto.productId  > *{productId}
 					   dto.productNm  > *{productNm}
 					   dto.price      > *{price}
 	
 	-->
-	
-	<!-- id name value값을 전부 자동으로 지정해준다. -->
 	<h3>th:object , th:field</h3>
 	<form action="#" method="post" th:object="${productDTO}"> <!-- model.addAttribute("productDTO" , productDTO); -->
 		<p>PRODUCT_ID : 	<input type="text" th:field="*{productId}"></p>

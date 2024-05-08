@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.application.mvc.data.ProductDTO;
 
 @Controller
-@RequestMapping("v2c")
+@RequestMapping("/v2c")
 public class V2C_binding {
 
-	@GetMapping("/view")
+	@GetMapping("/view") // localhost/v2c/view
 	public String view() {
 		return "chapter02_modelAndView/v2c";
 	}
@@ -37,9 +37,9 @@ public class V2C_binding {
 	@PostMapping("/modelAttribute")
 	public String modelAttribute(@ModelAttribute ProductDTO productDTO) {
 		
-		
 		System.out.println("\n - @ModelAttribute - \n");
 		System.out.println(productDTO);
+		System.out.println();
 		
 		return "redirect:/v2c/view";
 		
@@ -48,44 +48,39 @@ public class V2C_binding {
 	
 	/* 
 	  
-	  2) @RequestParam Map<K,V>
-	  
-	  - 요청 HTML의 name속성이 Map 컬렉션 프레임워크의 "KEY"로 바인딩되며
-	    요청 HTML의 name의 value속성이 Map 컬렉션 프레임워크의 "VALUE"로 바인딩된다.
-	
-	  - HashMap타입이 아닌 HashMap의 인터페이스인 Map타입으로 데이터를 받는다.
-	 
-	  - Map으로 전달되는 데이터가 정수 , 실수 , 글자등 다양한 데이터일 경우 다형성을 이용하여 Object타입으로 처리할 수 있다.
-	  
-	  - Object 타입으로 전송받는 경우 데이터를 전송받은 이후 로직에 알맞게 데이터 형변환을 따로 해주어야 한다.
-
-	 */
-	
-	@PostMapping("/map")
-	public String map(@RequestParam Map<String, Object> productMap) {
+		  2) @RequestParam Map<K,V>
+		  
+		  - 요청 HTML의 name속성이 Map 컬렉션 프레임워크의 "KEY"로 바인딩되며
+		    요청 HTML의 name의 value속성이 Map 컬렉션 프레임워크의 "VALUE"로 바인딩된다.
 		
-		System.out.println("\n - @MAP - \n");
+		  - HashMap타입이 아닌 HashMap의 인터페이스인 Map타입으로 데이터를 받는다.
+		 
+		  - Map으로 전달되는 데이터가 정수 , 실수 , 글자등 다양한 데이터일 경우 다형성을 이용하여 Object타입으로 처리할 수 있다.
+		  
+		  - Object 타입으로 전송받는 경우 데이터를 전송받은 이후 로직에 알맞게 데이터 형변환을 따로 해주어야 한다.
+	
+	*/
+	
+	@PostMapping("/map")	
+	public String map(@RequestParam Map<String,Object> productMap) {
+		
+		System.out.println("\n - Map - \n");
 		System.out.println(productMap);
+		System.out.println();
 		
 		return "redirect:/v2c/view";
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	//참고 : 오류코드
-	// 405(get, post방법 불일치) 405 뜨면 여기다.
-	@PostMapping("/url")// 404(url경로 불일치)
-	public String debugMethod(@ModelAttribute ProductDTO productDTO) { //400 에러 (파라미터 불일치)
+	// (참고 : 오류 코드)
+	// 405 (get,post 방법 불일치)
+	@PostMapping("/url") // 404 (url 경로 불일치)
+	public String debugMethod(@ModelAttribute ProductDTO productDTO) { // 400 (파라메타 불일치)
 		
-		// 이하 500 (서버 코드오류)
+		// 이하 500 (서버 코드 오류)
+		
 		return "";
+		
 	}
-	
 	
 }

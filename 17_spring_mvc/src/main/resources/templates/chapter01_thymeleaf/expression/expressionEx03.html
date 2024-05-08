@@ -21,19 +21,18 @@
 	-->
 	
 	<h3>escaped text</h3>
-	<p th:text="${data1}">hi</p>
-	<p th:text="${data2}">hello</p>
+	<p th:text="${data1}"></p>
+	<p th:text="${data2}"></p>
 	<p>[[${data1}]]</p>
 	<p>[[${data2}]]</p>
 	<hr/>
 		
 	<h3>unescaped text</h3>
-		<p th:utext="${data1}"></p>
-		<p th:utext="${data2}"></p>
-		<p>[(${data1})]</p>
-		<p>[(${data2})]</p>
+	<p th:utext="${data1}"></p>
+	<p th:utext="${data2}"></p>
+	<p>[(${data1})]</p>
+	<p>[(${data2})]</p>
 	<hr/>
-	
 
 </body>
 </html>

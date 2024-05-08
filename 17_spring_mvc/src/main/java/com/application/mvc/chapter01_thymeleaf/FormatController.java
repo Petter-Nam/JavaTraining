@@ -20,7 +20,7 @@ public class FormatController {
 		model.addAttribute("intVar" , 1000000000); // 1 , 10 , 100 , 1000000000
 		
 		// 소수점 (Decimal)
-		model.addAttribute("doubleVar" , 3.141592); //3.141592, 30000.141592
+		model.addAttribute("doubleVar" , 30000.141592); // 3.141592 , 30000.141592
 		
 		return "chapter01_thymeleaf/format/formatEx";
 		

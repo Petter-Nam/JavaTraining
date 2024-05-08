@@ -33,12 +33,15 @@
 	<p th:text="${date1}"></p>
 	<p th:text="${date2}"></p>
 	<br/>
+	
 	<p th:text="${#dates.format(date1, 'yyyy-MM-dd')}"></p>
-	<p th:text="${#dates.format(date2, 'yyyy-MM-dd')}"></p>
+	<p th:text="${#dates.format(date2 , 'yyyy-MM-dd')}"></p>
 	<br/>
-	<p th:text="${#dates.format(date1, 'yyyy년 MM월 dd일 mm분 ss초')}"></p>
-	<p th:text="${#dates.format(date2, 'yyyy년 MM월 dd일 mm분 ss초')}"></p>
-	<hr>
+	
+	<p th:text="${#dates.format(date1, 'yyyy년 MM월 dd일 hh시 mm분 ss초')}"></p>
+	<p th:text="${#dates.format(date2 , 'yyyy년 MM월 dd일 hh시 mm분 ss초')}"></p>
+	
+	<hr/>
 	
 
 	<!--
@@ -64,13 +67,13 @@
 	
 	<h3>formatInteger</h3>
 	<p th:text="${intVar}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 1, 'COMMA')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 2, 'COMMA')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 3, 'COMMA')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 3, 'POINT')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 3, 'WHITESPACE')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 3, 'NONE')}"></p>
-	<p th:text="${#numbers.formatInteger(intVar, 3, 'DEFAULT')}"></p><!-- 디폴트는 comma -->
+	<p th:text="${#numbers.formatInteger(intVar , 1 , 'COMMA')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 2 , 'COMMA')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 3 , 'COMMA')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 3 , 'POINT')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 3 , 'WHITESPACE')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 3 , 'NONE')}"></p>
+	<p th:text="${#numbers.formatInteger(intVar , 3 , 'DEFAULT')}"></p>
 	<hr>
 	
 	
@@ -91,9 +94,10 @@
 	 
 	<h3>formatDecimal</h3>
 	<p th:text="${doubleVar}"></p>
-	<p th:text="${#numbers.formatDecimal(doubleVar, 1, 'COMMA', 1, 'POINT')}"></p>
-	<p th:text="${#numbers.formatDecimal(doubleVar, 1, 'COMMA', 2, 'POINT')}"></p>
-	<p th:text="${#numbers.formatDecimal(doubleVar, 1, 'COMMA', 3, 'POINT')}"></p>
+	<p th:text="${#numbers.formatDecimal(doubleVar , 1 , 'COMMA' , 1 , 'POINT')}"></p>
+	<p th:text="${#numbers.formatDecimal(doubleVar , 1 , 'COMMA' , 2 , 'POINT')}"></p>
+	<p th:text="${#numbers.formatDecimal(doubleVar , 1 , 'COMMA' , 3 , 'POINT')}"></p>
+
 
 </body>
 </html>

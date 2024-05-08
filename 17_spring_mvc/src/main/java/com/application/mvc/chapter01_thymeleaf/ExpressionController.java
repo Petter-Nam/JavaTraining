@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-//클래스에  @RequestMapping을 사용할 수 있으며 해당클래스의 모든 메서드가 /th/expression 경로로 매핑된다.
+// 클래스에 @RequestMapping을 사용할 수 있으며 해당클래스의 모든 메서드가 /th/expression 경로로 매핑된다.
 @RequestMapping("/th/expression")
 public class ExpressionController {
 
@@ -21,7 +21,7 @@ public class ExpressionController {
 	@Autowired
 	private SupposeDAO supposeDAO;
 	
-	@GetMapping("/ex01") //lacalhost/th/expression/ex01
+	@GetMapping("/ex01") // localhost/th/expression/ex01
 	public String ex01(Model model) {
 		
 		// 데이터 전송 예시
@@ -40,7 +40,7 @@ public class ExpressionController {
 	}
 	
 	
-	@GetMapping("/ex02") //lacalhost/th/expression/ex02
+	@GetMapping("/ex02") // localhost/th/expression/ex02
 	public String ex02(HttpServletRequest request) {
 		
 		// session 예시
@@ -53,7 +53,7 @@ public class ExpressionController {
 	
 	}
 	
-	@GetMapping("/ex03") //lacalhost/th/expression/ex03
+	@GetMapping("/ex03") // localhost/th/expression/ex03
 	public String ex03(Model model) {
 		
 		// unescape 예시
@@ -63,5 +63,6 @@ public class ExpressionController {
 		return "chapter01_thymeleaf/expression/expressionEx03";
 		
 	}
+	
 	
 }

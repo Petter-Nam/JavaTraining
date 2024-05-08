@@ -376,7 +376,7 @@ public class ControlStatementAnswerSampleController {
 		   	  	<th>totalPrice</th>
 		   	  	<th>brandNm</th>
 		   	  </tr>
-		   	    <tr>
+		   	  <tr>
 		   	  	<td id="productNm0" name="productNm0">노트북1</td>
 		   	  	<td id="price0" name="price0">10000</td>      
 		   	  	<td id="addTax0" name="addTax0">1000.0</td>      

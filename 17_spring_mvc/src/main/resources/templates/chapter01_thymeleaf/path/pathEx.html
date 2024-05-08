@@ -6,15 +6,14 @@
 <!-- static 디렉터리를 기준으로 @{/경로}형태로 작성한다. -->
 <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/> <!-- css import 예시 --> 
 <script th:src="@{/script.js}"></script> 						 <!-- js import 예시 --> 
-<script th:src="@{/jquery/jquery-3.7.1.min.js}"></script>		 <!-- jquery import 예시 -->
+<script th:src="@{/jquery/jquery-3.7.1.min.js}"></script>		 <!-- jquery import 예시 --> 
 <script>
 	$().ready(function(){
-		alert("jquery import success")
+		alert("jquery import success");
 	});
 </script>
 
-<script th:src="@{/ckeditor/ckeditor.js}"></script>   			<!-- ckeditor import 예시 -->
-
+<script th:src="@{/ckeditor/ckeditor.js}"></script>              <!-- ckeditor import 예시 --> 
 </head>
 <body>
 
@@ -66,13 +65,12 @@
 	<br/><br/>
 	
 	<textarea rows="10" cols="10" name="test"></textarea>
-	<script>CKEDITOR.replace("test")</script>
+	<script>CKEDITOR.replace("test");</script>
 	<hr/>
-	
 	
 	<!-- form태그의 action속성은 th:action="@{/경로}" 형태로 작성한다. -->
 	<h1>5. form</h1>
-	<form th:action="@{/toController}" method="post">
+	<form th:action="@{/toController}">
 		<p>ID : <input type="text" name="id"></p>
 		<p>PASSWORD : <input type="password" name="passwd"></p>
 		<input type="submit">

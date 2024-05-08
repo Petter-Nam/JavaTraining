@@ -55,8 +55,19 @@ public class ProductDTO {
 	private String productNm;
 	private int price;
 	private int deliveryPrice;
-	@DateTimeFormat(pattern="yyyy-MM-dd")//htmld의 <input type="date">엘리먼트(string 타입) 와 자바의 date 타입 매핑 설정
+	// html의 <input type="date">엘리먼트(String타입)와 자바의 Date타입 매핑 설정
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date enrollDt; // java.util.Date;
 	private long brandId;	
 	
 }
+
+
+
+
+
+
+
+
+
+

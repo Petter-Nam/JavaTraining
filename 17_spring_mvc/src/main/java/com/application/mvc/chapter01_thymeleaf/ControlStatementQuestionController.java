@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -346,7 +345,7 @@ public class ControlStatementQuestionController {
 		  
 		  - controlEx16_practice.html파일에 productMapList 데이터를 전달하여 아래와같이 데이터를 출력하시오.
 			
-		  <table border="1">
+		   <table border="1">
 		   	  <tr>
 		   	  	<th>productNm</th>
 		   	  	<th>price</th>
@@ -355,11 +354,11 @@ public class ControlStatementQuestionController {
 		   	  	<th>brandNm</th>
 		   	  </tr>
 		   	  <tr>
-		   	  	<td id="productId0">노트북1</td>
-		   	  	<td id="price0">10000</td>      
-		   	  	<td id="addTax0">1000.0</td>      
-		   	  	<td id="totalPrice0">11000.0</td>      
-		   	  	<td id="brandNm0">"브랜드1</td>      
+		   	  	<td id="productNm0" name="productNm0">노트북1</td>
+		   	  	<td id="price0" name="price0">10000</td>      
+		   	  	<td id="addTax0" name="addTax0">1000.0</td>      
+		   	  	<td id="totalPrice0" name="totalPrice0">11000.0</td>      
+		   	  	<td id="brandNm0" name="brandNm0">"브랜드1</td>      
 		   	  </tr>
 		   	  ...
 		   	  ...

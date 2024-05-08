@@ -6,11 +6,15 @@
 </head>
 <body>
 
-	<table border="1">
-		<tr th:each="id : ${productIds}">
-			<td th:text="${id}"></td>
-		</tr>
-	</table>
+	<div th:if="${me < com}">
+		<p>UP!</p>
+	</div>
+	<div th:if="${me == com}">
+		<p>Bingo!</p>
+	</div>
+	<div th:if="${me > com}">
+		<p>Down!</p>
+	</div>
 
 </body>
 </html>
