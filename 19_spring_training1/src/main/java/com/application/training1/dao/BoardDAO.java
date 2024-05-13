@@ -1,0 +1,16 @@
+package com.application.training1.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.application.training1.dto.BoardDTO;
+
+@Mapper
+public interface BoardDAO {
+
+	public void createBoard(BoardDTO boardDTO);
+	public List<BoardDTO> getBoardList();
+	public BoardDTO getBoardDetail(long boardId);
+	public void updateReadCnt(long boardId);
+}
