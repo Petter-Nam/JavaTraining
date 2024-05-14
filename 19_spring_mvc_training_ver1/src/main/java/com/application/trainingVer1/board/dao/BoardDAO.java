@@ -21,8 +21,13 @@ public interface BoardDAO {
 	// <id="updateReadCnt"> 매퍼에 boardId를 전달한다.
 	public void updateReadCnt(long boardId);
 	
-	// <id="getPasswd"> 매퍼에 boardId를 전달하고 비밀번호를 검색하여 DAO객체로 전달한다.
+	// <id="getEncodedPasswd"> 매퍼에 boardId를 전달하고 비밀번호를 검색하여 DAO객체로 전달한다.
+	public String getEncodedPasswd(long boardId);
+	
 	// <id="updateBoard"> 매퍼에 1개의 게시글정보를 전달한다.
+	public void updateBoard(BoardDTO boardDTO);
+	
 	// <id="deleteBoard"> 매퍼에 boardId를 전달한다.
+	public void deleteBoard(long boardId);
 	
 }

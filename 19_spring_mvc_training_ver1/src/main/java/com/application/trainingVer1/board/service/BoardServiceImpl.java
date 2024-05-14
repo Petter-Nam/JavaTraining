@@ -64,6 +64,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private PasswordEncoder passwordEncoder; // SecurityConfiguration에서 생성된 객체를 주입한다.
+
 	
 	@Override
 	public void createBoard(BoardDTO boardDTO) {
@@ -94,11 +95,37 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardDetail(boardId);
 		
 	}
+
+	@Override
+	public boolean checkAuthenticationUser(BoardDTO boardDTO) {
+		
+		// DAO에서 반환된 암호화된 비밀번호를 임시변수에 저장한다.
+		String encodedPasswd = boardDAO.getEncodedPasswd(boardDTO.getBoardId());
+		
+		// matches()메서드를 사용하여 Controller에서 전달된 패스워드(평문)와 db에서 조회한 패스워드(암호화)를 비교한다.
+		boolean isAuthentication = passwordEncoder.matches(boardDTO.getPasswd(), encodedPasswd);
+		
+		return isAuthentication; // true or false
+		
+	}
+
+	@Override
+	public void updateBoard(BoardDTO boardDTO) {
+		
+		// Controller 객체에서 1개의 게시글을 전달받아 DAO로 전달한다.
+		boardDAO.updateBoard(boardDTO);
+				
+	}
+
+	@Override
+	public void deleteBoard(long boardId) {
+		
+		// Controller 객체에서 boardId를 전달받아 DAO로 전달한다.
+		boardDAO.deleteBoard(boardId);
+		
+	}
 	
 	
 	
-	// DAO에서 반환된 암호화된 비밀번호를 임시변수에 저장한다.
-	// Controller 객체에서 1개의 게시글을 전달받아 DAO로 전달한다.
-	// Controller 객체에서 boardId를 전달받아 DAO로 전달한다.
 	
 }
