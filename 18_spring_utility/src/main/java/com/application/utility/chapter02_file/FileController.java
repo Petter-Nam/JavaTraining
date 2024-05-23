@@ -255,18 +255,17 @@ public class FileController {
 			
 			// 범용고유식별자(UUID) 생성
 			UUID uuid = UUID.randomUUID();
+			
 			// 확장자 추출
-			String extention = originalFilename.substring(originalFilename.lastIndexOf("."));
+			String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
 			
 			// 파일 이름 수정
-			String uploadFileName = uuid + extention;
+			String uploadFileName = uuid + extension;
 			
 			// transferTo() 메서드를 사용하여 수정된 파일명으로 저장
 			modifyFile.transferTo(new File(fileRepoPath + uploadFileName));
+			
 		}
-		
-		
-		
 		
 		String jsScript = """
 				<script>
@@ -277,5 +276,10 @@ public class FileController {
 		
 		return jsScript;
 	}
+	
+	
+	
+	
+	
 
 }

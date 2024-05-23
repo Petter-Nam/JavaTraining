@@ -65,7 +65,7 @@
 			<th>파일명</th>
 			<th>다운로드</th>
 		</tr>
-		<tr><!-- <img th:src="@{/file/thumbnails(변수명=${memberDTO.profileNm})}" -->
+		<tr>	<!-- <img th:src="@{/file/thumbnails(변수명=${memberDTO.profileNm})}" /> -->
 			<td><img th:src="@{/file/thumbnails(fileName=404.PNG)}" width="200" height="120"/></td>
 			<td>404 이미지</td>
 			<td><a th:href="@{/file/download(fileName=404.PNG)}">다운로드</a></td>
