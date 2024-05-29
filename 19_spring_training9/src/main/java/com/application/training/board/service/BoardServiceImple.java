@@ -1,9 +1,12 @@
 package com.application.training.board.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.application.training.board.dao.BoardDAO;
 import com.application.training.board.dto.BoardDTO;
 @Service
 public class BoardServiceImple implements BoardService {
@@ -17,6 +20,38 @@ public class BoardServiceImple implements BoardService {
 	@Override
 	public void createBoard(BoardDTO boardDTO) {
 		boardDTO.setPasswd(passwordEncoder.encode(boardDTO.getPasswd()));
+	}
+
+	@Override
+	public List<BoardDTO> getBoardList() {
+		return boardDAO.getBoardList();
+	}
+
+	@Override
+	public BoardDTO getBoardDetail(long boardId, boolean isUpdateReadCnt) {
+		if (isUpdateReadCnt) {
+			boardDAO.updateReadCnt(boardId);
+		}
+		
+		return boardDAO.getBoardDetail(boardId);
+	}
+
+	@Override
+	public boolean checkAuthenticationUser(BoardDTO boardDTO) {
+		String encodedPasswd = boardDAO.getEncodedPasswd(boardDTO.getBoardId());
+		boolean isAuthentication = passwordEncoder.matches(boardDTO.getPasswd(), encodedPasswd);
+		return isAuthentication;
+	}
+
+	@Override
+	public void updateBoard(BoardDTO boardDTO) {
+		boardDAO.updateBoard(boardDTO);
+	}
+
+	@Override
+	public void deleteBoard(long boardId) {
+		boardDAO.deleteBoard(boardId);
+		
 	}
 
 }

@@ -16,11 +16,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.application.trainingVer2.dao.MemberDAO;
+import com.application.trainingVer2.member.dao.MemberDAO;
 import com.application.trainingVer2.member.dto.MemberDTO;
-
 @Service
-public class MemberServiceImple implements MemberService {
+public class MemberServiceImpl implements MemberService {
 
 	@Value("${file.repo.path}")
 	private String fileRepositoryPath;
@@ -31,13 +30,14 @@ public class MemberServiceImple implements MemberService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
-	private static Logger logger = LoggerFactory.getLogger(MemberService.class);
+	private static Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class); 
+	
 	
 	@Override
-	public void createMember(MultipartFile uploadProFile, MemberDTO memberDTO)
-			throws IllegalStateException, IOException {
-		if (!uploadProFile.isEmpty()) {
-			String originalFileName = uploadProFile.getOriginalFilename();
+	public void createMember(MultipartFile uploadProfile, MemberDTO memberDTO) throws IllegalStateException, IOException {
+		
+		if (!uploadProfile.isEmpty()) {
+			String originalFileName = uploadProfile.getOriginalFilename();
 			memberDTO.setProfileOriginalName(originalFileName);
 			
 			String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
@@ -45,53 +45,55 @@ public class MemberServiceImple implements MemberService {
 			String uploadFile = UUID.randomUUID() + extension;
 			memberDTO.setProfileUUID(uploadFile);
 			
-			uploadProFile.transferTo(new File(fileRepositoryPath + uploadFile));
+			uploadProfile.transferTo(new File(fileRepositoryPath + uploadFile));
+			
 		}
+		
 		if (memberDTO.getSmsstsYn() == null) memberDTO.setSmsstsYn("n");
-		if (memberDTO.getEmailstsYn() == null) memberDTO.setEmail("n");
+		if (memberDTO.getEmailstsYn() == null) memberDTO.setEmailstsYn("n");
 		
 		memberDTO.setPasswd(passwordEncoder.encode(memberDTO.getPasswd()));
-		memberDAO.createMember(memberDTO);
 		
+		memberDAO.createMember(memberDTO);
 	}
+
 
 	@Override
 	public String checkValidId(String memberId) {
 		String isValidId = "n";
-		
 		if (memberDAO.checkValidId(memberId) == null) {
 			isValidId = "y";
+			return isValidId;
 		}
+		
 		return isValidId;
 	}
 
+
 	@Override
-public boolean login(MemberDTO memberDTO)  { 
+	public boolean login(MemberDTO memberDTO) {
+		MemberDTO validateData = memberDAO.login(memberDTO.getMemberId());
 		
-		MemberDTO validateData = memberDAO.login(memberDTO.getMemberId()); 
-		
-		if (validateData != null) {  
-		
-			if (passwordEncoder.matches(memberDTO.getPasswd() , validateData.getPasswd()) && validateData.getActiveYn().equals("y")) {
+		if (validateData != null) {
+			if (passwordEncoder.matches(memberDTO.getPasswd(), validateData.getPasswd()) && validateData.getActiveYn().equals("y")) {
 				return true;
-			} 
+			}
 		}
-		
-		return false; 	
-		
+		return false;
 	}
+
 
 	@Override
 	public MemberDTO getMemberDetail(String memberId) {
 		return memberDAO.getMemberDetail(memberId);
 	}
 
+
 	@Override
 	public void updateMember(MultipartFile uploadProfile, MemberDTO memberDTO)
 			throws IllegalStateException, IOException {
-		
 		if (!uploadProfile.isEmpty()) {
-			new File(fileRepositoryPath + memberDTO.getProfileUUID()).delete();
+			new File (fileRepositoryPath + memberDTO.getProfileUUID()).delete();
 			
 			String originalFilename = uploadProfile.getOriginalFilename();
 			memberDTO.setProfileOriginalName(originalFilename);
@@ -99,42 +101,40 @@ public boolean login(MemberDTO memberDTO)  {
 			String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
 			
 			String uploadFile = UUID.randomUUID() + extension;
+			memberDTO.setProfileUUID(uploadFile);
 			
 			uploadProfile.transferTo(new File(fileRepositoryPath + uploadFile));
 		}
+		if (memberDTO.getSmsstsYn() == null)   memberDTO.setSmsstsYn("n");						
+		if (memberDTO.getEmailstsYn() == null) memberDTO.setEmailstsYn("n");					
 		
-		if (memberDTO.getSmsstsYn() == null) memberDTO.setSmsstsYn("n");
-		if (memberDTO.getEmailstsYn() == null) memberDTO.setEmailstsYn("n");
-		
-		memberDAO.updateMember(memberDTO);
-		
+		memberDAO.updateMember(memberDTO);				
 	}
+
 
 	@Override
 	public void updateInactiveMember(String memberId) {
-		
 		memberDAO.updateInactiveMember(memberId);
-		
 	}
+
 
 	@Override
 	@Scheduled(cron="0 59 23 * * *")
 	public void getTodayNewMemberCnt() {
-		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String today = sdf.format(new Date());
 		
 		logger.info("(" + today + ") 신규회원수 : " + memberDAO.getTodayNewMemberCnt(today));
-		
 	}
+
 
 	@Override
 	@Scheduled(cron="59 59 23 * * *")
 	public void deleteMemberScheduler() {
 		List<MemberDTO> deleteMemberList = memberDAO.getInActiveMemberList();
 		if (!deleteMemberList.isEmpty()) {
-			for (MemberDTO memberDTO : deleteMemberList) {
-				new File (fileRepositoryPath + memberDTO.getProfileUUID()).delete();
+			for(MemberDTO memberDTO : deleteMemberList) {
+				new File(fileRepositoryPath + memberDTO.getProfileUUID()).delete();
 				memberDAO.deleteMember(memberDTO.getMemberId());
 			}
 		}

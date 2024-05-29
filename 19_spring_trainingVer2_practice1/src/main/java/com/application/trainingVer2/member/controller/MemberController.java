@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.security.web.access.AuthorizationManagerWebInvocationPrivilegeEvaluator.HttpServletRequestTransformer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,11 +35,11 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
+	
 	@GetMapping("/main")
 	public String main() {
 		return "member/main";
 	}
-	
 	
 	@GetMapping("/register")
 	public String register() {
@@ -46,9 +47,9 @@ public class MemberController {
 	}
 	
 	@PostMapping("/register")
-	public String resgister(@RequestParam("uploadProfile") MultipartFile uploadProfile , @ModelAttribute MemberDTO memberDTO) throws IllegalStateException, IOException {
+	public String register(@RequestParam("uploadProfile") MultipartFile uploadProfile, @ModelAttribute MemberDTO memberDTO)throws IllegalStateException, IOException{
 		memberService.createMember(uploadProfile, memberDTO);
-		return "redirect:/member/main";
+		return"redirect:/member/main";
 	}
 	
 	@PostMapping("/validId")
@@ -58,7 +59,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("/login")
-	public String logn() {
+	public String login() {
 		return "member/login";
 	}
 	
@@ -67,6 +68,7 @@ public class MemberController {
 	public String login(@RequestBody MemberDTO memberDTO, HttpServletRequest request) {
 		
 		String isValidMember = "n";
+		
 		if (memberService.login(memberDTO)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("memberId", memberDTO.getMemberId());
@@ -79,23 +81,23 @@ public class MemberController {
 	
 	@GetMapping("/logout")
 	public String logout(HttpServletRequest request) {
-		
-		HttpSession session = request.getSession(); 
+		HttpSession session = request.getSession();
 		session.invalidate();
 		
 		return "redirect:/member/main";
-		
 	}
 	
 	@GetMapping("/update")
 	public String update(HttpServletRequest request, Model model) {
+		
 		HttpSession session = request.getSession();
 		model.addAttribute("memberDTO", memberService.getMemberDetail((String)session.getAttribute("memberId")));
+		
 		return "member/update";
 	}
 	
 	@PostMapping("/update")
-	public String update(@RequestParam("uploadProfile") MultipartFile uploadProfile, @ModelAttribute MemberDTO memberDTO) throws IllegalStateException, IOException {
+	public String update(@RequestParam("updateProfile") MultipartFile uploadProfile, @ModelAttribute MemberDTO memberDTO) throws IllegalStateException, IOException {
 		memberService.updateMember(uploadProfile, memberDTO);
 		return "redirect:/member/main";
 	}
@@ -113,11 +115,10 @@ public class MemberController {
 	
 	@PostMapping("/delete")
 	public String delete(HttpServletRequest request) {
-		
 		HttpSession session = request.getSession();
 		memberService.updateInactiveMember((String)session.getAttribute("memberId"));
 		session.invalidate();
 		
-		return "return:/member/main";
+		return "redirect:/member/main";
 	}
 }
