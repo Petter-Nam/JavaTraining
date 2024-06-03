@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.application.modudeal.dao.MemberDAO">
+
+	
+	<insert id="createMember" parameterType="MemberDTO">
+		INSERT INTO MEMBER (
+			MEMBER_ID,
+			PASSWORD,
+			NAME,
+			BIRTHDATE,
+			HP,
+			EMAIL,
+			ADDRESS_ZIPCODE,
+			ADDRESS_ROAD,
+			ADDRESS_JIBUN,
+			ADDRESS_NAMUJI
+		)
+		VALUES (
+			#{memberId},
+			#{password},
+			#{name},
+			#{birthDate},
+			#{hp},
+			#{email},
+			#{addressZipcode},
+			#{addressRoad},
+			#{addressJibun},
+			#{addressNamuji}
+		)
+	</insert>
+	
+	<select id="checkValidId" parameterType="String" resultType="String">
+		SELECT MEMBER_ID
+		FROM   MEMBER
+		WHERE  MEMBER_ID = #{memberId}
+	</select>
+
+</mapper>

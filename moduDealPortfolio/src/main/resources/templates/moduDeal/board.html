@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorate="~{/moduDeal/index.html}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" th:href="@{/vendors/linericon/style.css}" />
+<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+<link rel="stylesheet" th:href="@{/css/themify-icons.css}" />
+<link rel="stylesheet" th:href="@{/vendors/owl-carousel/owl.carousel.min.css}" />
+<link rel="stylesheet" th:href="@{/vendors/lightbox/simpleLightbox.css}" />
+<link rel="stylesheet" th:href="@{/vendors/nice-select/css/nice-select.css}" />
+<link rel="stylesheet" th:href="@{/vendors/animate-css/animate.css}" />
+<link rel="stylesheet" th:href="@{/vendors/jquery-ui/jquery-ui.css}" />
+<!-- main css -->
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet" th:href="@{/css/responsive.css}" />
+<style>
+/* 추가한 CSS */
+.board_area {
+    padding: 80px 0;
+}
+
+.board_form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main_btn:hover {
+    background-color: #0056b3;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+    
+    <div layout:fragment="content">
+        <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div
+                    class="banner_content d-md-flex justify-content-between align-items-center">
+                    <div class="mb-3 mb-md-0">
+                        <h2>내 상품 등록하기</h2>
+                        <p>서로에게 불편이 없도록 상품의 실제 사진과 설명 및 주의사항을 적어주시면 좋습니다.</p>
+                    </div>
+                    <div class="page_link">
+                        <a th:href="@{/moduDeal/index}">Home</a>
+                        <a th:href="@{/moduDeal/blog}">Blog </a>
+                        <a th:href="@{/moduDeal/single-blog}">Blog Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Board Area =================-->
+    <section class="board_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="board_form">
+                        <h2>상품 등록</h2>
+                        <form class="form-contact board_form" action="#" id="boardForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="product_title"
+                                            id="product_title" type="text"
+                                            placeholder="[상품종류][상품 모델][제목]">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control w-100"
+                                            name="product_description" id="product_description" cols="30"
+                                            rows="9" placeholder="상품 설명"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="product_quantity"
+                                            id="product_quantity" type="number" placeholder="상품 수량">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="product_price"
+                                            id="product_price" type="number" placeholder="상품 개당 가격">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="product_category">상품 종류</label> <select
+                                        class="form-control" id="product_category"
+                                        name="product_category">
+                                        <option value="기타">기타</option>
+                                        <option value="의류">의류</option>
+                                        <option value="액세서리">액세서리</option>
+                                        <option value="가방 / 지갑">가방 / 지갑</option>
+                                        <option value="가구 / 인테리어">가구 / 인테리어</option>
+                                        <option value="전자제품">전자제품</option>
+                                        <option value="차량">차량</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="main_btn">게시하기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="gallery slick-gallery"
+                        style="border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <!-- 이미지 갤러리 -->
+                    </div>
+                    <div class="form-group text-center mt-3">
+                        <input type="file" id="product_image" accept="image/*"
+                            style="display: none;" multiple> <label
+                            for="product_image" class="genric-btn default-border">이미지
+                            선택</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Board Area =================-->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script th:src="@{/js/popper.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/stellar.js}"></script>
+    <script th:src="@{/vendors/lightbox/simpleLightbox.min.js}"></script>
+    <script th:src="@{/vendors/nice-select/js/jquery.nice-select.min.js}"></script>
+    <script th:src="@{/vendors/isotope/imagesloaded.pkgd.min.js}"></script>
+    <script th:src="@{/vendors/isotope/isotope-min.js}"></script>
+    <script th:src="@{/vendors/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{/js/jquery.ajaxchimp.min.js}"></script>
+    <script th:src="@{/js/mail-script.js}"></script>
+    <script th:src="@{/js/theme.js}"></script>
+    <script th:src="@{/js/productImg.js}"></script>
+</body>
+</html>
+                        
