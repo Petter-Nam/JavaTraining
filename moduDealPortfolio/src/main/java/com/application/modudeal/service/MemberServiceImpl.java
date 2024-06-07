@@ -33,10 +33,27 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public String checkValidId(String memberId) {
 		String isValidId = "n";
-		if (memberDAO != null) {
+		if (memberDAO.checkValidId(memberId) == null) {
 			isValidId = "y";
 		}
 		return isValidId;
+	}
+
+	@Override
+	public MemberDTO login(MemberDTO memberDTO) {
+		MemberDTO resultDTO = memberDAO.login(memberDTO.getMemberId());
+		
+		if (resultDTO != null) {
+			if (passwordEncoder.matches(memberDTO.getPassword(), resultDTO.getPassword())) {
+				return resultDTO;
+			};
+		}
+		return null;
+	}
+
+	@Override
+	public MemberDTO getMemberDetail(String memberId) {
+		return memberDAO.getMemberDetail(memberId);
 	}
 
 }

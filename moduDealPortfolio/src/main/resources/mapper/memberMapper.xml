@@ -36,5 +36,18 @@
 		FROM   MEMBER
 		WHERE  MEMBER_ID = #{memberId}
 	</select>
+	
+	<select id="login" parameterType="String" resultType="MemberDTO">
+		SELECT MEMBER_ID,
+			   PASSWORD
+		FROM   MEMBER
+		WHERE  MEMBER_ID = #{memberId}
+	</select>
+	
+	<select id="getMemberDetail"  parameterType="String" resultType="MemberDTO">
+		SELECT	*
+		FROM	MEMBER
+		WHERE	MEMBER_ID = #{memberId}
+	</select>
 
 </mapper>
