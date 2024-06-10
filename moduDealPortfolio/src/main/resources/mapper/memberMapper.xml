@@ -49,5 +49,25 @@
 		FROM	MEMBER
 		WHERE	MEMBER_ID = #{memberId}
 	</select>
+	
+	<update id="changePassword" parameterType="MemberDTO">
+	    UPDATE MEMBER
+	    SET PASSWORD = #{password}
+	    WHERE MEMBER_ID = #{memberId}
+	</update>
 
+	<update id="updateHp" parameterType="MemberDTO">
+		UPDATE MEMBER
+		SET    HP = #{hp}
+		WHERE  MEMBER_ID = #{memberId}
+	</update>
+	
+	<update id="updateAddress" parameterType="MemberDTO">
+		UPDATE MEMBER
+        SET    ADDRESS_ZIPCODE = #{addressZipcode},
+               ADDRESS_ROAD = #{addressRoad},
+               ADDRESS_JIBUN = #{addressJibun},
+               ADDRESS_NAMUJI = #{addressNamuji}
+        WHERE  MEMBER_ID = #{memberId}
+	</update>
 </mapper>

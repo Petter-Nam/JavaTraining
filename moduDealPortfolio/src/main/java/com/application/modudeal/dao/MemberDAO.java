@@ -13,4 +13,7 @@ public interface MemberDAO {
 	public String checkValidId(String memberId);
 	public MemberDTO login(String memberId);
 	public MemberDTO getMemberDetail(String memberId);
+	public void changePassword(MemberDTO memberDTO);
+	//public void updateHp(MemberDTO memberDTO);
+	public void updateAddress(MemberDTO memberDTO);
 }

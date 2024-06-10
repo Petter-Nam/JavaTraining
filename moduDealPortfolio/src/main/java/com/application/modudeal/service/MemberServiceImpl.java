@@ -13,8 +13,6 @@ import com.application.modudeal.dto.MemberDTO;
 @Service
 public class MemberServiceImpl implements MemberService {
 
-	@Value("${file.repo.path}")
-	private String fileRepositoryPath;
 	
 	@Autowired
 	private MemberDAO memberDAO;
@@ -55,5 +53,51 @@ public class MemberServiceImpl implements MemberService {
 	public MemberDTO getMemberDetail(String memberId) {
 		return memberDAO.getMemberDetail(memberId);
 	}
+
+	public boolean changePassword(String memberId, String newPassword) {
+		
+		// memberId를 사용하여 사용자 정보를 조회합니다.
+	    MemberDTO memberDTO = memberDAO.getMemberDetail(memberId);
+	    
+	    if (memberDTO != null) {
+	        // 새로운 비밀번호를 암호화합니다.
+	        String encryptedNewPassword = passwordEncoder.encode(newPassword);
+	        
+	        // 암호화된 새로운 비밀번호를 사용자 정보에 설정합니다.
+	        memberDTO.setPassword(encryptedNewPassword);
+	        
+	        // 변경된 비밀번호로 사용자 정보를 업데이트합니다.
+	        memberDAO.changePassword(memberDTO);
+	        
+	        return true; // 비밀번호 변경 성공
+	    } else {
+	        return false; // 사용자 정보를 찾을 수 없는 경우
+	    }
+	    
+	}
+
+//	@Override
+//	public boolean updateHp(MemberDTO memberDTO) {
+//		
+//		if (memberDTO == memberDAO.getMemberDetail(memberDTO.getMemberId())) {
+//			memberDAO.updateHp(memberDTO);
+//			return true;
+//		}
+//		else {
+//			return false;
+//		}
+//	}
+
+	@Override
+    public boolean updateAddress(MemberDTO memberDTO) {
+		 if (memberDTO.getAddressZipcode() != null && memberDTO.getAddressRoad() != null &&
+		            memberDTO.getAddressJibun() != null && memberDTO.getAddressNamuji() != null) {
+			 memberDAO.updateAddress(memberDTO);
+			 return true;
+		 }
+		 else {
+			 return false;
+		 }
+    }
 
 }
