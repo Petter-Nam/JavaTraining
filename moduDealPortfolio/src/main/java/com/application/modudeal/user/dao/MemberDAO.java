@@ -1,10 +1,10 @@
-package com.application.modudeal.dao;
+package com.application.modudeal.user.dao;
 
 
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.application.modudeal.dto.MemberDTO;
+import com.application.modudeal.user.dto.MemberDTO;
 
 @Mapper
 public interface MemberDAO {

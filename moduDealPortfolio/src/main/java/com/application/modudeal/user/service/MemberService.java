@@ -1,6 +1,6 @@
-package com.application.modudeal.service;
+package com.application.modudeal.user.service;
 
-import com.application.modudeal.dto.MemberDTO;
+import com.application.modudeal.user.dto.MemberDTO;
 
 public interface MemberService {
 	

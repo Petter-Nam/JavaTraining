@@ -16,6 +16,39 @@
 				"closeIdleConnection": true,
 				"auth-model": "native"
 			}
+		},
+		"mysql8-1902ba7bdc7-45158c2f72eefeb0": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "modudeal.c18oigsu89up.ap-northeast-2.rds.amazonaws",
+			"save-password": true,
+			"configuration": {
+				"host": "modudeal.c18oigsu89up.ap-northeast-2.rds.amazonaws.com",
+				"port": "3306",
+				"url": "jdbc:mysql://modudeal.c18oigsu89up.ap-northeast-2.rds.amazonaws.com:3306/",
+				"configurationType": "MANUAL",
+				"home": "/opt/homebrew/Cellar/mysql/8.3.0_1",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "43.200.222.241",
+							"port": 22,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/nsj/Downloads/moduDeal.pem",
+							"implementation": "sshj",
+							"shareTunnels": true,
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
 		}
 	},
 	"virtual-models": {"mysql8-18e82e134f8-5190dc6e7b349c54":{"SQL_ADVANCE_PRACTICE":{"@properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202404011414\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mysql8-18e82e134f8-5190dc6e7b349c54\"\u003e\u003centity id\u003d\"1\" name\u003d\"TB_MEMBER\" fq-name\u003d\"SQL_ADVANCE_PRACTICE.TB_MEMBER\" order\u003d\"0\" x\u003d\"51\" y\u003d\"247\"\u003e\u003cpath name\u003d\"SQL_ADVANCE_PRACTICE\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"TB_ORDER\" fq-name\u003d\"SQL_ADVANCE_PRACTICE.TB_ORDER\" order\u003d\"1\" x\u003d\"376\" y\u003d\"245\"\u003e\u003cpath name\u003d\"SQL_ADVANCE_PRACTICE\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"TB_PRODUCT\" fq-name\u003d\"SQL_ADVANCE_PRACTICE.TB_PRODUCT\" order\u003d\"2\" x\u003d\"201\" y\u003d\"35\"\u003e\u003cpath name\u003d\"SQL_ADVANCE_PRACTICE\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"}}},"SQL_ADVANCED":{"@properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202404011442\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mysql8-18e82e134f8-5190dc6e7b349c54\"\u003e\u003centity id\u003d\"1\" name\u003d\"CAR\" fq-name\u003d\"SQL_ADVANCED.CAR\" order\u003d\"0\" x\u003d\"775\" y\u003d\"189\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"CLASS\" fq-name\u003d\"SQL_ADVANCED.CLASS\" order\u003d\"1\" x\u003d\"40\" y\u003d\"70\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"MEMBER\" fq-name\u003d\"SQL_ADVANCED.`MEMBER`\" order\u003d\"2\" x\u003d\"574\" y\u003d\"288\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"ORDER_EX\" fq-name\u003d\"SQL_ADVANCED.ORDER_EX\" order\u003d\"3\" x\u003d\"40\" y\u003d\"234\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"RENT\" fq-name\u003d\"SQL_ADVANCED.RENT\" order\u003d\"4\" x\u003d\"573\" y\u003d\"130\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"STUDENT\" fq-name\u003d\"SQL_ADVANCED.STUDENT\" order\u003d\"5\" x\u003d\"286\" y\u003d\"70\"\u003e\u003cpath name\u003d\"SQL_ADVANCED\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"}}},"SQL_ADVANCED_PRACTICE":{"@properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202404031028\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mysql8-18e82e134f8-5190dc6e7b349c54\"\u003e\u003centity id\u003d\"1\" name\u003d\"CAR_TB\" fq-name\u003d\"SQL_ADVANCED_PRACTICE.CAR_TB\" order\u003d\"0\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"SQL_ADVANCED_PRACTICE\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"MEMBER_TB\" fq-name\u003d\"SQL_ADVANCED_PRACTICE.MEMBER_TB\" order\u003d\"1\" x\u003d\"233\" y\u003d\"40\"\u003e\u003cpath name\u003d\"SQL_ADVANCED_PRACTICE\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"}}}}},

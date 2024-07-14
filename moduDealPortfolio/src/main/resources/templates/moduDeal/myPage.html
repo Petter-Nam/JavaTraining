@@ -201,10 +201,10 @@ body {
             </div>
             <div class="info">
                 <div>
-                    이름 : <span th:text="${memberDTO.name}"></span>
+                    이름 : <span th:text="${userDTO.name}"></span>
                 </div>
                 <div>
-                    생년월일 : <span th:text="${#dates.format(memberDTO.birthDate , 'yyyy년 MM월 dd일')}"></span>
+                    생년월일 : <span th:text="${#dates.format(userDTO.birthDate , 'yyyy년 MM월 dd일')}"></span>
                 </div>
             </div>
         </div>
@@ -217,7 +217,7 @@ body {
             </div>
             <div class="info">
                 <div>
-                    아이디 : <span th:text="${memberDTO.memberId}"></span>
+                    아이디 : <span th:text="${userDTO.userId}"></span>
                 </div>
                 <div>
                     <form id="passwordForm" th:action="@{/moduDeal/changePassword}" method="post">
@@ -228,7 +228,7 @@ body {
                         <div class="form-group">
                             <label for="confirmPassword">비밀번호 확인</label>
                             <input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
-                            <input type="hidden" id="memberId" name="memberId" th:value="${memberDTO.memberId}">
+                            <input type="hidden" id="userId" name="userId" th:value="${userDTO.userId}">
                         </div>
                         <button type="button" id="changePasswordBtn" class="btn btn-primary">비밀번호 변경</button>
                     </form>
@@ -248,8 +248,8 @@ body {
                 <form th:action="@{/moduDeal/updateEmail}" method="post" th:onsubmit="return updateEmail()">
                     <div class="form-group">
                         <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" th:value="${memberDTO.email}" class="form-control">
-                        <input type="hidden" id="memberId" name="memberId" th:value="${memberDTO.memberId}">
+                        <input type="email" id="email" name="email" th:value="${userDTO.email}" class="form-control">
+                        <input type="hidden" id="userId" name="userId" th:value="${userDTO.userId}">
                     </div>
                     <button type="submit" class="btn btn-primary">수정하기</button>
                 </form>
@@ -266,8 +266,8 @@ body {
                 <form th:action="@{/moduDeal/updateHp}" method="post" th:onsubmit="return updatePhone()">
                     <div class="form-group">
                         <label for="hp">휴대전화번호</label>
-                        <input type="tel" id="hp" name="hp" th:value="${memberDTO.hp}" class="form-control">
-                        <input type="hidden" id="memberId" name="memberId" th:value="${memberDTO.memberId}">
+                        <input type="tel" id="hp" name="hp" th:value="${userDTO.hp}" class="form-control">
+                        <input type="hidden" id="userId" name="userId" th:value="${userDTO.userId}">
                     </div>
                     <button type="submit" class="btn btn-primary">수정하기</button>
                 </form>
@@ -284,23 +284,23 @@ body {
                 <form th:action="@{/moduDeal/updateAddress}" method="post" th:onsubmit="return updateAddress()">
                     <div class="form-group">
                         <label for="addressZipcode">우편번호</label>
-                        <input type="text" id="addressZipcode" name="addressZipcode" th:value="${memberDTO.addressZipcode}" class="form-control">
+                        <input type="text" id="addressZipcode" name="addressZipcode" th:value="${userDTO.addressZipcode}" class="form-control">
                         <button type="button" class="btn btn-secondary" onclick="execDaumPostcode()">우편번호 찾기</button>
                     </div>
                     <div class="form-group">
                         <label for="addressRoad">도로명 주소</label>
-                        <input type="text" id="addressRoad" name="addressRoad" th:value="${memberDTO.addressRoad}" class="form-control">
+                        <input type="text" id="addressRoad" name="addressRoad" th:value="${userDTO.addressRoad}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="addressJibun">지번 주소</label>
-                        <input type="text" id="addressJibun" name="addressJibun" th:value="${memberDTO.addressJibun}" class="form-control">
+                        <input type="text" id="addressJibun" name="addressJibun" th:value="${userDTO.addressJibun}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="addressNamuji">나머지 주소</label>
-                        <input type="text" id="addressNamuji" name="addressNamuji" th:value="${memberDTO.addressNamuji}" class="form-control">
+                        <input type="text" id="addressNamuji" name="addressNamuji" th:value="${userDTO.addressNamuji}" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary">수정하기</button>
-                    <input type="hidden" id="memberId" name="memberId" th:value="${memberDTO.memberId}">
+                    <input type="hidden" id="userId" name="userId" th:value="${userDTO.userId}">
                 </form>
             </div>
         </div>
@@ -363,7 +363,7 @@ body {
     });
 
 
-    /* // 이메일 폼 유효성 검사
+    // 이메일 폼 유효성 검사
     function updateEmail() {
         let email = $('#email').val();
         
@@ -379,7 +379,7 @@ body {
         // Add your validation logic here
 
         return true; // 유효성 검사를 통과했습니다.
-    } */
+    } 
 
     // 주소 폼 유효성 검사
     function updateAddress() {

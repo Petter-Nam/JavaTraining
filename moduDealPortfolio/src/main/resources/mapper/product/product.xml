@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.application.modudeal.dao.ProductDAO">
+
+	<update id="updateProduct" parameterType="ProductDTO">
+        UPDATE products
+        SET title = #{title},
+            description = #{description},
+            qty = #{qty},
+            price = #{price},
+            product_category = #{productCategory},
+            member_id = #{memberId},
+            product_at = #{productAt}
+        WHERE product_id = #{productId}
+    </update>
+
+    <!-- 상품 이미지 정보를 업데이트하는 SQL -->
+    <update id="updateProductImg" parameterType="ProductDTO">
+        UPDATE product_images
+        SET img_url = #{imgUrl},
+            img_at = #{imgAt}
+        WHERE img_uuid = #{imgUuid}
+    </update>
+
+</mapper>

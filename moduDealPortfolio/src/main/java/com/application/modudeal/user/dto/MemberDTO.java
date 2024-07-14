@@ -1,4 +1,4 @@
-package com.application.modudeal.dto;
+package com.application.modudeal.user.dto;
 
 import java.util.Date;
 
