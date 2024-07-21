@@ -22,7 +22,7 @@ public class VariableEx03_연습4 {
 		
 		int total = test1 + test2 + test3;
 		int average = total / 3;
-		System.out.println("평균" + total);
+		System.out.println("평균" + average);
 		
 		//문제3) 밑변이 3이고 높이가 7인 삼각형 넓이 출력 (삼각형의 넓이 구하는 공식 : 밑변 * 높이 / 2)
 		int base = 3;

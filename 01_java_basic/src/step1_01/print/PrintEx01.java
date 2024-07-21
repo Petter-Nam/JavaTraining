@@ -70,7 +70,6 @@ public class PrintEx01 {
 		System.out.print(" 가격 : 10000원 / ");
 		System.out.print(" 할인률 : 10% / ");
 		System.out.print(" 결제금액 : 9000원 ] ");
-		
 	}
 
 }
